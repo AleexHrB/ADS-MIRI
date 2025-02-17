@@ -1,0 +1,25 @@
+\section{Introduction}
+
+Given a binary relation $R$ such that is:
+\begin{itemize}
+    \item Reflexive: $a R a$
+    \item Symmetric: $a R b \Rightarrow b R a$
+    \item Transitive: $a R b \land b R c \Rightarrow a R c$
+\end{itemize}
+
+we say that $R$ provides a partition $\Pi$ of $A$ into disjoint equivalence classes. That is, $\Pi = \{A_1, \ldots, A_k\}$ is defined as follows:
+
+\begin{itemize}
+    \item $\forall A_i, A_j \in \Pi, A_i \cap A_j = \emptyset \iff A_i \neq A_j$
+    \item $A = \bigcup\limits_{i = 1}^{k} A_i$
+    \item $a \equiv b \iff a,b \in A_i$ for some $A_i \in \Pi$.
+\end{itemize}
+
+As every subset defines an equivalence class it is enough to represent every $A_i$ with a single element $a \in A_i$ which is called the \textit{representative} of $A_i$ (as every other element of $A_i$ is related to $a$ by the properties of the binary relation previously defined).
+
+Such idea was firstly introduced by Galler and Fisher\cite{galler1964improved} in Computer Science as the \textbf{union-find data structure} which is a data structure that stores partition of a set into disjoint sets. In particular \textbf{union find} consist of two main operation:
+
+\begin{itemize}
+    \item Find Operation: Given two elements $a,b \in A$ determine if $\exists A_i \in \Pi$ s.t $a,b \in A_i$.
+    \item Union Operation: Given two elements $a \in A_i$ and $b \in A_j$, \textit{merge} $A_i$ and $A_j$. That is, the result of this operation to the partition $\Pi$ will be a new partition $\Pi'$ such that $\Pi' = (\Pi \setminus \{A_i, A_j\}) \cup (A_i \cup A_j)$.
+\end{itemize}
