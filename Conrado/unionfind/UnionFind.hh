@@ -23,7 +23,13 @@ class UnionFind {
 
         void merge(unsigned int ri, unsigned int rj);
 
+        void resetMetric();
+
         unsigned int num_blocks() const;
+
+        unsigned int getTPL() const;
+
+        unsigned int getTPU() const;
 
     private:
         int* P;
@@ -32,6 +38,9 @@ class UnionFind {
         bool weighted;
         UnionStrategy strat;
         PathStrategy path;
+
+        unsigned int tpl;
+        unsigned int tpu;
 
         void mergeQU(unsigned int i, unsigned int j);
         void mergeUW(unsigned int i, unsigned int j);

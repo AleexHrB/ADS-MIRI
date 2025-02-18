@@ -4,38 +4,32 @@
 using namespace std;
 
 
-struct myPair {
-    unsigned int first;
-    unsigned int second;
-};
-
 int main(int argc, char** argv) {
 
-    unsigned int size = atoi(argv[1]);
-    unsigned int m = size*(size - 1) / 2;
+    unsigned int size;
+    cin >> size;
 
-    myPair* pairs = (myPair*) malloc(m * sizeof(myPair));
+    unsigned int UR,PH;
+    cin >> UR >> PH;
 
-    unsigned int index = 0;
-    for (unsigned int i = 0; i < size; ++i) {
-        for (unsigned int j = i + 1; j < size; ++j) {
-            pairs[index].first = i;
-            pairs[index].second = j;
-            ++index;
+    unsigned int delta = 250;
+    unsigned int count = 0;
+
+    UnionFind uf(size, UnionFind::UnionStrategy(UR), UnionFind::PathStrategy(PH));
+
+    while (uf.num_blocks() != 1) {
+
+        if (count == delta) {
+            unsigned int tpl = uf.getTPL();
+            unsigned int tpu = uf.getTPU();
+            uf.resetMetric();
+            printf("TPL = %d, TPU = %d \n", tpl, tpu);
+            count = 0;
         }
+
+        unsigned int i,j;
+        cin >> i >> j;
+        uf.merge(i,j);
+        ++count;
     }
-
-    srand(time(NULL));
-    random_shuffle(&pairs[0], &pairs[m]);
-
-    UnionFind uf(size, UnionFind::UR, UnionFind::PH);
-
-    index = 0;
-    while (uf.num_blocks() != 1 and index < m) {
-        uf.merge(pairs[index].first, pairs[index].second);
-        ++index;
-    }
-
-    free(pairs);
-
 }

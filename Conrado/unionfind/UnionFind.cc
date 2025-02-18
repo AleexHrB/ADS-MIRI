@@ -1,6 +1,5 @@
 #include "UnionFind.hh"
 #include <cstdlib>
-#include <iostream>
 using namespace std;
 #define min(a,b) (((a)<(b))?(a):(b))
 
@@ -16,10 +15,23 @@ UnionFind::UnionFind(unsigned int n, UnionStrategy s, PathStrategy p) {
     path = p;
     numBlocks = n;
     size = n;
+    tpl = tpu = 0;
 }
 
 UnionFind::~UnionFind() {
     free(P);
+}
+
+void UnionFind::resetMetric() {
+    tpl = tpu = 0;
+}
+
+unsigned int UnionFind::getTPL() const {
+    return tpl;
+}
+
+unsigned int UnionFind::getTPU() const {
+    return tpu;
 }
 
 unsigned int UnionFind::find(unsigned int i) {
@@ -32,7 +44,11 @@ unsigned int UnionFind::find(unsigned int i) {
         case PathStrategy::PH:
             return pathPH(i);
         default:
-            while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
+            while (weighted ? P[i] > 0 : P[i] != i) {
+                i = P[i];
+                ++tpl;
+            }
+
             return i;
     }
 }
@@ -42,7 +58,10 @@ unsigned int UnionFind::pathFC(unsigned int i) {
     if (weighted ? P[i] < 0 : P[i] == i) return i;
 
     else {
+        ++tpl;
         P[i] = pathFC(P[i]);
+        ++tpu;
+        ++tpl;
         return P[i];
     }
 }
@@ -53,11 +72,14 @@ unsigned int UnionFind::pathPS(unsigned int i) {
 
     unsigned int i1 = i;
     unsigned int i2 = P[i1];
+    ++tpl;
 
     while (weighted ? P[i2] > 0 : P[i2] != i2) {
         P[i1] = P[i2];
+        ++tpu;
         i1 = i2;
         i2 = P[i2];
+        ++tpl;
     }
 
     return i2;
@@ -70,13 +92,18 @@ unsigned int UnionFind::pathPH(unsigned int i) {
     unsigned int i1 = i;
     unsigned int i2 = P[i1];
     bool setParent = true;
+    ++tpl;
 
     while (weighted ? P[i2] > 0 : P[i2] != i2) {
 
-        if (setParent) P[i1] = P[i2];
+        if (setParent) {
+            P[i1] = P[i2];
+            ++tpu;
+        }
         setParent = not setParent;
         i1 = i2;
         i2 = P[i2];
+        ++tpl;
     }
 
     return i2;
@@ -111,8 +138,6 @@ void UnionFind::mergeQU(unsigned int i, unsigned int j) {
     if (ri != rj) {
         P[ri] = rj;
         --numBlocks;
-        for (unsigned int k = 0; k < size; ++k) cout << P[k] << " ";
-        cout << endl;
     }
 
 }
@@ -134,8 +159,6 @@ void UnionFind::mergeUW(unsigned int i, unsigned int j) {
             P[rj] = ri;
         }
          --numBlocks;
-         for (unsigned int k = 0; k < size; ++k) cout << P[k] << " ";
-         cout << endl;
 
     }
 }
@@ -157,7 +180,5 @@ void UnionFind::mergeUR(unsigned int i, unsigned int j) {
             P[rj] = ri;
         }
         --numBlocks;
-         for (unsigned int k = 0; k < size; ++k) cout << P[k] << " ";
-         cout << endl;
     }
 }
