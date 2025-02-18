@@ -37,7 +37,7 @@ class UnionFind {
         void mergeUW(unsigned int i, unsigned int j);
         void mergeUR(unsigned int i, unsigned int j);
 
-        void pathFC(unsigned int i, unsigned int ri);
-        void pathPS(unsigned int i);
-        void pathPH(unsigned int i);
+        unsigned int pathFC(unsigned int i);
+        unsigned int pathPS(unsigned int i);
+        unsigned int pathPH(unsigned int i);
 };

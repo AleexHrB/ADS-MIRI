@@ -24,76 +24,62 @@ UnionFind::~UnionFind() {
 
 unsigned int UnionFind::find(unsigned int i) {
 
-    unsigned int ri = i;
-    while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
-
-    unsigned int aux = ri;
-    ri = i;
-    i = aux;
-
     switch(path) {
         case PathStrategy::FC:
-            pathFC(i, ri);
-            break;
+            return pathFC(i);
         case PathStrategy::PS:
-            pathPS(i);
-            break;
+            return pathPS(i);
         case PathStrategy::PH:
-            pathPH(i);
-            break;
+            return pathPH(i);
         default:
-            break;
-    }
-
-    return ri;
-}
-
-void UnionFind::pathFC(unsigned int i, unsigned int ri) {
-
-    while (weighted ? P[i] > 0 : P[i] != i) {
-        int aux = i;
-        i = P[i];
-        P[aux] = ri;
+            while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
+            return i;
     }
 }
 
-void UnionFind::pathPS(unsigned int i) {
+unsigned int UnionFind::pathFC(unsigned int i) {
 
-    int setParent[2] = {-1,-1};
-    unsigned int index = 0;
+    if (weighted ? P[i] < 0 : P[i] == i) return i;
 
-    while (weighted ? P[i] > 0 : P[i] != i) {
-
-        if (setParent[index] != -1) {
-            P[setParent[index]] = i;
-        }
-
-        setParent[index] = i;
-        ++index;
-        index = index & 0x01;
-
-        i = P[i];
+    else {
+        P[i] = pathFC(P[i]);
+        return P[i];
     }
 }
 
-void UnionFind::pathPH(unsigned int i) {
+unsigned int UnionFind::pathPS(unsigned int i) {
 
+    if (weighted ? P[i] < 0 : P[i] == i) return i;
 
-    bool setParent = false;
-    unsigned int childIndex = i;
+    unsigned int i1 = i;
+    unsigned int i2 = P[i1];
 
-    if (weighted ? P[i] > 0 : P[i] != i) i = P[i];
+    while (weighted ? P[i2] > 0 : P[i2] != i2) {
+        P[i1] = P[i2];
+        i1 = i2;
+        i2 = P[i2];
+    }
 
-    while (weighted ? P[i] > 0 : P[i] != i) {
+    return i2;
+}
 
-        if (setParent) {
-            P[childIndex] = i;
-            childIndex = i;
-        }
+unsigned int UnionFind::pathPH(unsigned int i) {
 
+    if (weighted ? P[i] < 0 : P[i] == i) return i;
+
+    unsigned int i1 = i;
+    unsigned int i2 = P[i1];
+    bool setParent = true;
+
+    while (weighted ? P[i2] > 0 : P[i2] != i2) {
+
+        if (setParent) P[i1] = P[i2];
         setParent = not setParent;
-        i = P[i];
+        i1 = i2;
+        i2 = P[i2];
     }
+
+    return i2;
 }
 
 unsigned int UnionFind::num_blocks() const {
