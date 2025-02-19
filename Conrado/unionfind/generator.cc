@@ -18,10 +18,18 @@ int main(int argc, char**argv) {
     while (uf.num_blocks() != 1) {
         pair<unsigned int, unsigned int> p = {0,0};
 
-        while (p.first == p.second or not s.insert(p).second) {
+        while (p.first == p.second or s.find(p) != s.end()) {
             p.first = rand() % n;
             p.second = rand()% n;
+
+            if (p.first > p.second) {
+                unsigned int aux = p.first;
+                p.first = p.second;
+                p.second = aux;
+            }
         }
+
+        s.insert(p);
 
         cout << p.first << " " <<  p.second << endl;
         uf.merge(p.first, p.second);

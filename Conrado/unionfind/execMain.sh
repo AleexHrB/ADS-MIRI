@@ -15,7 +15,7 @@ for f in $(ls ./instances)
 do
     size=$(echo $f | grep -oP '(?<=size=)[0-9]+')
     file="./instances/${f}"
-    (echo "$size $UR $PS" ; cat $file) | ./main.exe
+    (echo "$size $UR $NC" ; cat $file) | ./main.exe
 done
 
 echo "Finish!"
