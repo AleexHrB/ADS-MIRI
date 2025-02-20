@@ -40,7 +40,7 @@ unsigned int UnionFind::getTPL() const {
     for (unsigned int i = 0; i < size; ++i) {
         unsigned int j = i;
 
-        while (weighted ? P[j] < 0 : P[j] == j) {
+        while (weighted ? P[j] > 0 : P[j] != j) {
             j = P[j];
             ++tpl;
         }
@@ -96,7 +96,6 @@ unsigned int UnionFind::pathPS(unsigned int i) {
         ++tpu;
     }
 
-    if (parent(i) != i) ++tpu;
     i = parent(i);
     return i;
 }
@@ -109,7 +108,6 @@ unsigned int UnionFind::pathPH(unsigned int i) {
         ++tpu;
     }
 
-    if (parent(i) != i) ++tpu;
     i = parent(i);
     return i;
 }
