@@ -21,9 +21,11 @@ class UnionFind {
 
         unsigned int find(unsigned int i);
 
-        void merge(unsigned int ri, unsigned int rj);
+        void merge(unsigned int i, unsigned int j);
 
         void resetMetric();
+
+        void printUF();
 
         unsigned int num_blocks() const;
 
@@ -39,12 +41,13 @@ class UnionFind {
         UnionStrategy strat;
         PathStrategy path;
 
-        unsigned int tpl;
         unsigned int tpu;
 
         void mergeQU(unsigned int i, unsigned int j);
         void mergeUW(unsigned int i, unsigned int j);
         void mergeUR(unsigned int i, unsigned int j);
+
+        inline unsigned int parent(unsigned int i);
 
         unsigned int pathFC(unsigned int i);
         unsigned int pathPS(unsigned int i);

@@ -10,7 +10,7 @@ int main(int argc, char**argv) {
     unsigned int n = atoi(argv[1]);
     unsigned int seed = atoi(argv[2]);
 
-    UnionFind uf(n, UnionFind::UR, UnionFind::PS);
+    UnionFind uf(n, UnionFind::UW, UnionFind::PS);
     srand(seed);
     
     set<pair<unsigned int, unsigned int>> s;
@@ -34,5 +34,8 @@ int main(int argc, char**argv) {
         cout << p.first << " " <<  p.second << endl;
         uf.merge(p.first, p.second);
     }
+
+    //uf.printUF();
+    //cout << uf.num_blocks() << endl;
 
 }

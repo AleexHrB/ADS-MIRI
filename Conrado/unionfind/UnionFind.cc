@@ -1,5 +1,6 @@
 #include "UnionFind.hh"
 #include <cstdlib>
+#include <cstdio>
 using namespace std;
 #define min(a,b) (((a)<(b))?(a):(b))
 
@@ -15,7 +16,7 @@ UnionFind::UnionFind(unsigned int n, UnionStrategy s, PathStrategy p) {
     path = p;
     numBlocks = n;
     size = n;
-    tpl = tpu = 0;
+    tpu = 0;
 }
 
 UnionFind::~UnionFind() {
@@ -23,10 +24,29 @@ UnionFind::~UnionFind() {
 }
 
 void UnionFind::resetMetric() {
-    tpl = tpu = 0;
+    tpu = 0;
+}
+
+void UnionFind::printUF() {
+
+    for (unsigned int i = 0; i < size; ++i) printf("%d ", P[i]);
+    printf("\n");
 }
 
 unsigned int UnionFind::getTPL() const {
+
+    unsigned int tpl = 0;
+
+    for (unsigned int i = 0; i < size; ++i) {
+        unsigned int j = i;
+
+        while (weighted ? P[j] < 0 : P[j] == j) {
+            j = P[j];
+            ++tpl;
+        }
+
+    }
+
     return tpl;
 }
 
@@ -46,7 +66,6 @@ unsigned int UnionFind::find(unsigned int i) {
         default:
             while (weighted ? P[i] > 0 : P[i] != i) {
                 i = P[i];
-                ++tpl;
             }
 
             return i;
@@ -58,63 +77,54 @@ unsigned int UnionFind::pathFC(unsigned int i) {
     if (weighted ? P[i] < 0 : P[i] == i) return i;
 
     else {
-        ++tpl;
         P[i] = pathFC(P[i]);
         ++tpu;
-        ++tpl;
         return P[i];
     }
 }
 
+inline unsigned int UnionFind::parent(unsigned int i) {
+    return P[i] < 0 ? i : P[i];
+}
+
 unsigned int UnionFind::pathPS(unsigned int i) {
 
-    if (weighted ? P[i] < 0 : P[i] == i) return i;
-
-    unsigned int i1 = i;
-    unsigned int i2 = P[i1];
-    ++tpl;
-
-    while (weighted ? P[i2] > 0 : P[i2] != i2) {
-        P[i1] = P[i2];
+    while (parent(i) != parent(parent(i))) {
+        unsigned int aux = P[i];
+        P[i] = P[P[i]];
+        i = aux;
         ++tpu;
-        i1 = i2;
-        i2 = P[i2];
-        ++tpl;
     }
 
-    return i2;
+    if (parent(i) != i) ++tpu;
+    i = parent(i);
+    return i;
 }
 
 unsigned int UnionFind::pathPH(unsigned int i) {
 
-    if (weighted ? P[i] < 0 : P[i] == i) return i;
-
-    unsigned int i1 = i;
-    unsigned int i2 = P[i1];
-    bool setParent = true;
-    ++tpl;
-
-    while (weighted ? P[i2] > 0 : P[i2] != i2) {
-
-        if (setParent) {
-            P[i1] = P[i2];
-            ++tpu;
-        }
-        setParent = not setParent;
-        i1 = i2;
-        i2 = P[i2];
-        ++tpl;
+    while (parent(i) != parent(parent(i))) {
+        P[i] = P[P[i]];
+        i = P[i];
+        ++tpu;
     }
 
-    return i2;
+    if (parent(i) != i) ++tpu;
+    i = parent(i);
+    return i;
 }
 
 unsigned int UnionFind::num_blocks() const {
     return numBlocks;
 }
 
-void UnionFind::merge(unsigned int ri, unsigned int rj) {
+void UnionFind::merge(unsigned int i, unsigned int j) {
 
+
+    unsigned int ri = find(i);
+    unsigned int rj = find(j);
+    if (ri == rj) return;
+    --numBlocks;
     switch(strat) {
         case UnionStrategy::QU:
             mergeQU(ri, rj);
@@ -125,60 +135,41 @@ void UnionFind::merge(unsigned int ri, unsigned int rj) {
         case UnionStrategy::UR:
             mergeUR(ri, rj);
             break;
+        default:
+            break;
     }
 }
 
 
 
-void UnionFind::mergeQU(unsigned int i, unsigned int j) {
+void UnionFind::mergeQU(unsigned int ri, unsigned int rj) {
+    P[ri] = rj;
+}
 
-    unsigned int ri = find(i);
-    unsigned int rj = find(j);
+void UnionFind::mergeUW(unsigned int ri, unsigned int rj) {
 
-    if (ri != rj) {
+    //Negative numbers, p[ri] is smaller than p[rj]
+    if (P[ri] >= P[rj]) {
+        P[rj] += P[ri];
         P[ri] = rj;
-        --numBlocks;
     }
 
-}
-
-void UnionFind::mergeUW(unsigned int i, unsigned int j) {
-
-    unsigned int ri = find(i);
-    unsigned int rj = find(j);
-
-    if (ri != rj) {
-        //Negative numbers, p[ri] is smaller than p[rj]
-        if (P[ri] >= P[rj]) {
-            P[rj] += P[ri];
-            P[ri] = rj;
-        }
-
-        else {
-            P[ri] += P[rj];
-            P[rj] = ri;
-        }
-         --numBlocks;
-
+    else {
+        P[ri] += P[rj];
+        P[rj] = ri;
     }
 }
 
-void UnionFind::mergeUR(unsigned int i, unsigned int j) {
+void UnionFind::mergeUR(unsigned int ri, unsigned int rj) {
 
-    unsigned int ri = find(i);
-    unsigned int rj = find(j);
+    //Recall that P[ri] and P[rj] are negative numbers!!!!
+    if (P[ri] >= P[rj]) {
+        P[rj] = min(P[rj], P[ri] - 1);
+        P[ri] = rj;
+    }
 
-    if (ri != rj) {
-        //Recall that P[ri] and P[rj] are negative numbers!!!!
-        if (P[ri] >= P[rj]) {
-            P[rj] = min(P[rj], P[ri] - 1);
-            P[ri] = rj;
-        }
-
-        else {
-            P[ri] = min(P[ri], P[rj] - 1);
-            P[rj] = ri;
-        }
-        --numBlocks;
+    else {
+        P[ri] = min(P[ri], P[rj] - 1);
+        P[rj] = ri;
     }
 }

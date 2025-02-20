@@ -4,7 +4,7 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -std=c++11 -O2 -fopenmp
+CXXFLAGS = -std=c++11 -g
 
 # Targets
 TARGETS = main.exe generator.exe
