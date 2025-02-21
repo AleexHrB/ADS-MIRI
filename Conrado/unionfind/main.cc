@@ -51,22 +51,20 @@ int main(int argc, char** argv) {
 
     UnionFind uf(size, eus, eps);
 
+    printf("tpl,tpu\n");
+
     while (uf.num_blocks() != 1) {
 
-        //if (count == delta) {
-        //    unsigned int tpl = uf.getTPL();
-        //    unsigned int tpu = uf.getTPU();
-        //    uf.resetMetric();
-        //    printf("TPL = %d, TPU = %d \n", tpl, tpu);
-        //    count = 0;
-        //}
+        if (count == delta) {
+            unsigned int tpl = uf.getTPL();
+            unsigned int tpu = uf.getTPU();
+            printf("%d,%d\n", tpl, tpu);
+            count = 0;
+        }
 
         unsigned int i,j;
-        if (cin >> i >> j) uf.merge(i,j);
-        else {
-            uf.printUF();
-            return -1;
-        }
-        //++count;
+        cin >> i >> j;
+        uf.merge(i,j);
+        ++count;
     }
 }

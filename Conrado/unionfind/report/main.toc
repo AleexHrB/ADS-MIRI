@@ -1,8 +1,0 @@
-\babel@toc {english}{}\relax 
-\contentsline {section}{\numberline {1}Introduction}{3}{}%
-\contentsline {section}{\numberline {2}Implementation}{3}{}%
-\contentsline {subsection}{\numberline {2.1}Representation of the partition}{3}{}%
-\contentsline {subsection}{\numberline {2.2}Find Operation}{4}{}%
-\contentsline {subsubsection}{\numberline {2.2.1}Full path compresion}{5}{}%
-\contentsline {subsubsection}{\numberline {2.2.2}Path Splitting}{5}{}%
-\contentsline {subsubsection}{\numberline {2.2.3}Path Halving}{5}{}%

@@ -23,10 +23,6 @@ class UnionFind {
 
         void merge(unsigned int i, unsigned int j);
 
-        void resetMetric();
-
-        void printUF();
-
         unsigned int num_blocks() const;
 
         unsigned int getTPL() const;

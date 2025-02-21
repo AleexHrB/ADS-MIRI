@@ -23,16 +23,6 @@ UnionFind::~UnionFind() {
     free(P);
 }
 
-void UnionFind::resetMetric() {
-    tpu = 0;
-}
-
-void UnionFind::printUF() {
-
-    for (unsigned int i = 0; i < size; ++i) printf("%d ", P[i]);
-    printf("\n");
-}
-
 unsigned int UnionFind::getTPL() const {
 
     unsigned int tpl = 0;
@@ -64,10 +54,7 @@ unsigned int UnionFind::find(unsigned int i) {
         case PathStrategy::PH:
             return pathPH(i);
         default:
-            while (weighted ? P[i] > 0 : P[i] != i) {
-                i = P[i];
-            }
-
+            while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
             return i;
     }
 }
@@ -96,8 +83,7 @@ unsigned int UnionFind::pathPS(unsigned int i) {
         ++tpu;
     }
 
-    i = parent(i);
-    return i;
+    return parent(i);
 }
 
 unsigned int UnionFind::pathPH(unsigned int i) {
@@ -108,8 +94,7 @@ unsigned int UnionFind::pathPH(unsigned int i) {
         ++tpu;
     }
 
-    i = parent(i);
-    return i;
+    return parent(i);
 }
 
 unsigned int UnionFind::num_blocks() const {

@@ -4,7 +4,7 @@ make generator
 
 rm ./instances/*
 
-size=(1000 5000 10000 50000 100000)
+size=(1000 5000 10000)
 
 for n in ${size[@]}
 do
