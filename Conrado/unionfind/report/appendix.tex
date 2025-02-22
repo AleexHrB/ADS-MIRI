@@ -29,7 +29,7 @@ void UnionFind::merge(unsigned int i, unsigned int j) {
 Firstly one can see that there are two calls to the \texttt{find} operation which, depending on the strategy choosen for the path compression they will behave differently. For now let us just consider how the union operation is implemented 
 
 \subsection{Quick-Union}
-Anyone who chooses to use this strategy as their union strategy will perform the union operation in an extremely efficient time—more precisely, in $\Theta(1)$—at the cost of increased time complexity in the find operation. The following code provides an implementation of this approach:
+Anyone who chooses to use this strategy as their union strategy will perform the union operation in an extremely efficient time—as there is only one single operation—at the cost of increased time complexity in the find operation. The following code provides an implementation of this approach:
 
 \begin{center}
     \begin{verbatim}
@@ -73,5 +73,115 @@ void UnionFind::mergeUR(unsigned int ri, unsigned int rj) {
         P[ri] = min(P[ri], P[rj] - 1);
         P[rj] = ri;
     }
+}
+\end{verbatim}
+
+\section{Find Operation: Code}\label{ap:Path}
+Let us tackle the find operation, which is the first call during the union function. The following code correspond to such call: 
+
+\begin{verbatim}
+unsigned int UnionFind::find(unsigned int i) {
+
+    switch(path) {
+        case PathStrategy::FC:
+            return pathFC(i);
+        case PathStrategy::PS:
+            return pathPS(i);
+        case PathStrategy::PH:
+            return pathPH(i);
+        default:
+            while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
+            return i;
+    }
+}
+
+\end{verbatim}
+
+As you can see, depending on the user's strategy for path compression, the code will choose the corresponding approach. It is worth noting that if the user decides not to use any path compression, the find operation will simply look for the representative of the class in a straightforward manner within the while loop (where \texttt{weighted} is just a boolean that indicates whether the representation of representatives uses negative numbers or not).
+
+
+\subsection{Full Compression}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::pathFC(unsigned int i) {
+
+    if (weighted ? P[i] < 0 : P[i] == i) return i;
+
+    else {
+        P[i] = pathFC(P[i]);
+        //Increase by one the counter which tracks 
+        //the number of pointer switches that one makes
+        ++tpu;
+        return P[i];
+    }
+}
+\end{verbatim}
+
+\subsection{Path Splitting}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+
+unsigned int UnionFind::pathPS(unsigned int i) {
+
+    //parent(i) is defined as P[i] < 0 ? i : P[i]
+    while (parent(i) != parent(parent(i))) {
+        unsigned int aux = P[i];
+        P[i] = P[P[i]];
+        i = aux;
+        //Increase by one the counter which tracks 
+        //the number of pointer switches that one makes
+        ++tpu;
+    }
+
+    //This function will stop either at the root or
+    //at a children of the node, that is why we 
+    //must make another call to parent(i)
+    return parent(i);
+}
+\end{verbatim}
+
+
+\subsection{Path Halving}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::pathPH(unsigned int i) {
+
+    while (parent(i) != parent(parent(i))) {
+        P[i] = P[P[i]];
+        i = P[i];
+        //Increase by one the counter which tracks 
+        //the number of pointer switches that one makes
+        ++tpu;
+    }
+
+    //This function will stop either at the root or
+    //at a children of the node, that is why we 
+    //must make another call to parent(i)
+    return parent(i);
+}
+\end{verbatim}
+
+\section{TPL Calculation}\label{ap:TPL}
+As stated before, the author has decided to traverse the entire data structure to calculate the TPL. Again, it is important to remember that the goal of this metric is its value rather than the efficiency of its computation. The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::getTPL() const {
+
+    unsigned int tpl = 0;
+
+    for (unsigned int i = 0; i < size; ++i) {
+        unsigned int j = i;
+
+        while (weighted ? P[j] > 0 : P[j] != j) {
+            j = P[j];
+            ++tpl;
+        }
+
+    }
+
+    return tpl;
 }
 \end{verbatim}
