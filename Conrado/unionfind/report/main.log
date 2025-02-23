@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.13)  22 FEB 2025 21:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.13)  23 FEB 2025 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -599,7 +599,7 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box54
-) (./main.aux (./one.aux) (./appendix.aux))
+) (./main.aux (./one.aux) (./time.aux) (./appendix.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -753,317 +753,306 @@ Underfull \hbox (badness 3019) in paragraph at lines 21--21
 <../images/plotNCNonFull1000_PathLength.pdf, id=37, 376.57188pt x 309.2895pt>
 File: ../images/plotNCNonFull1000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotNCNonFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotNCNonFull1000_PathLength.pdf  used on input line 33.
+Package pdftex.def Info: ../images/plotNCNonFull1000_PathLength.pdf  used on input line 25.
 (pdftex.def)             Requested size: 145.68144pt x 119.65494pt.
 
-Underfull \hbox (badness 2781) in paragraph at lines 34--34
-[]\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
+Underfull \hbox (badness 2564) in paragraph at lines 26--26
+[]\T1/cmr/m/n/9 (d) |Path Lengths with dif-fer-ent
  []
 
 <../images/plotNCNonFull5000_PathLength.pdf, id=38, 367.68365pt x 307.34523pt>
 File: ../images/plotNCNonFull5000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotNCNonFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotNCNonFull5000_PathLength.pdf  used on input line 40.
+Package pdftex.def Info: ../images/plotNCNonFull5000_PathLength.pdf  used on input line 32.
 (pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
 
-Underfull \hbox (badness 2564) in paragraph at lines 41--41
-[]\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
+Underfull \hbox (badness 3019) in paragraph at lines 33--33
+[]\T1/cmr/m/n/9 (e) |Path Lengths with dif-fer-ent
  []
 
 <../images/plotNCNonFull10000_PathLength.pdf, id=39, 367.68365pt x 307.34523pt>
 File: ../images/plotNCNonFull10000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotNCNonFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotNCNonFull10000_PathLength.pdf  used on input line 47.
+Package pdftex.def Info: ../images/plotNCNonFull10000_PathLength.pdf  used on input line 39.
 (pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
 
-Underfull \hbox (badness 3019) in paragraph at lines 48--48
-[]\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
+Underfull \hbox (badness 3302) in paragraph at lines 40--40
+[]\T1/cmr/m/n/9 (f) |Path Lengths with dif-fer-ent
  []
 
 )
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
-Package pdftex.def Info: title/logo-upc.png  used on input line 65.
+Package pdftex.def Info: title/logo-upc.png  used on input line 70.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[4] (./fcFigures.tex
+[4] (./tpuFigures.tex
 <../images/plotFCFull1000_PathLength.pdf, id=44, 376.57188pt x 309.2895pt>
 File: ../images/plotFCFull1000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotFCFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotFCFull1000_PathLength.pdf  used on input line 6.
+Package pdftex.def Info: ../images/plotFCFull1000_PathLength.pdf  used on input line 5.
 (pdftex.def)             Requested size: 145.68144pt x 119.65494pt.
 
-Underfull \hbox (badness 2781) in paragraph at lines 7--7
+Underfull \hbox (badness 2781) in paragraph at lines 6--6
 []\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
  []
 
 <../images/plotFCFull5000_PathLength.pdf, id=45, 367.68365pt x 307.34323pt>
 File: ../images/plotFCFull5000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotFCFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotFCFull5000_PathLength.pdf  used on input line 13.
+Package pdftex.def Info: ../images/plotFCFull5000_PathLength.pdf  used on input line 12.
 (pdftex.def)             Requested size: 145.68144pt x 121.77675pt.
 
-Underfull \hbox (badness 2564) in paragraph at lines 14--14
+Underfull \hbox (badness 2564) in paragraph at lines 13--13
 []\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
  []
 
 <../images/plotFCFull10000_PathLength.pdf, id=46, 367.68365pt x 307.34425pt>
 File: ../images/plotFCFull10000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotFCFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotFCFull10000_PathLength.pdf  used on input line 20.
+Package pdftex.def Info: ../images/plotFCFull10000_PathLength.pdf  used on input line 19.
 (pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
 
-Underfull \hbox (badness 3019) in paragraph at lines 21--21
+Underfull \hbox (badness 3019) in paragraph at lines 20--20
 []\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
  []
 
-<../images/plotFCNonFull1000_PathLength.pdf, id=47, 376.57188pt x 309.2915pt>
+<../images/plotPSFull1000_PathLength.pdf, id=47, 376.57188pt x 309.28749pt>
+File: ../images/plotPSFull1000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPSFull1000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPSFull1000_PathLength.pdf  used on input line 25.
+(pdftex.def)             Requested size: 145.68144pt x 119.65416pt.
+
+Underfull \hbox (badness 2564) in paragraph at lines 26--26
+[]\T1/cmr/m/n/9 (d) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPSFull5000_PathLength.pdf, id=48, 367.68365pt x 307.34425pt>
+File: ../images/plotPSFull5000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPSFull5000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPSFull5000_PathLength.pdf  used on input line 32.
+(pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
+
+Underfull \hbox (badness 3019) in paragraph at lines 33--33
+[]\T1/cmr/m/n/9 (e) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPSFull10000_PathLength.pdf, id=49, 367.68365pt x 307.34523pt>
+File: ../images/plotPSFull10000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPSFull10000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPSFull10000_PathLength.pdf  used on input line 39.
+(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
+
+Underfull \hbox (badness 3302) in paragraph at lines 40--40
+[]\T1/cmr/m/n/9 (f) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPHFull1000_PathLength.pdf, id=50, 376.57188pt x 309.2885pt>
+File: ../images/plotPHFull1000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPHFull1000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPHFull1000_PathLength.pdf  used on input line 45.
+(pdftex.def)             Requested size: 145.68144pt x 119.65456pt.
+
+Underfull \hbox (badness 2781) in paragraph at lines 46--46
+[]\T1/cmr/m/n/9 (g) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPHFull5000_PathLength.pdf, id=51, 367.68365pt x 307.34523pt>
+File: ../images/plotPHFull5000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPHFull5000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPHFull5000_PathLength.pdf  used on input line 52.
+(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
+
+Underfull \hbox (badness 2564) in paragraph at lines 53--53
+[]\T1/cmr/m/n/9 (h) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPHFull10000_PathLength.pdf, id=52, 367.68365pt x 307.34523pt>
+File: ../images/plotPHFull10000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPHFull10000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPHFull10000_PathLength.pdf  used on input line 59.
+(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
+<../images/plotFCNonFull1000_PathLength.pdf, id=53, 376.57188pt x 309.2915pt>
 File: ../images/plotFCNonFull1000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotFCNonFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotFCNonFull1000_PathLength.pdf  used on input line 33.
+Package pdftex.def Info: ../images/plotFCNonFull1000_PathLength.pdf  used on input line 71.
 (pdftex.def)             Requested size: 145.68144pt x 119.65572pt.
 
-Underfull \hbox (badness 2781) in paragraph at lines 34--34
+Underfull \hbox (badness 2781) in paragraph at lines 72--72
 []\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
  []
 
-<../images/plotFCNonFull5000_PathLength.pdf, id=48, 367.68365pt x 307.34624pt>
+<../images/plotFCNonFull5000_PathLength.pdf, id=54, 367.68365pt x 307.34624pt>
 File: ../images/plotFCNonFull5000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotFCNonFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotFCNonFull5000_PathLength.pdf  used on input line 40.
+Package pdftex.def Info: ../images/plotFCNonFull5000_PathLength.pdf  used on input line 78.
 (pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
 
-Underfull \hbox (badness 2564) in paragraph at lines 41--41
+Underfull \hbox (badness 2564) in paragraph at lines 79--79
 []\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
  []
 
-<../images/plotFCNonFull10000_PathLength.pdf, id=49, 367.68365pt x 307.34624pt>
+<../images/plotFCNonFull10000_PathLength.pdf, id=55, 367.68365pt x 307.34624pt>
 File: ../images/plotFCNonFull10000_PathLength.pdf Graphic file (type pdf)
 <use ../images/plotFCNonFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotFCNonFull10000_PathLength.pdf  used on input line 47.
+Package pdftex.def Info: ../images/plotFCNonFull10000_PathLength.pdf  used on input line 85.
 (pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
 
-Underfull \hbox (badness 3019) in paragraph at lines 48--48
+Underfull \hbox (badness 3019) in paragraph at lines 86--86
 []\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
  []
 
-<../images/plotFCFull1000_PointerUpdates.pdf, id=50, 373.79451pt x 309.29051pt>
-File: ../images/plotFCFull1000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotFCFull1000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotFCFull1000_PointerUpdates.pdf  used on input line 60.
-(pdftex.def)             Requested size: 145.68144pt x 120.54257pt.
-<../images/plotFCFull5000_PointerUpdates.pdf, id=51, 364.90527pt x 307.34724pt>
-File: ../images/plotFCFull5000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotFCFull5000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotFCFull5000_PointerUpdates.pdf  used on input line 67.
-(pdftex.def)             Requested size: 145.68144pt x 122.70691pt.
-<../images/plotFCFull10000_PointerUpdates.pdf, id=52, 364.90527pt x 307.34523pt>
-File: ../images/plotFCFull10000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotFCFull10000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotFCFull10000_PointerUpdates.pdf  used on input line 74.
-(pdftex.def)             Requested size: 145.68144pt x 122.7061pt.
-<../images/plotFCNonFull1000_PointerUpdates.pdf, id=53, 368.7948pt x 309.2885pt>
-File: ../images/plotFCNonFull1000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotFCNonFull1000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotFCNonFull1000_PointerUpdates.pdf  used on input line 88.
-(pdftex.def)             Requested size: 145.68144pt x 122.17941pt.
-<../images/plotFCNonFull5000_PointerUpdates.pdf, id=54, 364.90527pt x 307.34624pt>
-File: ../images/plotFCNonFull5000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotFCNonFull5000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotFCNonFull5000_PointerUpdates.pdf  used on input line 95.
-(pdftex.def)             Requested size: 145.68144pt x 122.70651pt.
-<../images/plotFCNonFull10000_PointerUpdates.pdf, id=55, 364.90527pt x 307.34724pt>
-File: ../images/plotFCNonFull10000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotFCNonFull10000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotFCNonFull10000_PointerUpdates.pdf  used on input line 102.
-(pdftex.def)             Requested size: 145.68144pt x 122.70691pt.
+<../images/plotPSNonFull1000_PathLength.pdf, id=56, 376.57188pt x 309.2915pt>
+File: ../images/plotPSNonFull1000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPSNonFull1000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPSNonFull1000_PathLength.pdf  used on input line 91.
+(pdftex.def)             Requested size: 145.68144pt x 119.65572pt.
+
+Underfull \hbox (badness 2564) in paragraph at lines 92--92
+[]\T1/cmr/m/n/9 (d) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPSNonFull5000_PathLength.pdf, id=57, 367.68365pt x 307.34624pt>
+File: ../images/plotPSNonFull5000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPSNonFull5000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPSNonFull5000_PathLength.pdf  used on input line 98.
+(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
+
+Underfull \hbox (badness 3019) in paragraph at lines 99--99
+[]\T1/cmr/m/n/9 (e) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPSNonFull10000_PathLength.pdf, id=58, 367.68365pt x 307.34624pt>
+File: ../images/plotPSNonFull10000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPSNonFull10000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPSNonFull10000_PathLength.pdf  used on input line 105.
+(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
+
+Underfull \hbox (badness 3302) in paragraph at lines 106--106
+[]\T1/cmr/m/n/9 (f) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPHNonFull1000_PathLength.pdf, id=59, 376.57188pt x 309.29051pt>
+File: ../images/plotPHNonFull1000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPHNonFull1000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPHNonFull1000_PathLength.pdf  used on input line 111.
+(pdftex.def)             Requested size: 145.68144pt x 119.65533pt.
+
+Underfull \hbox (badness 2781) in paragraph at lines 112--112
+[]\T1/cmr/m/n/9 (g) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPHNonFull5000_PathLength.pdf, id=60, 367.68365pt x 307.34624pt>
+File: ../images/plotPHNonFull5000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPHNonFull5000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPHNonFull5000_PathLength.pdf  used on input line 118.
+(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
+
+Underfull \hbox (badness 2564) in paragraph at lines 119--119
+[]\T1/cmr/m/n/9 (h) |Path Lengths with dif-fer-ent
+ []
+
+<../images/plotPHNonFull10000_PathLength.pdf, id=61, 367.68365pt x 307.34624pt>
+File: ../images/plotPHNonFull10000_PathLength.pdf Graphic file (type pdf)
+<use ../images/plotPHNonFull10000_PathLength.pdf>
+Package pdftex.def Info: ../images/plotPHNonFull10000_PathLength.pdf  used on input line 125.
+(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
 )
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
-Package pdftex.def Info: title/logo-upc.png  used on input line 75.
+Package pdftex.def Info: title/logo-upc.png  used on input line 80.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[5 <../images/plotNCFull1000_PathLength.pdf> <../images/plotNCFull5000_PathLength.pdf> <../images/plotNCFull10000_PathLength.pdf> <../images/plotNCNonFull1000_PathLength.pdf> <../images/plotNCNonFull5000_PathLength.pdf> <../images/plotNCNonFull10000_PathLength.pdf>] (./psFigures.tex
-<../images/plotPSFull1000_PathLength.pdf, id=208, 376.57188pt x 309.28749pt>
-File: ../images/plotPSFull1000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPSFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPSFull1000_PathLength.pdf  used on input line 6.
-(pdftex.def)             Requested size: 145.68144pt x 119.65416pt.
-
-Underfull \hbox (badness 2781) in paragraph at lines 7--7
-[]\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPSFull5000_PathLength.pdf, id=209, 367.68365pt x 307.34425pt>
-File: ../images/plotPSFull5000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPSFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPSFull5000_PathLength.pdf  used on input line 13.
-(pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
-
-Underfull \hbox (badness 2564) in paragraph at lines 14--14
-[]\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPSFull10000_PathLength.pdf, id=210, 367.68365pt x 307.34523pt>
-File: ../images/plotPSFull10000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPSFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPSFull10000_PathLength.pdf  used on input line 20.
-(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
-
-Underfull \hbox (badness 3019) in paragraph at lines 21--21
-[]\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPSNonFull1000_PathLength.pdf, id=211, 376.57188pt x 309.2915pt>
-File: ../images/plotPSNonFull1000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPSNonFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPSNonFull1000_PathLength.pdf  used on input line 33.
-(pdftex.def)             Requested size: 145.68144pt x 119.65572pt.
-
-Underfull \hbox (badness 2781) in paragraph at lines 34--34
-[]\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPSNonFull5000_PathLength.pdf, id=212, 367.68365pt x 307.34624pt>
-File: ../images/plotPSNonFull5000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPSNonFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPSNonFull5000_PathLength.pdf  used on input line 40.
-(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
-
-Underfull \hbox (badness 2564) in paragraph at lines 41--41
-[]\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPSNonFull10000_PathLength.pdf, id=213, 367.68365pt x 307.34624pt>
-File: ../images/plotPSNonFull10000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPSNonFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPSNonFull10000_PathLength.pdf  used on input line 47.
-(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
-
-Underfull \hbox (badness 3019) in paragraph at lines 48--48
-[]\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPSFull1000_PointerUpdates.pdf, id=214, 368.7948pt x 309.2885pt>
+[5 <../images/plotNCFull1000_PathLength.pdf> <../images/plotNCFull5000_PathLength.pdf> <../images/plotNCFull10000_PathLength.pdf> <../images/plotNCNonFull1000_PathLength.pdf> <../images/plotNCNonFull5000_PathLength.pdf> <../images/plotNCNonFull10000_PathLength.pdf>] (./tplFigures.tex
+<../images/plotFCFull1000_PointerUpdates.pdf, id=214, 368.7948pt x 309.28249pt>
+File: ../images/plotFCFull1000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotFCFull1000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotFCFull1000_PointerUpdates.pdf  used on input line 5.
+(pdftex.def)             Requested size: 145.68144pt x 122.17703pt.
+<../images/plotFCFull5000_PointerUpdates.pdf, id=215, 364.90527pt x 307.34624pt>
+File: ../images/plotFCFull5000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotFCFull5000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotFCFull5000_PointerUpdates.pdf  used on input line 12.
+(pdftex.def)             Requested size: 145.68144pt x 122.70651pt.
+<../images/plotFCFull10000_PointerUpdates.pdf, id=216, 364.90527pt x 307.34624pt>
+File: ../images/plotFCFull10000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotFCFull10000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotFCFull10000_PointerUpdates.pdf  used on input line 19.
+(pdftex.def)             Requested size: 145.68144pt x 122.70651pt.
+<../images/plotPSFull1000_PointerUpdates.pdf, id=217, 368.7948pt x 309.2885pt>
 File: ../images/plotPSFull1000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPSFull1000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPSFull1000_PointerUpdates.pdf  used on input line 60.
+Package pdftex.def Info: ../images/plotPSFull1000_PointerUpdates.pdf  used on input line 25.
 (pdftex.def)             Requested size: 145.68144pt x 122.17941pt.
-<../images/plotPSFull5000_PointerUpdates.pdf, id=215, 364.90527pt x 307.34624pt>
+<../images/plotPSFull5000_PointerUpdates.pdf, id=218, 364.90527pt x 307.34624pt>
 File: ../images/plotPSFull5000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPSFull5000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPSFull5000_PointerUpdates.pdf  used on input line 67.
+Package pdftex.def Info: ../images/plotPSFull5000_PointerUpdates.pdf  used on input line 32.
 (pdftex.def)             Requested size: 145.68144pt x 122.70651pt.
-<../images/plotPSFull10000_PointerUpdates.pdf, id=216, 364.90527pt x 307.34624pt>
+<../images/plotPSFull10000_PointerUpdates.pdf, id=219, 364.90527pt x 307.34624pt>
 File: ../images/plotPSFull10000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPSFull10000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPSFull10000_PointerUpdates.pdf  used on input line 74.
+Package pdftex.def Info: ../images/plotPSFull10000_PointerUpdates.pdf  used on input line 39.
 (pdftex.def)             Requested size: 145.68144pt x 122.70651pt.
-<../images/plotPSNonFull1000_PointerUpdates.pdf, id=217, 376.57188pt x 309.2885pt>
-File: ../images/plotPSNonFull1000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotPSNonFull1000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPSNonFull1000_PointerUpdates.pdf  used on input line 88.
-(pdftex.def)             Requested size: 145.68144pt x 119.65456pt.
-<../images/plotPSNonFull5000_PointerUpdates.pdf, id=218, 367.68365pt x 307.34425pt>
-File: ../images/plotPSNonFull5000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotPSNonFull5000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPSNonFull5000_PointerUpdates.pdf  used on input line 95.
-(pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
-<../images/plotPSNonFull10000_PointerUpdates.pdf, id=219, 367.68365pt x 307.34523pt>
-File: ../images/plotPSNonFull10000_PointerUpdates.pdf Graphic file (type pdf)
-<use ../images/plotPSNonFull10000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPSNonFull10000_PointerUpdates.pdf  used on input line 102.
-(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
-) (./phFigures.tex
-<../images/plotPHFull1000_PathLength.pdf, id=220, 376.57188pt x 309.2885pt>
-File: ../images/plotPHFull1000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPHFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPHFull1000_PathLength.pdf  used on input line 6.
-(pdftex.def)             Requested size: 145.68144pt x 119.65456pt.
-
-Underfull \hbox (badness 2781) in paragraph at lines 7--7
-[]\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPHFull5000_PathLength.pdf, id=221, 367.68365pt x 307.34523pt>
-File: ../images/plotPHFull5000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPHFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPHFull5000_PathLength.pdf  used on input line 13.
-(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
-
-Underfull \hbox (badness 2564) in paragraph at lines 14--14
-[]\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPHFull10000_PathLength.pdf, id=222, 367.68365pt x 307.34523pt>
-File: ../images/plotPHFull10000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPHFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPHFull10000_PathLength.pdf  used on input line 20.
-(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
-
-Underfull \hbox (badness 3019) in paragraph at lines 21--21
-[]\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPHNonFull1000_PathLength.pdf, id=223, 376.57188pt x 309.29051pt>
-File: ../images/plotPHNonFull1000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPHNonFull1000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPHNonFull1000_PathLength.pdf  used on input line 33.
-(pdftex.def)             Requested size: 145.68144pt x 119.65533pt.
-
-Underfull \hbox (badness 2781) in paragraph at lines 34--34
-[]\T1/cmr/m/n/9 (a) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPHNonFull5000_PathLength.pdf, id=224, 367.68365pt x 307.34624pt>
-File: ../images/plotPHNonFull5000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPHNonFull5000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPHNonFull5000_PathLength.pdf  used on input line 40.
-(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
-
-Underfull \hbox (badness 2564) in paragraph at lines 41--41
-[]\T1/cmr/m/n/9 (b) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPHNonFull10000_PathLength.pdf, id=225, 367.68365pt x 307.34624pt>
-File: ../images/plotPHNonFull10000_PathLength.pdf Graphic file (type pdf)
-<use ../images/plotPHNonFull10000_PathLength.pdf>
-Package pdftex.def Info: ../images/plotPHNonFull10000_PathLength.pdf  used on input line 47.
-(pdftex.def)             Requested size: 145.68144pt x 121.77795pt.
-
-Underfull \hbox (badness 3019) in paragraph at lines 48--48
-[]\T1/cmr/m/n/9 (c) |Path Lengths with dif-fer-ent
- []
-
-<../images/plotPHFull1000_PointerUpdates.pdf, id=226, 368.7948pt x 309.28249pt>
+<../images/plotPHFull1000_PointerUpdates.pdf, id=220, 368.7948pt x 309.28249pt>
 File: ../images/plotPHFull1000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPHFull1000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPHFull1000_PointerUpdates.pdf  used on input line 61.
+Package pdftex.def Info: ../images/plotPHFull1000_PointerUpdates.pdf  used on input line 45.
 (pdftex.def)             Requested size: 145.68144pt x 122.17703pt.
-<../images/plotPHFull5000_PointerUpdates.pdf, id=227, 359.90561pt x 307.34523pt>
+<../images/plotPHFull5000_PointerUpdates.pdf, id=221, 359.90561pt x 307.34523pt>
 File: ../images/plotPHFull5000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPHFull5000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPHFull5000_PointerUpdates.pdf  used on input line 68.
+Package pdftex.def Info: ../images/plotPHFull5000_PointerUpdates.pdf  used on input line 52.
 (pdftex.def)             Requested size: 145.68144pt x 124.40848pt.
-<../images/plotPHFull10000_PointerUpdates.pdf, id=228, 364.90527pt x 307.34624pt>
+<../images/plotPHFull10000_PointerUpdates.pdf, id=222, 364.90527pt x 307.34624pt>
 File: ../images/plotPHFull10000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPHFull10000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPHFull10000_PointerUpdates.pdf  used on input line 75.
+Package pdftex.def Info: ../images/plotPHFull10000_PointerUpdates.pdf  used on input line 59.
 (pdftex.def)             Requested size: 145.68144pt x 122.70651pt.
+<../images/plotFCNonFull1000_PointerUpdates.pdf, id=223, 376.57188pt x 309.2885pt>
+File: ../images/plotFCNonFull1000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotFCNonFull1000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotFCNonFull1000_PointerUpdates.pdf  used on input line 72.
+(pdftex.def)             Requested size: 145.68144pt x 119.65456pt.
+<../images/plotFCNonFull5000_PointerUpdates.pdf, id=224, 367.68365pt x 307.34425pt>
+File: ../images/plotFCNonFull5000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotFCNonFull5000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotFCNonFull5000_PointerUpdates.pdf  used on input line 79.
+(pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
+<../images/plotFCNonFull10000_PointerUpdates.pdf, id=225, 367.68365pt x 307.34425pt>
+File: ../images/plotFCNonFull10000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotFCNonFull10000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotFCNonFull10000_PointerUpdates.pdf  used on input line 86.
+(pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
+<../images/plotPSNonFull1000_PointerUpdates.pdf, id=226, 376.57188pt x 309.2885pt>
+File: ../images/plotPSNonFull1000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotPSNonFull1000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotPSNonFull1000_PointerUpdates.pdf  used on input line 92.
+(pdftex.def)             Requested size: 145.68144pt x 119.65456pt.
+<../images/plotPSNonFull5000_PointerUpdates.pdf, id=227, 367.68365pt x 307.34425pt>
+File: ../images/plotPSNonFull5000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotPSNonFull5000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotPSNonFull5000_PointerUpdates.pdf  used on input line 99.
+(pdftex.def)             Requested size: 145.68144pt x 121.77716pt.
+<../images/plotPSNonFull10000_PointerUpdates.pdf, id=228, 367.68365pt x 307.34523pt>
+File: ../images/plotPSNonFull10000_PointerUpdates.pdf Graphic file (type pdf)
+<use ../images/plotPSNonFull10000_PointerUpdates.pdf>
+Package pdftex.def Info: ../images/plotPSNonFull10000_PointerUpdates.pdf  used on input line 106.
+(pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
 <../images/plotPHNonFull1000_PointerUpdates.pdf, id=229, 376.57188pt x 309.2885pt>
 File: ../images/plotPHNonFull1000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPHNonFull1000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPHNonFull1000_PointerUpdates.pdf  used on input line 89.
+Package pdftex.def Info: ../images/plotPHNonFull1000_PointerUpdates.pdf  used on input line 112.
 (pdftex.def)             Requested size: 145.68144pt x 119.65456pt.
 <../images/plotPHNonFull5000_PointerUpdates.pdf, id=230, 367.68365pt x 307.34523pt>
 File: ../images/plotPHNonFull5000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPHNonFull5000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPHNonFull5000_PointerUpdates.pdf  used on input line 96.
+Package pdftex.def Info: ../images/plotPHNonFull5000_PointerUpdates.pdf  used on input line 119.
 (pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
 <../images/plotPHNonFull10000_PointerUpdates.pdf, id=231, 367.68365pt x 307.34523pt>
 File: ../images/plotPHNonFull10000_PointerUpdates.pdf Graphic file (type pdf)
 <use ../images/plotPHNonFull10000_PointerUpdates.pdf>
-Package pdftex.def Info: ../images/plotPHNonFull10000_PointerUpdates.pdf  used on input line 103.
+Package pdftex.def Info: ../images/plotPHNonFull10000_PointerUpdates.pdf  used on input line 126.
 (pdftex.def)             Requested size: 145.68144pt x 121.77754pt.
 ))
 
@@ -1071,31 +1060,136 @@ File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 35.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[6 <../images/plotFCFull1000_PathLength.pdf> <../images/plotFCFull5000_PathLength.pdf> <../images/plotFCFull10000_PathLength.pdf> <../images/plotFCNonFull1000_PathLength.pdf> <../images/plotFCNonFull5000_PathLength.pdf> <../images/plotFCNonFull10000_PathLength.pdf>]
+[6]
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 35.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[7 <../images/plotFCFull1000_PointerUpdates.pdf> <../images/plotFCFull5000_PointerUpdates.pdf> <../images/plotFCFull10000_PointerUpdates.pdf> <../images/plotFCNonFull1000_PointerUpdates.pdf> <../images/plotFCNonFull5000_PointerUpdates.pdf> <../images/plotFCNonFull10000_PointerUpdates.pdf> <../images/plotPSFull1000_PathLength.pdf> <../images/plotPSFull5000_PathLength.pdf> <../images/plotPSFull10000_PathLength.pdf>]
+[7 <../images/plotFCFull1000_PathLength.pdf> <../images/plotFCFull5000_PathLength.pdf> <../images/plotFCFull10000_PathLength.pdf> <../images/plotPSFull1000_PathLength.pdf> <../images/plotPSFull5000_PathLength.pdf> <../images/plotPSFull10000_PathLength.pdf> <../images/plotPHFull1000_PathLength.pdf> <../images/plotPHFull5000_PathLength.pdf> <../images/plotPHFull10000_PathLength.pdf>]
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 35.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[8 <../images/plotPSNonFull1000_PathLength.pdf> <../images/plotPSNonFull5000_PathLength.pdf> <../images/plotPSNonFull10000_PathLength.pdf> <../images/plotPSFull1000_PointerUpdates.pdf> <../images/plotPSFull5000_PointerUpdates.pdf> <../images/plotPSFull10000_PointerUpdates.pdf> <../images/plotPSNonFull1000_PointerUpdates.pdf> <../images/plotPSNonFull5000_PointerUpdates.pdf> <../images/plotPSNonFull10000_PointerUpdates.pdf>]
+[8 <../images/plotFCNonFull1000_PathLength.pdf> <../images/plotFCNonFull5000_PathLength.pdf> <../images/plotFCNonFull10000_PathLength.pdf> <../images/plotPSNonFull1000_PathLength.pdf> <../images/plotPSNonFull5000_PathLength.pdf> <../images/plotPSNonFull10000_PathLength.pdf> <../images/plotPHNonFull1000_PathLength.pdf> <../images/plotPHNonFull5000_PathLength.pdf> <../images/plotPHNonFull10000_PathLength.pdf>]
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 35.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[9 <../images/plotPHFull1000_PathLength.pdf> <../images/plotPHFull5000_PathLength.pdf> <../images/plotPHFull10000_PathLength.pdf> <../images/plotPHNonFull1000_PathLength.pdf> <../images/plotPHNonFull5000_PathLength.pdf> <../images/plotPHNonFull10000_PathLength.pdf> <../images/plotPHFull1000_PointerUpdates.pdf> <../images/plotPHFull5000_PointerUpdates.pdf> <../images/plotPHFull10000_PointerUpdates.pdf>]
+[9 <../images/plotFCFull1000_PointerUpdates.pdf> <../images/plotFCFull5000_PointerUpdates.pdf> <../images/plotFCFull10000_PointerUpdates.pdf> <../images/plotPSFull1000_PointerUpdates.pdf> <../images/plotPSFull5000_PointerUpdates.pdf> <../images/plotPSFull10000_PointerUpdates.pdf> <../images/plotPHFull1000_PointerUpdates.pdf> <../images/plotPHFull5000_PointerUpdates.pdf> <../images/plotPHFull10000_PointerUpdates.pdf>]
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 35.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[10 <../images/plotPHNonFull1000_PointerUpdates.pdf> <../images/plotPHNonFull5000_PointerUpdates.pdf> <../images/plotPHNonFull10000_PointerUpdates.pdf>]
+[10 <../images/plotFCNonFull1000_PointerUpdates.pdf> <../images/plotFCNonFull5000_PointerUpdates.pdf> <../images/plotFCNonFull10000_PointerUpdates.pdf> <../images/plotPSNonFull1000_PointerUpdates.pdf> <../images/plotPSNonFull5000_PointerUpdates.pdf> <../images/plotPSNonFull10000_PointerUpdates.pdf> <../images/plotPHNonFull1000_PointerUpdates.pdf> <../images/plotPHNonFull5000_PointerUpdates.pdf> <../images/plotPHNonFull10000_PointerUpdates.pdf>]
+\openout2 = `time.aux'.
+
+ (./time.tex (./timeNC.tex
+<../images/plotNCFull1000_time(ms).pdf, id=1058, 377.73822pt x 309.2915pt>
+File: ../images/plotNCFull1000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotNCFull1000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotNCFull1000_time(ms).pdf  used on input line 6.
+(pdftex.def)             Requested size: 145.68144pt x 119.28288pt.
+<../images/plotNCFull5000_time(ms).pdf, id=1059, 366.07166pt x 307.34425pt>
+File: ../images/plotNCFull5000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotNCFull5000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotNCFull5000_time(ms).pdf  used on input line 13.
+(pdftex.def)             Requested size: 145.68144pt x 122.31178pt.
+<../images/plotNCFull10000_time(ms).pdf, id=1060, 371.07233pt x 307.34523pt>
+File: ../images/plotNCFull10000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotNCFull10000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotNCFull10000_time(ms).pdf  used on input line 20.
+(pdftex.def)             Requested size: 145.68144pt x 120.66139pt.
+<../images/plotNCNonFull1000_time(ms).pdf, id=1061, 377.73822pt x 309.29051pt>
+File: ../images/plotNCNonFull1000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotNCNonFull1000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotNCNonFull1000_time(ms).pdf  used on input line 25.
+(pdftex.def)             Requested size: 145.68144pt x 119.2825pt.
+<../images/plotNCNonFull5000_time(ms).pdf, id=1062, 361.07196pt x 307.34523pt>
+File: ../images/plotNCNonFull5000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotNCNonFull5000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotNCNonFull5000_time(ms).pdf  used on input line 32.
+(pdftex.def)             Requested size: 145.68144pt x 124.00516pt.
+<../images/plotNCNonFull10000_time(ms).pdf, id=1063, 366.07166pt x 307.34523pt>
+File: ../images/plotNCNonFull10000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotNCNonFull10000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotNCNonFull10000_time(ms).pdf  used on input line 39.
+(pdftex.def)             Requested size: 145.68144pt x 122.31218pt.
+) (./timeH.tex
+<../images/plotFCFull1000_time(ms).pdf, id=1064, 377.73822pt x 309.29051pt>
+File: ../images/plotFCFull1000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotFCFull1000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotFCFull1000_time(ms).pdf  used on input line 5.
+(pdftex.def)             Requested size: 145.68144pt x 119.2825pt.
+<../images/plotFCFull5000_time(ms).pdf, id=1065, 361.07196pt x 307.34523pt>
+File: ../images/plotFCFull5000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotFCFull5000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotFCFull5000_time(ms).pdf  used on input line 12.
+(pdftex.def)             Requested size: 145.68144pt x 124.00516pt.
+<../images/plotFCFull10000_time(ms).pdf, id=1066, 366.07166pt x 307.34523pt>
+File: ../images/plotFCFull10000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotFCFull10000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotFCFull10000_time(ms).pdf  used on input line 19.
+(pdftex.def)             Requested size: 145.68144pt x 122.31218pt.
+<../images/plotPSFull1000_time(ms).pdf, id=1067, 377.73822pt x 309.29051pt>
+File: ../images/plotPSFull1000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotPSFull1000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotPSFull1000_time(ms).pdf  used on input line 25.
+(pdftex.def)             Requested size: 145.68144pt x 119.2825pt.
+<../images/plotPSFull5000_time(ms).pdf, id=1068, 361.07196pt x 307.34523pt>
+File: ../images/plotPSFull5000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotPSFull5000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotPSFull5000_time(ms).pdf  used on input line 32.
+(pdftex.def)             Requested size: 145.68144pt x 124.00516pt.
+<../images/plotPSFull10000_time(ms).pdf, id=1069, 366.07166pt x 307.34523pt>
+File: ../images/plotPSFull10000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotPSFull10000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotPSFull10000_time(ms).pdf  used on input line 39.
+(pdftex.def)             Requested size: 145.68144pt x 122.31218pt.
+<../images/plotPHFull1000_time(ms).pdf, id=1070, 377.73822pt x 309.29051pt>
+File: ../images/plotPHFull1000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotPHFull1000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotPHFull1000_time(ms).pdf  used on input line 45.
+(pdftex.def)             Requested size: 145.68144pt x 119.2825pt.
+<../images/plotPHFull5000_time(ms).pdf, id=1071, 361.07196pt x 307.34523pt>
+File: ../images/plotPHFull5000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotPHFull5000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotPHFull5000_time(ms).pdf  used on input line 52.
+(pdftex.def)             Requested size: 145.68144pt x 124.00516pt.
+<../images/plotPHFull10000_time(ms).pdf, id=1072, 366.07166pt x 307.34523pt>
+File: ../images/plotPHFull10000_time(ms).pdf Graphic file (type pdf)
+<use ../images/plotPHFull10000_time(ms).pdf>
+Package pdftex.def Info: ../images/plotPHFull10000_time(ms).pdf  used on input line 59.
+(pdftex.def)             Requested size: 145.68144pt x 122.31218pt.
+))
+
+File: title/logo-upc.png Graphic file (type png)
+<use title/logo-upc.png>
+Package pdftex.def Info: title/logo-upc.png  used on input line 36.
+(pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
+[11
+
+
+
+ <../images/plotNCFull1000_time(ms).pdf> <../images/plotNCFull5000_time(ms).pdf> <../images/plotNCFull10000_time(ms).pdf> <../images/plotNCNonFull1000_time(ms).pdf> <../images/plotNCNonFull5000_time(ms).pdf> <../images/plotNCNonFull10000_time(ms).pdf>]
+
+File: title/logo-upc.png Graphic file (type png)
+<use title/logo-upc.png>
+Package pdftex.def Info: title/logo-upc.png  used on input line 36.
+(pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
+[12 <../images/plotFCFull1000_time(ms).pdf> <../images/plotFCFull5000_time(ms).pdf> <../images/plotFCFull10000_time(ms).pdf> <../images/plotPSFull1000_time(ms).pdf> <../images/plotPSFull5000_time(ms).pdf> <../images/plotPSFull10000_time(ms).pdf> <../images/plotPHFull1000_time(ms).pdf> <../images/plotPHFull5000_time(ms).pdf> <../images/plotPHFull10000_time(ms).pdf>] (./main.bbl)
+
+File: title/logo-upc.png Graphic file (type png)
+<use title/logo-upc.png>
+Package pdftex.def Info: title/logo-upc.png  used on input line 42.
+(pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
+[13
+
+
+]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -1104,9 +1198,7 @@ File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 58.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[11
-
-
+[14
 
 ]
 
@@ -1114,37 +1206,37 @@ File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
 Package pdftex.def Info: title/logo-upc.png  used on input line 106.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[12]
+[15]
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
-Package pdftex.def Info: title/logo-upc.png  used on input line 165.
+Package pdftex.def Info: title/logo-upc.png  used on input line 164.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[13])
+[16])
 
 File: title/logo-upc.png Graphic file (type png)
 <use title/logo-upc.png>
-Package pdftex.def Info: title/logo-upc.png  used on input line 36.
+Package pdftex.def Info: title/logo-upc.png  used on input line 42.
 (pdftex.def)             Requested size: 215.80704pt x 37.76599pt.
-[14] (./main.aux (./one.aux) (./appendix.aux))
+[17] (./main.aux (./one.aux) (./time.aux) (./appendix.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 6871 strings out of 473201
- 126390 string characters out of 5716126
- 525345 words of memory out of 5000000
- 30033 multiletter control sequences out of 15000+600000
+ 7007 strings out of 473201
+ 132027 string characters out of 5716126
+ 525537 words of memory out of 5000000
+ 30157 multiletter control sequences out of 15000+600000
  571637 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,15n,77p,956b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 67i,15n,77p,996b,577s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfcc1728.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on main.pdf (14 pages, 777653 bytes).
+Output written on main.pdf (17 pages, 937468 bytes).
 PDF statistics:
- 1157 PDF objects out of 1200 (max. 8388607)
- 821 compressed objects within 9 object streams
+ 1518 PDF objects out of 1728 (max. 8388607)
+ 1082 compressed objects within 11 object streams
  0 named destinations out of 1000 (max. 500000)
- 216 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -39,10 +39,13 @@ generator.exe: $(GEN_OBJ)
 %.o: %.cc $(HEADERS)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Build main executable with METRICS flag
+main_time: CXXFLAGS += -DTIME=1
+main_time: main.exe
+
 # Clean up build files
 clean:
 	rm -f $(TARGETS) $(MAIN_OBJ) $(GEN_OBJ)
 
 # Phony targets
-.PHONY: all clean main generator
-
+.PHONY: all clean main generator main_time

@@ -106,12 +106,11 @@ The following code provides an implementation of this approach:
 \begin{verbatim}
 unsigned int UnionFind::pathFC(unsigned int i) {
 
-    if (weighted ? P[i] < 0 : P[i] == i) return i;
+    //parent(i) is defined as P[i] < 0 ? i : P[i]
+    if (parent(i) == parent(parent(i))) return parent(i);
 
     else {
         P[i] = pathFC(P[i]);
-        //Increase by one the counter which tracks 
-        //the number of pointer switches that one makes
         ++tpu;
         return P[i];
     }

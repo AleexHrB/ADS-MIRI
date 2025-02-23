@@ -1,0 +1,7 @@
+\section{Time Comparison}
+With the same approach explained in Section 3, times have been calculated. Figure \ref{fig:timeNC} provides plots for the execution time counting only the time needed for doing merge operations. As expected, Quick-Union performs the worst when we compare with weighted unions (the difference is even more clear as we increase the size of the data structure). Still, with weighted unions we see that time is getting more close to each other as we increase the size (but this is not a surprise, as time execution is related to average TPL and TPU which has been calculated in the previous section, where we saw that both metrics are similar using weighted unions).
+
+\input{timeNC.tex}
+
+What is really interesting is that, although Quick-Union performed the worst in both TPL and TPU metrics using any path heuristic, its execution time does not notably differ from weighted unions (see Figure \ref{fig:timeH}), as TPL and TPU do. We might need a larger sample size to spot a notable difference in the trade-off of performing \textit{cheap} unions in exchange for letting the find operation balance the trees.
+\input{timeH.tex}

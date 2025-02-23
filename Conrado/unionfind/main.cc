@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <time.h>
 #include "UnionFind.hh"
 using namespace std;
 
@@ -51,20 +52,36 @@ int main(int argc, char** argv) {
 
     UnionFind uf(size, eus, eps);
 
+
+#ifndef TIME 
     printf("tpl,tpu\n");
+#else
+    printf("time\n");
+#endif
+
+    float time = 0.0f;
 
     while (uf.num_blocks() != 1) {
 
         if (count == delta) {
+#ifndef TIME
             unsigned int tpl = uf.getTPL();
             unsigned int tpu = uf.getTPU();
             printf("%d,%d\n", tpl, tpu);
+#else
+            printf("%f\n", time * 1000);
+#endif
             count = 0;
         }
 
         unsigned int i,j;
         cin >> i >> j;
+
+        clock_t start = clock();
         uf.merge(i,j);
+        clock_t end = clock();
+
+        time += (float)(end - start) / CLOCKS_PER_SEC;
         ++count;
     }
 }

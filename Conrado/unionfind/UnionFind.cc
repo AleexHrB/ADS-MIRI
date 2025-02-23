@@ -61,11 +61,13 @@ unsigned int UnionFind::find(unsigned int i) {
 
 unsigned int UnionFind::pathFC(unsigned int i) {
 
-    if (weighted ? P[i] < 0 : P[i] == i) return i;
+    if (parent(i) == parent(parent(i))) return parent(i);
 
     else {
         P[i] = pathFC(P[i]);
+#ifndef TIME
         ++tpu;
+#endif
         return P[i];
     }
 }
@@ -80,7 +82,9 @@ unsigned int UnionFind::pathPS(unsigned int i) {
         unsigned int aux = P[i];
         P[i] = P[P[i]];
         i = aux;
+#ifndef TIME
         ++tpu;
+#endif
     }
 
     return parent(i);
@@ -91,7 +95,9 @@ unsigned int UnionFind::pathPH(unsigned int i) {
     while (parent(i) != parent(parent(i))) {
         P[i] = P[P[i]];
         i = P[i];
+#ifndef TIME
         ++tpu;
+#endif
     }
 
     return parent(i);

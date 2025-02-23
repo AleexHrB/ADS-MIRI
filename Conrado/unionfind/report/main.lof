@@ -1,15 +1,8 @@
 \babel@toc {english}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Total Path Length normalized with No Compression}}{5}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Total Path Length normalized with No Compression without Quick-Union}}{5}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Total Path Length normalized with Full Compression}}{6}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Total Path Length normalized with Full Compression without Quick-Union}}{6}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Total Pointer Update normalized with Full Compression}}{7}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Total Pointer Update normalized with Full Compression without Quick-Union}}{7}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Total Path Length normalized with Path Splitting}}{7}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Total Path Length normalized with Path Splitting without Quick-Union}}{8}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Total Pointer Update normalized with Path Splitting}}{8}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Total Pointer Update normalized with Path Splitting without Quick-Union}}{8}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Total Path Length normalized with Path Halving}}{9}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Total Path Length normalized with Path Halving without Quick-Union}}{9}{}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Total Pointer Update normalized with Path Halving}}{9}{}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Total Pointer Update normalized with Path Halving without Quick-Union}}{10}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Total Path Length normalized for different heuristics}}{7}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Total Path Length normalized for different heuristics without Quick-Union}}{8}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Total Pointer Update normalized using different heuristics}}{9}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Total Pointer Update normalized with Path Splitting and Path Halving without Quick-Union}}{10}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Total time No Compression}}{11}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Total time using different heuristics}}{12}{}%

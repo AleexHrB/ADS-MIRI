@@ -33,12 +33,14 @@ To execute the program, one can compile it using the provided \texttt{Makefile} 
 
 \texttt{./main.exe 1000 1 3 < file.txt}
 
+For getting time results you just need to compile by running \texttt{make main\_time}.
+
 \section{Experimental Setup}
 To generate random instances, a number \( n \) of elements and a seed \( s \) are requested as input. Then, this program generates a random number of different pairs \( (i, j) \) where \( 0 \leq i < j < n \) until the total number of pairs generated forms a single block in a Union-Find data structure. 
 
 The time complexity of this program is difficult to calculate, as there is no guarantee that the program will terminate. Since it generates pseudo-random different pairs, it might enter a loop where all the pairs generated are repetitions. However, this approach is better than the initial implementation, which involved generating all possible \(n \choose 2 \) pairs—requiring \( \Theta(n^2) \) time and space complexity—and then selecting random pairs until a single block is formed in the Union-Find structure. Using this new approach we use a C++ set to keep track of all different pairs, requesting only necessary memory.
 
-For the following experiments, $20$ instances of size ($n = 1000, 5000, 10000$) have been created. Each instance was generated with a seed $s$ that goes from $1964$ (in honor of Union-Find data structure discover!) to $1983$. Each instance has been executed with the $12$ possible different strategies and the data has been collected as follows:
+For the following experiments, $20$ instances of size ($n = 1000, 5000, 10000$) have been created. Each instance was generated with a seed $s$ that goes from $1964$ (in honor of Union-Find data structure discover\cite{galler1964improved}!) to $1983$. Each instance has been executed with the $12$ possible different strategies and the data has been collected as follows:
 
 \begin{enumerate}
     \item For each size \( n \), union strategy and path strategy, execute all instances of size \( n \).
@@ -54,24 +56,29 @@ Using these samples we gained samples for, approximately: $3750$ pairs of elemen
 \subsubsection{Path Strategy: No Compression}
 Using this technique, the minimization of paths between an element $i$ and its representative $r_i$ relies solely on the Union heuristic. Specifically, in the case of Quick-Union, Figure \ref{fig:tplNC} shows that Quick-Union differs significantly from TPL compared to the other union techniques. This difference makes sense, as we do not use any heuristic to help minimize those paths. 
 
-Still we need to take a look on the performance of Union by size and Union by Weight, Figure \ref{fig:tplNCNoQU} provides a look to such performance. As we see, there is not a big difference (although union by size performs slightly better) between these strategies in this context.
+Still we need to take a look on the performance of Union by size and Union by Weight, Figure \ref{fig:tplNC} also provides a look to such performance. As we see, there is not a big difference (although union by size performs slightly better) between these strategies in this context.
 
 \input{ncFigures.tex}
 
-Taking a close look to Figures \ref{fig:tplNC} and \ref{fig:tplNCNoQU}, when you perform a union without compression, the length you add is proportional to the expected length, \(O(\log n)\) because of randomness, which explains why it starts flat and increases quickly. However, as you continue performing more unions, the probability that the pair is already connected increases, so the union does nothing and the TPL does not change. That is why the shape of both figures seems logarithmic.
+Taking a close look, when you perform a union without compression, the length you add is proportional to the expected length, \(O(\log n)\) because of randomness, which explains why it starts flat and increases quickly. However, as you continue performing more unions, the probability that the pair is already connected increases, so the union does nothing and the TPL does not change. That is why the shape of both figures seems logarithmic.
 
-\subsubsection{Path Strategy: Full Compression}
-The Full Compression heuristic ensures that every element in the path from \( i \) to the representative of the class \( r_i \) will point directly to \( r_i \) by traversing the path twice (first to identify \( r_i \) and second to rearrange the pointers). At the cost of traversing this path twice, we expect to speed up future find operations involving a class where this heuristic has been applied. 
+\subsubsection{Path Strategy: using Heuristics}
 
-As expected, Figure \ref{fig:tplFC} clearly shows that Quick-Union starts increasing its TPL faster than the other methods. There is a considerable initial increment, but it quickly starts decreasing, which aligns with expectations—the more find operations we perform, the more balanced each tree becomes. However, we do not observe a \textit{smooth} decrease in the shape, rather than other heuristics in Figure \ref{fig:tplFCNoQU}. This suggests that, although there is an improvement in TPL as more find operations are executed, the choice of heuristic for the merge strategy also impacts performance (indeed, there is a drastically improvement on the TPL when it starts decreasing because with a Quick-Union strategy there is much more improvement left to do). Both heuristics Union by Weight and Rank behave in the same way (as we try to not unbalance the trees there is not a noticeable improvement).
+Here we are going to consider the following heuristics for path compression:
 
-A similar argument can be used to argument TPUs in Figures \ref{fig:tpuFC} and \ref{fig:tpuFCNoQU}: Because average TPL in Quick-Union is greater than with weighted unions we will traverse more nodes from one element to its representative, resulting in more changes within the path.
+\begin{itemize}
+    \item The \textbf{Full Compression} heuristic ensures that every element in the path from \( i \) to the representative of the class \( r_i \) will point directly to \( r_i \) by traversing the path twice (first to identify \( r_i \) and second to rearrange the pointers). At the cost of traversing this path twice, we expect to speed up future find operations involving a class where this heuristic has been applied. 
+    \item Traversing a path twice might not always be the best option so, in order to speed up future find operations, we are going to decrement path lengths within the class by making that every node points to its grandparent as long as this exists. That is what \textbf{Path Splitting} and \textbf{Path Halving} does. The only difference between Path Splitting and Halving is that in splitting we will always make every node point to its grandparent (as long as they exists) while in halving we are going to do that operation every other node (so we expect to end sooner a find operation).
+\end{itemize}
 
 
-\input{fcFigures.tex}
+As expected, Figure \ref{fig:tplH} clearly shows that Quick-Union starts increasing its TPL faster than the other methods. There is a considerable initial increment, but it quickly starts decreasing, which aligns with expectations—the more find operations we perform, the more balanced each tree becomes. However, we do not observe a \textit{smooth} decrease in the shape, rather than other union heuristics (see Figure \ref{fig:tplNH}). This suggests that, although there is an improvement in TPL as more find operations are executed, the choice of heuristic for the merge strategy also impacts performance (indeed, there is a drastically improvement on the TPL when it starts decreasing because with a Quick-Union strategy there is much more improvement left to do). Both heuristics Union by Weight and Rank behave in the same way (as we try to not unbalance the trees there is not a noticeable improvement, it reaches stability \textit{soon}).
 
-\subsubsection{Path Strategy: Path Splitting and Path Halving}
-Traversing a path twice might not always be the best option so, in order to speed up future find operations, we are going to decrement path lengths within the class by making that every node points to its grandparent as long as this exists. The only difference between Path Splitting and Halving is that in splitting we will always make every node point to its grandparent (as long as they exists) while in halving we are going to do that operation every other node (so we expect to end sooner a find operation).
+\input{tpuFigures.tex}
 
-\input{psFigures.tex}
-\input{phFigures.tex}
+A similar argument can be used to analyze TPUs in Figures \ref{fig:tpuH} and \ref{fig:tpuNH}: because the average TPL in Quick-Union is greater than in Weighted Unions, we traverse more nodes from one element to its representative, resulting in more changes within the path.
+
+A particularly interesting result in Figures \ref{fig:tplNH} and \ref{fig:tpuNH} is that every path compression heuristic with Weighted Unions behaves in exactly the same way. This confirms what Tarjan \& van Leeuwen \cite{tarjan1984worst} proved in their article: every combination of $m$ Union and Find operations on $n$ disjoint sets, using Union by Size/Rank and any of the path compression heuristics (full, splitting, or halving), has a cost of $O(m \cdot \alpha(m,n))$, where $\alpha$ is the inverse Ackermann function. This function is well known for growing extremely slowly—slower even than the iterative logarithm.
+
+\input{tplFigures.tex}
+

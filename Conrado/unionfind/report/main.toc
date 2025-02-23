@@ -5,15 +5,14 @@
 \contentsline {section}{\numberline {4}Results}{4}{}%
 \contentsline {subsection}{\numberline {4.1}Metric Comparisons}{4}{}%
 \contentsline {subsubsection}{\numberline {4.1.1}Path Strategy: No Compression}{4}{}%
-\contentsline {subsubsection}{\numberline {4.1.2}Path Strategy: Full Compression}{5}{}%
-\contentsline {subsubsection}{\numberline {4.1.3}Path Strategy: Path Splitting and Path Halving}{5}{}%
-\contentsline {subsubsection}{\numberline {4.1.4}Path Strategy: Path Halving}{6}{}%
-\contentsline {section}{\numberline {A}Union Operation: Code}{11}{}%
-\contentsline {subsection}{\numberline {A.1}Quick-Union}{11}{}%
-\contentsline {subsection}{\numberline {A.2}Union by Weight}{11}{}%
-\contentsline {subsection}{\numberline {A.3}Union by Rank}{12}{}%
-\contentsline {section}{\numberline {B}Find Operation: Code}{12}{}%
-\contentsline {subsection}{\numberline {B.1}Full Compression}{13}{}%
-\contentsline {subsection}{\numberline {B.2}Path Splitting}{13}{}%
-\contentsline {subsection}{\numberline {B.3}Path Halving}{13}{}%
-\contentsline {section}{\numberline {C}TPL Calculation}{14}{}%
+\contentsline {subsubsection}{\numberline {4.1.2}Path Strategy: using Heuristics}{5}{}%
+\contentsline {section}{\numberline {5}Time Comparison}{11}{}%
+\contentsline {section}{\numberline {A}Union Operation: Code}{14}{}%
+\contentsline {subsection}{\numberline {A.1}Quick-Union}{14}{}%
+\contentsline {subsection}{\numberline {A.2}Union by Weight}{14}{}%
+\contentsline {subsection}{\numberline {A.3}Union by Rank}{15}{}%
+\contentsline {section}{\numberline {B}Find Operation: Code}{15}{}%
+\contentsline {subsection}{\numberline {B.1}Full Compression}{16}{}%
+\contentsline {subsection}{\numberline {B.2}Path Splitting}{16}{}%
+\contentsline {subsection}{\numberline {B.3}Path Halving}{16}{}%
+\contentsline {section}{\numberline {C}TPL Calculation}{17}{}%
