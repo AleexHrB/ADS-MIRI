@@ -111,7 +111,9 @@ unsigned int UnionFind::pathFC(unsigned int i) {
 
     else {
         P[i] = pathFC(P[i]);
+        #ifndef TIME
         ++tpu;
+        #endif
         return P[i];
     }
 }
@@ -131,7 +133,9 @@ unsigned int UnionFind::pathPS(unsigned int i) {
         i = aux;
         //Increase by one the counter which tracks 
         //the number of pointer switches that one makes
+        #ifndef TIME
         ++tpu;
+        #endif
     }
 
     //This function will stop either at the root or
@@ -153,7 +157,9 @@ unsigned int UnionFind::pathPH(unsigned int i) {
         i = P[i];
         //Increase by one the counter which tracks 
         //the number of pointer switches that one makes
+        #ifndef TIME
         ++tpu;
+        #endif
     }
 
     //This function will stop either at the root or
