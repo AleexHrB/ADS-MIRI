@@ -42,8 +42,11 @@ int main(int argc, char** argv) {
         case 3:
             eps = UnionFind::PH;
             break;
+        case 4:
+            eps = UnionFind::TOR;
+            break;
         default:
-            cout << "Please provide a valid Path Strategy (number from 0-3)" << endl;
+            cout << "Please provide a valid Path Strategy (number from 0-4)" << endl;
             return -1;
     }
 

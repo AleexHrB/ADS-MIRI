@@ -18,7 +18,7 @@ for size in ${size[@]}
 do
     for US in $(seq 0 2)
     do
-        for PS in $(seq 0 3)
+        for PS in $(seq 0 4)
         do
             for f in $(ls ./instances/size=${size}_*)
             do

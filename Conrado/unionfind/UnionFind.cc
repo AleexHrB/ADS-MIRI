@@ -53,10 +53,35 @@ unsigned int UnionFind::find(unsigned int i) {
             return pathPS(i);
         case PathStrategy::PH:
             return pathPH(i);
+        case PathStrategy::TOR:
+            return pathR(i);
         default:
             while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
             return i;
     }
+}
+
+unsigned int UnionFind::pathR(unsigned int i) {
+
+    unsigned int finalNode = i;
+    i = parent(i);
+
+    while (parent(i) != i) {
+        unsigned int aux = P[i];
+        P[i] = finalNode;
+        i = aux;
+#ifndef TIME
+        ++tpu;
+#endif
+    }
+
+    if (i != finalNode) {
+        P[finalNode] = i;
+#ifndef TIME
+        ++tpu;
+#endif
+    }
+    return i;
 }
 
 unsigned int UnionFind::pathFC(unsigned int i) {

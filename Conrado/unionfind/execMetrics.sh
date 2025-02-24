@@ -3,22 +3,13 @@ make main
 
 rm resultsMetrics/*.csv
 
-QU=0
-UW=1
-UR=2
-
-NC=0
-FC=1
-PS=2
-PH=3
-
 size=(1000 5000 10000)
 
 for size in ${size[@]}
 do
     for US in $(seq 0 2)
     do
-        for PS in $(seq 0 3)
+        for PS in $(seq 0 4)
         do
             for f in $(ls ./instances/size=${size}_*)
             do

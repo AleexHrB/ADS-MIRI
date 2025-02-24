@@ -14,7 +14,8 @@ class UnionFind {
             NC,
             FC,
             PS,
-            PH
+            PH,
+            TOR
         };
 
         //Creates a UnionFind data structure of size n with 
@@ -66,4 +67,5 @@ class UnionFind {
         unsigned int pathFC(unsigned int i);
         unsigned int pathPS(unsigned int i);
         unsigned int pathPH(unsigned int i);
+        unsigned int pathR(unsigned int i);
 };
