@@ -1,0 +1,41 @@
+\documentclass[a4paper, twoside]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{graphicx}
+
+\begin{document}
+\input{title/title.tex}
+
+\setlength{\headheight}{45pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\fontsize{9bp}{9bp}\selectfont{Random Binary Search Trees: \\ An empirical analysis}}
+\lhead{\includegraphics[width=215px]{title/logo-upc.png}}
+\rfoot{\thepage}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+\setstretch{1.1}
+\input{one.tex}
+
+\newpage
+%\bibliographystyle{alpha}
+%\bibliography{bibs/sample}
+
+\end{document}
