@@ -66,7 +66,7 @@ unsigned int UnionFind::pathR(unsigned int i) {
     unsigned int finalNode = i;
     i = parent(i);
 
-    while (parent(i) != i) {
+    while (parent(i) != parent(parent(i))) {
         unsigned int aux = P[i];
         P[i] = finalNode;
         i = aux;
@@ -75,13 +75,14 @@ unsigned int UnionFind::pathR(unsigned int i) {
 #endif
     }
 
-    if (i != finalNode) {
-        P[finalNode] = i;
+    if (parent(finalNode) != parent(i)) {
+        P[finalNode] = parent(i);
+        P[i] = finalNode;
 #ifndef TIME
-        ++tpu;
+        tpu += 2;
 #endif
     }
-    return i;
+    return parent(finalNode);
 }
 
 unsigned int UnionFind::pathFC(unsigned int i) {
