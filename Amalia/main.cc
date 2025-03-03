@@ -1,29 +1,21 @@
 #include <iostream>
-#include <algorithm>
 #include "bst.hh"
 using namespace std;
-
-
-
-
-
-
-
 
 int main(int argc, char** argv) {
 
     unsigned int n = atoi(argv[1]);
-    unsigned int keys[n];
+    unsigned int seed = atoi(argv[2]);
 
     BST t;
 
-    for (unsigned int i = 0; i < n; ++i) keys[i] = i;
+    srand(seed);
+    for (unsigned int i = 0; i < n; ++i) t.insert(((double)rand()) / RAND_MAX);
+    
 
-    srand(time(NULL));
-    random_shuffle(&keys[0], &keys[n]);
-    for (unsigned int i = 0; i < n; ++i) cout << keys[i] << " ";
-    cout << endl;
-    for (unsigned int i = 0; i < n; ++i) t.insert(keys[i]);
+    unsigned int q = 2*n;
+    unsigned int tpl = 0;
+    for (unsigned int i = 0; i < q; ++i) tpl += t.find(((double)rand()) / RAND_MAX);
 
-    t.print();
+    cout << float(tpl) / q << endl;
 }

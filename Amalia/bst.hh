@@ -4,11 +4,11 @@ class BST {
     public:
         BST();
 
-        void insert(unsigned int x);
+        ~BST();
 
-        void erase(unsigned int x);
+        void insert(float x);
 
-        bool find(unsigned int x);
+        unsigned int find(float x);
 
         void print();
 
@@ -16,13 +16,13 @@ class BST {
         struct node {
             node* l = nullptr;
             node* r = nullptr;
-            unsigned int x;
+            float x;
         };
 
         node* root;
 
-        node* insert(unsigned int x, node* n);
-        node* erase(unsigned int x, node* n);
-        bool find(unsigned int x, node* n);
+        node* insert(float x, node* n);
+        unsigned int find(float x, node* n);
         void print(node* n);
+        void freeMemory(node* n);
 };

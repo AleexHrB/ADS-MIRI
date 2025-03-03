@@ -7,12 +7,21 @@ BST::BST() {
     root = nullptr;
 }
 
-void BST::insert(unsigned int x) {
-    root = insert(x, root);
+BST::~BST() {
+    freeMemory(root);
 }
 
-void BST::erase(unsigned int x) {
-    root = erase(x, root);
+void BST::freeMemory(node* n) {
+
+    if (n != nullptr) {
+        freeMemory(n -> l);
+        freeMemory(n -> r);
+        delete n;
+    }
+}
+
+void BST::insert(float x) {
+    root = insert(x, root);
 }
 
 void BST::print() {
@@ -27,18 +36,18 @@ void BST::print(node* n) {
     }
 }
 
-bool BST::find(unsigned int x) {
+unsigned int BST::find(float x) {
     return find(x, root);
 }
 
-bool BST::find(unsigned int x, node* n) {
-    if (n == nullptr) return false;
-    if (n -> x == x) return true;
-    if (n -> x > x) return find(x, n->l);
-    else return find(x, n->r);
+unsigned int BST::find(float x, node* n) {
+    if (n == nullptr) return 0;
+    if (n -> x == x) return 1;
+    if (n -> x > x) return 1 + find(x, n->l);
+    else return 1 + find(x, n->r);
 }
 
-BST::node* BST::insert(unsigned int x, node* n) {
+BST::node* BST::insert(float x, node* n) {
 
     if (n == nullptr) {
         node* newNode = new node;
@@ -53,37 +62,4 @@ BST::node* BST::insert(unsigned int x, node* n) {
         else n -> r = insert(x, n -> r);
         return n;
     }
-}
-
-BST::node* BST::erase(unsigned int x, node* n) {
-
-    if (n == nullptr) return nullptr;
-
-    if (n -> x > x) {
-        n -> l = erase(x, n-> l);
-        return n;
-    }
-
-    if (n -> x < x) {
-        n -> r = erase(x, n-> r);
-        return n;
-    }
-
-    if (n -> l == nullptr) {
-        node* aux = n -> r;
-        delete n;
-        return aux;
-    }
-
-    if (n -> r == nullptr) {
-        node* aux = n -> l;
-        delete n;
-        return aux;
-    }
-
-    node* newVal = n -> r;
-    while (newVal -> l != nullptr) newVal = newVal -> l;
-    n -> x = newVal -> x;
-    n -> r = erase(x,n -> r);
-    return n;
 }

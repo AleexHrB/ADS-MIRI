@@ -11,32 +11,77 @@ Although it is well known that, in the worst case, a BST behaves like a linked l
 By \textit{random BSTs}, we mean the following: Given a universe of keys $U$ with $|U| = n$, we construct the BST by inserting each element of $U$ exactly once, choosing the insertion order uniformly at random.
 
 \section{Analysis of the Average Cost of Insertions}
-Let us first analyze the expected cost of inserting an element \( u \in U \) into our BST \( T \). For that, we will consider this cost as the cost of searching for \( u \) in our BST, which is valid since we assume that our search terminates in any empty subtree with identical probability. 
+Let us first analyze the expected cost of inserting an element \( u \in U \) into our BST \( T \). For that, we will consider this cost as the cost of searching for \( u \) in our BST, which is valid since we can assume that, if $u$ does not exist in $T$, our search terminates in any empty subtree with identical probability. 
 
-Let \( R(T) \) be a recurrence that, given a BST \( T \) with subtrees \( T_l \) and \( T_r \), returns the expected number of nodes that the BST will traverse during the search. Then, \( R(T) \) can be calculated as:
+Let $I_n$ be the expected cost of the insertion of a key $x$ in a random BST of size $n$. Let, also, be $I_{n,q}$ be the expected cost of the insertion of a key $x$ in a random BST which root is the $q-\text{th}$ smallest element. Then, the expected cost of $I_n$ is
 
-\[
-\begin{cases}
-    R(T) = 0, & \text{if } |T| = 0, \\
-    R(T) = 1 + \frac{|T_l|}{n} R(T_l) + \frac{|T_r|}{n} R(T_r), & \text{otherwise}.
-\end{cases}
-\]
+\begin{align*}
+    I_n &= \frac{1}{n}\sum\limits_{q = 1}^{n} I_{n,q} \\
+        &= 1 + \frac{1}{n}\sum\limits_{k=1}^{n} (\frac{1}{n} 0 + \frac{k-1}{n} I_{k-1} + \frac{n-k}{n} I_{n-k}) \\
+        &= 1 + \frac{1}{n}\sum\limits_{k=0}^{n-1} (\frac{k}{n} I_{k} + \frac{n-k-1}{n} I_{n-k-1}) \\
+        &= 1 + \frac{1}{n^2}\sum\limits_{k=0}^{n-1} (k I_{k} + (n-k-1)I_{n-k-1}) \\
+        &= 1 + \frac{2}{n^2}\sum\limits_{k=0}^{n-1} k I_{k}
+\end{align*}
 
-To explain \( R(T) \), it suffices to note that, since each element is drawn from a uniformly random distribution over \( n \) different values, each node has probability \( \frac{1}{n} \) of being $u$. Thus, we have:
-
-\[
-\mathbb{P}[u \in T_l] = \mathbb{P}[\exists l_i \in T_l : l_i = u] = \sum\limits_{l_i \in T_l}\mathbb{P}[l_i = u] = \sum\limits_{i = 1}^{|T_l|}\frac{1}{n} = \frac{|T_l|}{n}.
-\]
-
-Using the same reasoning, we find that \( \mathbb{P}[u \in T_r] = \frac{|T_r|}{n} \), which allows us to compute the expected number of nodes we need to traverse in order to find \( u \).
-
-Although this recurrence is useful, we must express it in terms of the size \( n \) to obtain a general result. Let \( I_n \) be the expected cost of searching for a key \( u \) in a random BST of size \( n \), measured as the number of nodes visited until reaching \( u \). Then, \( I_n \) can be expressed as:
+We can solve this recurrence using the continuous master theorem. The continuous master theorem solves recurrences of the form
 
 \[
-\begin{cases}
-I_n = 0, & \text{if } n = 0, \\
-I_n = 1 + \frac{1}{n} \sum\limits_{k = 0}^{n-1} \left(\frac{k}{n} I_k + \frac{(n-1-k)}{n} I_{n-1-k}\right), & \text{otherwise}.
-\end{cases}
+F_n = t_n + \sum\limits_{0 \leq j < n} w_{n,j} F_j
 \]
 
-The key difference from the previous recurrence is that we must now consider every possible partitioning of the tree sizes as being equally likely.
+with \( t_n = \Theta(n^a (\log n)^b) \). We proceed as follows:
+
+\begin{itemize}
+    \item Determine the values of \( a \) and \( b \): Since \( t_n = \Theta(1) \), it is straightforward to see that \( a = b = 0 \).
+    \item Provide a shape function for the weights \( w_{n,j} \): We use the following trick to determine the shape function:
+
+    \[
+    w(z) = \lim\limits_{n\to\infty} n \cdot w_{n,z\cdot n} = n \cdot \frac{2zn}{n^2} = 2z.
+    \]
+
+    \item Determine the value of 
+
+    \[
+    \mathcal{H} = 1 - \int\limits_{0}^{1} w(z) z^a dz.
+    \]
+
+    Substituting the values, we obtain:
+
+    \[
+    \mathcal{H} = 1 - \int\limits_{0}^{1} 2z dz = 1 - (1 - 0) = 0.
+    \]
+
+    \item Since \( \mathcal{H} = 0 \), we need to compute 
+
+    \[
+    \mathcal{H'} = -(b+1) \int\limits_{0}^{1} w(z) z^a \ln z \, dz.
+    \]
+
+    Substituting the known values,
+
+    \[
+    \mathcal{H'} = -1 \int\limits_{0}^{1} 2z \ln z \, dz.
+    \]
+
+    This integral can be solved using integration by parts. For the purpose of applying the theorem, we skip the detailed calculation, giving the result:
+
+    \[
+    \mathcal{H'} = - (x^2 \ln x - \frac{x^2}{2})\Big|_0^1 = \frac{1}{2}.
+    \]
+
+\end{itemize}
+
+Since \( \mathcal{H} = 0 \) and \( \mathcal{H'} \neq 0 \), we use the result
+
+\[
+F_n = \frac{t_n}{\mathcal{H'}} \ln n + o(t_n \log n).
+\]
+
+Substituting the values, we obtain
+
+\[
+I_n = 2\ln n + o(\log n).
+\]
+
+Thus, the expected cost of an insertion into a random binary search tree is bounded by \( O(\log n) \).
+
