@@ -17,5 +17,5 @@ int main(int argc, char** argv) {
     unsigned int tpl = 0;
     for (unsigned int i = 0; i < q; ++i) tpl += t.find(((double)rand()) / RAND_MAX);
 
-    cout << float(tpl) / q << endl;
+    cout << n << "," << float(tpl) / q << endl;
 }
