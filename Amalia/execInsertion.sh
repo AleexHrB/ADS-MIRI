@@ -1,5 +1,5 @@
 make clean
-make main
+make insertion
 rm ./resultsInsertion/*.csv
 
 min=10000

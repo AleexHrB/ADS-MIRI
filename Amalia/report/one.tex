@@ -98,13 +98,13 @@ Once we have theoretical results on the expected cost of an insertion in a rando
     \item We repeat the entire experiment for different values of \( n \).
 \end{enumerate}
 
-I conducted the experiment previously explained with values of $n$ ranging from $10,000$ to $200,000$ in increments of $5,000$, using seeds to generate random numbers from $1989$ (in honor of the year of the first publication of the book \textit{Introduction to Algorithms}, which was a great resource for refreshing my knowledge of BSTs and expected cost!) to $2008$. Figure \ref{fig:plotBoundIns} provides a plot of the values obtained from this experiment, as well as the theoretical bound derived using the continuous master theorem. As we can see, the theoretical bound is respected within the experiment. Additionally, Table 1 presents the errors between the theoretical bound and the experimental results.
+I conducted the experiment previously explained with values of \( n \) ranging from \( 10,000 \) to \( 200,000 \) in increments of \( 5,000 \), using seeds to generate random numbers from \( 1989 \) (in honor of the year of the first publication of the book \textit{Introduction to Algorithms}, which was a great resource for refreshing my knowledge of BSTs and expected cost!) to \( 2008 \). Figure \ref{fig:plotBoundIns} provides a plot of the values obtained from this experiment, as well as the theoretical bound derived using the continuous master theorem. For a more detailed view of the values, we can refer to Table \ref{tab:tabIns}, from which we are particularly interested in the column \textit{difference}. From this, we observe a fixed behavior: as the size increases, both the theoretical and the experimental values maintain the same difference between the expected and the measured values. This indicates that, indeed, as the size increases, both functions appear to grow simultaneously, thereby bounding the measured cost by a logarithmic function.
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.65]{plotInsertion.pdf}
-    \caption{Plot}
+    \caption{Plot average number of nodes visited respect theoretical bound}
     \label{fig:plotBoundIns}
 \end{figure}
 
-\input{table.tex}
+\input{tableInsertion.tex}

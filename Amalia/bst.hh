@@ -12,6 +12,8 @@ class BST {
 
         void print();
 
+        unsigned int ipl();
+
     private:
         struct node {
             node* l = nullptr;

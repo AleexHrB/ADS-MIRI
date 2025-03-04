@@ -1,5 +1,6 @@
 #include "bst.hh"
 #include <iostream>
+#include <queue>
 using namespace std;
 
 
@@ -9,6 +10,26 @@ BST::BST() {
 
 BST::~BST() {
     freeMemory(root);
+}
+
+unsigned int BST::ipl() {
+    queue<pair<node*,unsigned int>> q;
+    unsigned int iplLocal = 0;
+    q.push({root,0});
+
+    while (not q.empty()) {
+        pair<node*, unsigned int> p = q.front();
+        q.pop();
+
+        if (p.first != nullptr) {
+            unsigned int d = p.second;
+            iplLocal += d;
+            q.push({p.first -> l, d+1});
+            q.push({p.first -> r, d+1});
+        }
+    }
+
+    return iplLocal;
 }
 
 void BST::freeMemory(node* n) {
