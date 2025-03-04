@@ -11,6 +11,7 @@ Although it is well known that, in the worst case, a BST behaves like a linked l
 By \textit{random BSTs}, we mean the following: Given a universe of keys $U$ with $|U| = n$, we construct the BST by inserting each element of $U$ exactly once, choosing the insertion order uniformly at random.
 
 \section{Analysis of the Average Cost of Insertions}
+\subsection{Theoretical Study}
 Let us first analyze the expected cost of inserting an element \( u \in U \) into our BST \( T \). For that, we will consider this cost as the cost of searching for \( u \) in our BST, which is valid since we can assume that, if $u$ does not exist in $T$, our search terminates in any empty subtree with identical probability. 
 
 Let $I_n$ be the expected cost of the insertion of a key $x$ in a random BST of size $n$. Let, also, be $I_{n,q}$ be the expected cost of the insertion of a key $x$ in a random BST which root is the $q-\text{th}$ smallest element. Then, the expected cost of $I_n$ is
@@ -85,3 +86,25 @@ I_n = 2\ln n + o(\log n).
 
 Thus, the expected cost of an insertion into a random binary search tree is bounded by \( O(\log n) \).
 
+\subsection{Experimental Study}
+Once we have theoretical results on the expected cost of an insertion in a random BST, we can provide experimental results to assess how closely they match the theoretical predictions. For this, we will conduct the following experiment:
+
+\begin{enumerate}
+    \item We create a random BST of size \( n \) by generating \( n \) random keys in the interval \( [0,1] \).
+    \item After constructing the BST, we generate \( q = 2\cdot n \) random numbers in the interval \( [0,1] \).
+    \item For each generated value, we perform a \texttt{find} operation in the BST, counting the number of nodes traversed during the operation.
+    \item We sum up the total number of nodes traversed across all \( q \) search operations and compute the average.
+    \item We repeat all previous steps with 20 different seeds and compute the final average.
+    \item We repeat the entire experiment for different values of \( n \).
+\end{enumerate}
+
+I conducted the experiment previously explained with values of $n$ ranging from $10,000$ to $200,000$ in increments of $5,000$, using seeds to generate random numbers from $1989$ (in honor of the year of the first publication of the book \textit{Introduction to Algorithms}, which was a great resource for refreshing my knowledge of BSTs and expected cost!) to $2008$. Figure \ref{fig:plotBoundIns} provides a plot of the values obtained from this experiment, as well as the theoretical bound derived using the continuous master theorem. As we can see, the theoretical bound is respected within the experiment. Additionally, Table 1 presents the errors between the theoretical bound and the experimental results.
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.65]{plotInsertion.pdf}
+    \caption{Plot}
+    \label{fig:plotBoundIns}
+\end{figure}
+
+\input{table.tex}
