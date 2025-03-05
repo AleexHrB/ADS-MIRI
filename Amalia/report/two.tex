@@ -75,3 +75,20 @@ I_n = 2(n-1) \ln n + o(n \log n)
 Thus, the expected internal path length in a BST is bounded by \( O(n \log n) \). Such recurrence can be used to solve the expected cost of doing an insertion in a BST as we can express that cost as: $I_n = 1 + \frac{IPL_n}{n}$ (as we can have an estimation of $I_n$ by averaging the internal path length over the size of the tree in order to get an estimation of the average distance between the root and a node) which would give a result of $O(\log n)$ which was the expected bound we obtained in the previous section.
 
 \subsection{Experimental Study}
+Once we have theoretical results on the expected internal path length in a random BST, we can provide experimental results to assess how closely they match the theoretical predictions. For this, we will conduct the following experiment:
+
+\begin{enumerate}
+    \item We create a random BST of size \( n \) by generating \( n \) random keys in the interval \( [0,1] \).
+    \item We calculate the internal path length of the random BST by doing a Breadth-first search algorithm
+    \item We repeat all previous steps with 20 different seeds and compute the final average.
+    \item We repeat the entire experiment for different values of \( n \).
+\end{enumerate}
+
+Again, I conducted the experiment with the same value of $n$ and same values of \textit{seeds} as before. 
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.65]{plotIPL.pdf}
+    \caption{Plot average IPL respect the theoretical bound}
+    \label{fig:plotBoundIPL}
+\end{figure}

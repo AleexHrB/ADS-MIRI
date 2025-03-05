@@ -12,6 +12,57 @@ BST::~BST() {
     freeMemory(root);
 }
 
+void BST::erase(float x) {
+    root = erase(root, x);
+}
+
+BST::node* BST::erase(node* n, float x) {
+
+    if (n == nullptr) return nullptr;
+
+    if (n -> x < x) {
+        n -> r = erase(n -> r, x);
+        return n;
+    }
+
+    if (n -> x > x) {
+        n -> l = erase(n -> l, x);
+        return n;
+    }
+
+    if (n -> l == nullptr) {
+        node* aux = n -> r;
+        delete n;
+        return aux;
+    }
+
+    if (n -> r == nullptr) {
+        node* aux = n -> l;
+        delete n;
+        return aux;
+    }
+
+    float val = 0;
+    n -> r  = eraseSuccessor(n -> r, val);
+    n -> x = val;
+    return n;
+}
+
+BST::node* BST::eraseSuccessor(node* n, float& x) {
+    
+    if (n -> l == nullptr) {
+        node* aux = n -> r;
+        x = n -> x;
+        delete n;
+        return aux;
+    }
+
+    else {
+        n -> l = eraseSuccessor(n -> l, x);
+        return n;
+    }
+}
+
 unsigned int BST::ipl() {
     queue<pair<node*,unsigned int>> q;
     unsigned int iplLocal = 0;

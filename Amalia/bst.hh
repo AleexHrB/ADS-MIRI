@@ -14,6 +14,8 @@ class BST {
 
         unsigned int ipl();
 
+        void erase(float x);
+
     private:
         struct node {
             node* l = nullptr;
@@ -27,4 +29,6 @@ class BST {
         unsigned int find(float x, node* n);
         void print(node* n);
         void freeMemory(node* n);
+        node* erase(node* n, float x);
+        node* eraseSuccessor(node* n, float& x);
 };

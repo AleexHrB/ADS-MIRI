@@ -12,7 +12,7 @@ do
     echo "n,In" >> "./resultsInsertion/insertion_${seed}.csv" 
     for n in $(seq $min $step $max)
     do
-        ./main $n $seed >> "./resultsInsertion/insertion_${seed}.csv"     
+        ./insertion $n $seed >> "./resultsInsertion/insertion_${seed}.csv"     
     done
 done
 
