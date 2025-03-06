@@ -1,7 +1,7 @@
 # Compiler
 CXX = g++
 # Compiler flags
-CXXFLAGS = -std=c++11 -O2
+CXXFLAGS = -std=c++11 -O2 -g
 # Source files (BST class)
 BST_SRC = bst.cc
 BST_OBJ = $(BST_SRC:.cc=.o)

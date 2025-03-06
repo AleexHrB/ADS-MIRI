@@ -10,8 +10,6 @@ class BST {
 
         unsigned int find(float x);
 
-        void print();
-
         unsigned int ipl();
 
         void erase(float x);
@@ -27,7 +25,6 @@ class BST {
 
         node* insert(float x, node* n);
         unsigned int find(float x, node* n);
-        void print(node* n);
         void freeMemory(node* n);
         node* erase(node* n, float x);
         node* eraseSuccessor(node* n, float& x);

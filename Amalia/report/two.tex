@@ -69,7 +69,7 @@ F_n = \frac{t_n}{\mathcal{H'}} \ln n + o(t_n \log n).
 Substituting the values, we obtain
 
 \[
-I_n = 2(n-1) \ln n + o(n \log n)
+I_n = 2(n-1) \ln n + o(n \log n) = 2n \ln n + o(n \log n)
 \]
 
 Thus, the expected internal path length in a BST is bounded by \( O(n \log n) \). Such recurrence can be used to solve the expected cost of doing an insertion in a BST as we can express that cost as: $I_n = 1 + \frac{IPL_n}{n}$ (as we can have an estimation of $I_n$ by averaging the internal path length over the size of the tree in order to get an estimation of the average distance between the root and a node) which would give a result of $O(\log n)$ which was the expected bound we obtained in the previous section.
@@ -84,11 +84,20 @@ Once we have theoretical results on the expected internal path length in a rando
     \item We repeat the entire experiment for different values of \( n \).
 \end{enumerate}
 
-Again, I conducted the experiment with the same value of $n$ and same values of \textit{seeds} as before. 
+Again, I conducted the experiment with the same value of $n$ and same values of \textit{seeds} as before. Figure \ref{fig:plotBoundIPL} provides, as before, a plot with the expected values we should obtain following the continuous master theorem result and the experimental result. This time we do not see a similar behavior between the two curves as we saw before: It seems that the theoretical bound increase faster than the experimental result, not at the same time as before.
 
 \begin{figure}
     \centering
     \includegraphics[scale=0.65]{plotIPL.pdf}
     \caption{Plot average IPL respect the theoretical bound}
     \label{fig:plotBoundIPL}
+\end{figure}
+
+We know that there is a factor \( o(n \log n) \) (in fact, with a more detailed solution of the recurrence, see Appendix CITAR, we know that this $o(n \log n)$ is $O(n)$) that must be taken into account in our study. As a result, even with a high number of nodes in a random BST, this theoretical bound may still be influenced by the \( o(n \log n) \) factor until we reach a significantly larger number of nodes. To analyze this effect, we provide Figure \ref{fig:plotBoundCtIPL}, where we divide the experimental data by \( n \log n \) to observe when this \( o(n \log n) \) factor stabilizes. As seen in the figure, even for large input sizes (over 200,000 nodes), this factor still plays a significant role in our analysis.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.65]{plotCtIPL.pdf}
+    \caption{Plot experimental result divided by $n \log n$}
+    \label{fig:plotBoundCtIPL}
 \end{figure}

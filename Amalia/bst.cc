@@ -1,5 +1,4 @@
 #include "bst.hh"
-#include <iostream>
 #include <queue>
 using namespace std;
 
@@ -94,18 +93,6 @@ void BST::freeMemory(node* n) {
 
 void BST::insert(float x) {
     root = insert(x, root);
-}
-
-void BST::print() {
-    print(root);
-}
-
-void BST::print(node* n) {
-    if (n != nullptr) {
-        print(n -> l);
-        cout << n -> x << endl;
-        print(n -> r);
-    }
 }
 
 unsigned int BST::find(float x) {
