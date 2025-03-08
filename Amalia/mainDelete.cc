@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 #include "bst.hh"
 using namespace std;
 
@@ -7,28 +8,27 @@ int main(int argc, char** argv) {
     unsigned int n = atoi(argv[1]);
     unsigned int seed = atoi(argv[2]);
 
-    float v[n*n];
+    float *v = (float *) malloc(n*n*sizeof(float));
 
     BST t;
-
     unsigned int lastElem = n - 1;
 
-    srand(seed);
+    mt19937 generator(seed);
+    uniform_real_distribution<float> distribution(0.0, 1.0);
     for (unsigned int i = 0; i < n; ++i) {
-        v[i] = ((double)rand()) / RAND_MAX;
+        v[i] = distribution(generator);
         t.insert(v[i]);
     }
 
     unsigned int erasedElems = 0;
-    unsigned int size = n;
-
+    srand(seed);
+    bool ins = true;
     for (unsigned int i = 0; i < n*n; ++i) {
 
-        if (rand() % 2 == 0) {
+        if (ins) {
             ++lastElem;
-            v[lastElem] = ((double)rand()) / RAND_MAX;
+            v[lastElem] = distribution(generator);
             t.insert(v[lastElem]);
-            ++size;
         }
 
         else {
@@ -38,10 +38,13 @@ int main(int argc, char** argv) {
             v[erasedElems] = aux;
             t.erase(aux);
             ++erasedElems;
-            --size;
         }
+
+        ins = !ins;
+
     }
 
     
-    cout << size << "," << t.ipl() << endl;
+    cout << n << "," << t.ipl() << endl;
+    free(v);
 }

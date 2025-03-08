@@ -6,4 +6,5 @@
 \contentsline {section}{\numberline {3}Analysis of Internal Path Length}{7}{}%
 \contentsline {subsection}{\numberline {3.1}Theoretical Study}{7}{}%
 \contentsline {subsection}{\numberline {3.2}Experimental Study}{8}{}%
-\contentsline {section}{\numberline {A}More accurate solutions to the previous recurrences}{10}{}%
+\contentsline {section}{\numberline {4}Analysis of Interleaver Insertions and Deletions}{10}{}%
+\contentsline {section}{\numberline {A}More accurate solutions to the previous recurrences}{11}{}%

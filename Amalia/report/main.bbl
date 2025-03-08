@@ -1,0 +1,13 @@
+\begin{thebibliography}{Knu98}
+
+\bibitem[Epp83]{eppinger1983empirical}
+Jeffrey~L Eppinger.
+\newblock An empirical study of insertion and deletion in binary search trees.
+\newblock {\em Communications of the ACM}, 26(9):663--669, 1983.
+
+\bibitem[Knu98]{knuth1998art}
+Donald~E Knuth.
+\newblock {\em The Art of Computer Programming: Sorting and Searching, volume 3}.
+\newblock Addison-Wesley Professional, 1998.
+
+\end{thebibliography}

@@ -101,3 +101,5 @@ We know that there is a factor \( o(n \log n) \) (in fact, with a more detailed 
     \caption{Plot experimental result divided by $n \log n$}
     \label{fig:plotBoundCtIPL}
 \end{figure}
+
+So, that $o(n \log n)$ factor must be the reason why it is difficult to predict a more accurate theoretical solution to the IPL: because this factor is very influential even in instances with more than $100,000$ nodes, and we need to reach an even larger size of random BSTs to make this factor smaller than the actual bound.
