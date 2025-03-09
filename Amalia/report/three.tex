@@ -1,4 +1,26 @@
 \section{Analysis of Interleaver Insertions and Deletions}
-Knuth in the volume $3$ of his well-known book \textit{The Art of Computer Programming} \cite{knuth1998art} mentioned that, indeed, random insertions and deletions \textit{destroys} the randomness of a BST. This fact was firstly observed by Gary Knott in 1972 and, later on, Eppinger \cite{eppinger1983empirical} showed expeerimentally that the path length, although at the beginning it decreases slightly, increases and reaches a stability after doing a quadratic number of deletions/insertions.
+Knuth, in Volume 3 of his well-known book \textit{The Art of Computer Programming} \cite{knuth1998art}, mentioned that random insertions and deletions indeed \textit{destroy} the randomness of a BST. This phenomenon was first observed by Gary Knott in 1972, and later, Eppinger \cite{eppinger1983empirical} demonstrated experimentally that the path length, although initially decreasing slightly, eventually increases and stabilizes after performing a quadratic number of deletions and insertions.
 
-Although Knuth also mentioned that still we lack of a theoretical explanation
+The following experiment aims to support the observations made by Eppinger and Knuth:
+\begin{enumerate}
+    \item We create a random BST of size \( n \) by generating \( n \) random keys in the interval \( [0,1] \).
+    \item We perform a quadratic number of insertions and deletions as follows: we alternately insert a random element from the interval \( [0,1] \) and delete a random element from the BST.
+    \item We compute the internal path length of the BST using a Breadth-First Search algorithm.
+    \item We repeat all the previous steps with 20 different seeds and compute the final average.
+    \item We repeat the entire experiment for different values of \( n \).
+\end{enumerate}
+
+This time, as we are doing a quadratic number of steps, because of memory and time performance I have decided to conduct this experient with Random BSTs of size $1000$ to $2000$ in increases of $50$ elements. Figure \ref{fig:plotDeletion} provides a plot of the final IPL with and without doing this alternation between deletions and insertion. As expected, we see that, indeed, the IPL of a tree increases if we perform this operations, indicating that we are unbalancing our random BST (hence, destroying our randomness).
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[scale=0.65]{plotDeletion.pdf}
+    \caption{Plot average IPL with and without alternating insertions and deletions}
+    \label{fig:plotDeletion}
+\end{figure}
+
+\newpage
+
+Table \ref{tab:tabDelet} provides a more numerical view of such plot. As we see, the difference in IPL gets bigger as we increases the size of $n$, definitely destroying the initial randomness that we created.
+
+\input{tableDeletion.tex}

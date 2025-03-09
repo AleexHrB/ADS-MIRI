@@ -1,2 +1,43 @@
 \appendix
 \section{More accurate solutions to the previous recurrences}
+Let us consider the previous recurrence for the IPL of a Random BST:
+$$
+I_n = n -1 + \frac{2}{n} \sum\limits_{k = 0}^{n-1} I_k
+$$
+
+We have to try to put this recurrence in terms of just one call instead of multiple calls of it. For that we need to firstly see that:
+
+$$
+I_{n+1} = n + \frac{2}{n+1} \sum\limits_{k = 0}^{n} I_k
+$$
+
+Now we need to subtract carefully both recurrences. For that, let us first multiply each recurrence by $n$ and $n+1$:
+
+\begin{align*}
+    (n+1) I_{n+1} &= (n+1)n + 2 \sum\limits_{k = 0}^{n} I_k \\
+    nI_n &= n^2 -n + 2 \sum\limits_{k = 0}^{n-1} I_k \\
+\end{align*}
+
+Now we are ready to subtract both recurrences:
+
+\begin{align*}
+    (n+1) IPL_{n+1} - nIPL_n &= (n+1)n + 2 IPL_n - n^2 + n \\
+    (n+1) IPL_{n+1} &= n^2 + n + 2IPL_n - n^2 + n + nIPL_n \\
+    (n+1) IPL_{n+1} &= 2n + 2IPL_n + nIPL_n = 2n + (2+n)IPL_n \\
+    IPL_{n+1} &= \frac{2n}{n+1} + \frac{2+n}{n+1} IPL_n \\
+     &= \frac{2n}{n+1} + \frac{2(2+n)(n-1)}{(n+1)n} + \frac{(2+n)(n+1)}{(n+1)n}IPL_{n-1} \\
+     &= \frac{2n}{n+1} + \frac{2(2+n)(n-1)}{(n+1)n} + \frac{2+n}{n}(\frac{2(n-2)}{n-1} + \frac{n}{n-1} IPL_{n-2}) \\
+     &= \frac{2n}{n+1} + 2(n+2)\sum\limits_{i = 1}^{n} \frac{n-i}{(n-i+1)(n-i+2)} \\
+     &= \frac{2n}{n+1} + 2(n+2)\sum\limits_{i = 1}^{n} \frac{i}{(i+1)(i+2)} \\
+     &= \frac{2n}{n+1} + 2(n+2)\sum\limits_{i = 1}^{n} \frac{2}{i+2} - \frac{1}{i+1} \\
+     &= \frac{2n}{n+1} + 2(n+2)(\frac{2}{n+2} + \frac{1}{n+1} + H_n - 2) \\
+     &= 2nH_n - 4n + 4H_n + O(1)
+\end{align*}
+
+We know that harmonic numbers grow similarly to the natural logarithm, so \( H_n = \ln n + O(1) \). Hence, \( I_n = 2n \ln n + O(n) \). Using the IPL, we can estimate the average number of nodes required for an insertion by averaging the IPL over the number of nodes. This gives the following estimation:  
+
+\[
+I_n = 1 + \frac{IPL_n}{n} = 2 \ln n + O(1).
+\]
+
+Special thanks to Conrado's slides on Data Structures and Algorithms, which, along with the book \textit{Introduction to Algorithms}, were a great source for refreshing my knowledge and assisting me when I struggled with certain calculations!

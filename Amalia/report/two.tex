@@ -84,14 +84,16 @@ Once we have theoretical results on the expected internal path length in a rando
     \item We repeat the entire experiment for different values of \( n \).
 \end{enumerate}
 
-Again, I conducted the experiment with the same value of $n$ and same values of \textit{seeds} as before. Figure \ref{fig:plotBoundIPL} provides, as before, a plot with the expected values we should obtain following the continuous master theorem result and the experimental result. This time we do not see a similar behavior between the two curves as we saw before: It seems that the theoretical bound increase faster than the experimental result, not at the same time as before.
+Again, I conducted the experiment with the same value of $n$ and the same \textit{seeds} as before. Figure \ref{fig:plotBoundIPL} presents, as before, a plot comparing the expected values obtained from the continuous master theorem result with the experimental results. This time, however, the two curves do not exhibit similar behavior as observed previously. It appears that the theoretical bound increases faster than the experimental result, unlike the previous case. A more numerical perspective is provided in Table \ref{tab:tabIPL}, where we observe that the difference is no longer constant. In fact, the discrepancy increases as the input size grows.
 
-\begin{figure}
+\begin{figure}[ht]
     \centering
     \includegraphics[scale=0.65]{plotIPL.pdf}
     \caption{Plot average IPL respect the theoretical bound}
     \label{fig:plotBoundIPL}
 \end{figure}
+
+\input{tableIPL.tex}
 
 We know that there is a factor \( o(n \log n) \) (in fact, with a more detailed solution of the recurrence, see Appendix CITAR, we know that this $o(n \log n)$ is $O(n)$) that must be taken into account in our study. As a result, even with a high number of nodes in a random BST, this theoretical bound may still be influenced by the \( o(n \log n) \) factor until we reach a significantly larger number of nodes. To analyze this effect, we provide Figure \ref{fig:plotBoundCtIPL}, where we divide the experimental data by \( n \log n \) to observe when this \( o(n \log n) \) factor stabilizes. As seen in the figure, even for large input sizes (over 200,000 nodes), this factor still plays a significant role in our analysis.
 
