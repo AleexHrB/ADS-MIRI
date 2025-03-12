@@ -7,4 +7,14 @@
 \contentsline {subsection}{\numberline {3.1}Theoretical Study}{7}{}%
 \contentsline {subsection}{\numberline {3.2}Experimental Study}{8}{}%
 \contentsline {section}{\numberline {4}Analysis of Interleaver Insertions and Deletions}{11}{}%
-\contentsline {section}{\numberline {A}More accurate solutions to the previous recurrences}{13}{}%
+\contentsline {section}{\numberline {5}Conclusion}{13}{}%
+\contentsline {section}{\numberline {A}More accurate solutions to the previous recurrences}{14}{}%
+\contentsline {section}{\numberline {B}Main file implementation}{15}{}%
+\contentsline {subsection}{\numberline {B.1}Average Cost of Insertions}{15}{}%
+\contentsline {subsection}{\numberline {B.2}Analysis of Internal Path Length}{15}{}%
+\contentsline {subsection}{\numberline {B.3}Analysis of Interleaved Insertions and Deletions}{16}{}%
+\contentsline {section}{\numberline {C}Binary Search Tree implementation}{17}{}%
+\contentsline {subsection}{\numberline {C.1}Find operation}{17}{}%
+\contentsline {subsection}{\numberline {C.2}Insert operation}{17}{}%
+\contentsline {subsection}{\numberline {C.3}Erase Operation}{18}{}%
+\contentsline {subsection}{\numberline {C.4}Internal Path Length calculation}{19}{}%

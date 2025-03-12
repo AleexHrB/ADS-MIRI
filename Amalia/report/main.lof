@@ -1,5 +1,6 @@
 \babel@toc {english}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces Plot average number of nodes visited respect theoretical bound}}{5}{}%
 \contentsline {figure}{\numberline {2}{\ignorespaces Plot average IPL respect the theoretical bound}}{9}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Plot experimental result divided by $n \log n$}}{9}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Plot experimental result divided by $n \log n$}}{10}{}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Plot average IPL with and without alternating insertions and deletions}}{11}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Evolution of IPLs by doing insertions and deletions}}{13}{}%

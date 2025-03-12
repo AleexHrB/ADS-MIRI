@@ -19,9 +19,12 @@ delete_SRC = mainDelete.cc
 delete_OBJ = $(delete_SRC:.cc=.o)
 delete_TARGET = delete
 
+deleteSingle_OBJ = mainDelete_single.o
+deleteSingle_TARGET = deleteSingle
+
 # Default rule (show usage)
 all:
-	@echo "Usage: make [insertion | ipl | delete]"
+	@echo "Usage: make [insertion | ipl | delete | deleteSingle]"
 
 # Rules for compiling each executable
 $(insertion_TARGET): $(insertion_OBJ) $(BST_OBJ)
@@ -33,13 +36,20 @@ $(ipl_TARGET): $(ipl_OBJ) $(BST_OBJ)
 $(delete_TARGET): $(delete_OBJ) $(BST_OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
+$(deleteSingle_TARGET): $(deleteSingle_OBJ) $(BST_OBJ)
+	$(CXX) $(CXXFLAGS) -o $@ $^
+
 # Compiling source files to object files
 %.o: %.cc
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Special rule for compiling mainDelete.cc with -D SINGLE
+mainDelete_single.o: mainDelete.cc
+	$(CXX) $(CXXFLAGS) -D SINGLE -c $< -o $@
+
 # Clean build files
 clean:
-	rm -f $(insertion_OBJ) $(ipl_OBJ) $(delete_OBJ) $(BST_OBJ) $(insertion_TARGET) $(ipl_TARGET) $(delete_TARGET)
+	rm -f $(insertion_OBJ) $(ipl_OBJ) $(delete_OBJ) $(deleteSingle_OBJ) $(BST_OBJ) $(insertion_TARGET) $(ipl_TARGET) $(delete_TARGET) $(deleteSingle_TARGET)
 
 # Phony targets
-.PHONY: all clean insertion ipl delete
+.PHONY: all clean insertion ipl delete deleteSingle

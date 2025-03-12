@@ -5,46 +5,46 @@ A level-1 auxiliary file: one.aux
 A level-1 auxiliary file: two.aux
 A level-1 auxiliary file: three.aux
 A level-1 auxiliary file: appendix.aux
-The style file: alpha.bst
+The style file: ieeetr.bst
 Database file #1: bibs/sample.bib
-You've used 2 entries,
-            2543 wiz_defined-function locations,
-            575 strings with 4738 characters,
-and the built_in function-call counts, 654 in all, are:
-= -- 61
-> -- 16
-< -- 2
-+ -- 6
-- -- 4
-* -- 42
-:= -- 113
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 9
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 31
-empty$ -- 56
+You've used 6 entries,
+            1876 wiz_defined-function locations,
+            522 strings with 4337 characters,
+and the built_in function-call counts, 1596 in all, are:
+= -- 176
+> -- 32
+< -- 0
++ -- 14
+- -- 8
+* -- 96
+:= -- 217
+add.period$ -- 8
+call.type$ -- 6
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 86
+empty$ -- 161
 format.name$ -- 8
-if$ -- 129
-int.to.chr$ -- 1
-int.to.str$ -- 0
-missing$ -- 3
-newline$ -- 13
+if$ -- 399
+int.to.chr$ -- 0
+int.to.str$ -- 6
+missing$ -- 8
+newline$ -- 23
 num.names$ -- 6
-pop$ -- 12
+pop$ -- 18
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 0
 quote$ -- 0
-skip$ -- 22
+skip$ -- 60
 stack$ -- 0
-substring$ -- 41
-swap$ -- 2
-text.length$ -- 2
-text.prefix$ -- 2
+substring$ -- 128
+swap$ -- 38
+text.length$ -- 0
+text.prefix$ -- 0
 top$ -- 0
-type$ -- 12
+type$ -- 0
 warning$ -- 0
-while$ -- 6
-width$ -- 3
-write$ -- 27
+while$ -- 18
+width$ -- 7
+write$ -- 62

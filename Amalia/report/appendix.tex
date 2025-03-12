@@ -1,5 +1,5 @@
 \appendix
-\section{More accurate solutions to the previous recurrences}
+\section{More accurate solutions to the previous recurrences}\label{ap:rec}
 Let us consider the previous recurrence for the IPL of a Random BST:
 $$
 I_n = n -1 + \frac{2}{n} \sum\limits_{k = 0}^{n-1} I_k
@@ -40,4 +40,240 @@ We know that harmonic numbers grow similarly to the natural logarithm, so \( H_n
 I_n = 1 + \frac{IPL_n}{n} = 2 \ln n + O(1).
 \]
 
-Special thanks to Conrado's slides on Data Structures and Algorithms, which, along with the book \textit{Introduction to Algorithms}, were a great source for refreshing my knowledge and assisting me when I struggled with certain calculations!
+\section{Main file implementation}
+We have created three different main files for each different section. Both will require as an input the size of the BST as well as a seed for generating random numbers. Then a random BST is going to be created and it will perform a single execution of the required experiment.
+
+\subsection{Average Cost of Insertions}
+The provided \texttt{Makefile} can be used to compile this code. To do so, execute the following command in the terminal: \texttt{make insertion}. This will compile the main file along with the BST class.  
+
+To run the executable, the size and the seed must also be provided via the command line, following the format:  
+
+\texttt{./insertion n seed}.
+
+\begin{verbatim}
+#include <iostream>
+#include <random>
+#include "bst.hh"
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    unsigned int n = atoi(argv[1]);
+    unsigned int seed = atoi(argv[2]);
+
+    BST t;
+
+    mt19937 generator(seed);
+    uniform_real_distribution<float> distribution(0.0, 1.0);
+    for (unsigned int i = 0; i < n; ++i) t.insert(distribution(generator));
+    
+
+    unsigned int q = 2*n;
+    unsigned int tpl = 0;
+    for (unsigned int i = 0; i < q; ++i) tpl += t.find(distribution(generator));
+
+    cout << n << "," << float(tpl) / q << endl;
+}
+\end{verbatim}
+
+\subsection{Analysis of Internal Path Length}
+The provided \texttt{Makefile} can be used to compile this code. To do so, execute the following command in the terminal: \texttt{make ipl}. This will compile the main file along with the BST class.  
+
+To run the executable, the size and the seed must also be provided via the command line, following the format:  
+
+\texttt{./ipl n seed}.
+
+\begin{verbatim}
+#include <iostream>
+#include <random>
+#include "bst.hh"
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    unsigned int n = atoi(argv[1]);
+    unsigned int seed = atoi(argv[2]);
+
+    BST t;
+
+    mt19937 generator(seed);
+    uniform_real_distribution<float> distribution(0.0, 1.0);
+    for (unsigned int i = 0; i < n; ++i) t.insert(distribution(generator));
+    
+    cout << n << "," << t.ipl() << endl;
+}
+\end{verbatim}
+
+\subsection{Analysis of Interleaved Insertions and Deletions}
+The provided \texttt{Makefile} can be used to compile this code. In this case, we either want to obtain the IPL of the final BST or track instances of the IPL to observe how it evolves during the procedure. To compute the final IPL, compile the code using \texttt{make delete}. Otherwise, to track the IPL evolution, compile using \texttt{make deleteSingle}.  
+
+To execute the program, we also need to specify the size and the seed via the command line, following the format:  
+
+\texttt{./delete n seed} \quad or \quad \texttt{./deleteSingle n seed}.
+
+\begin{verbatim}
+#include <iostream>
+#include <random>
+#include "bst.hh"
+using namespace std;
+
+int main(int argc, char** argv) {
+
+    unsigned int n = atoi(argv[1]);
+    unsigned int seed = atoi(argv[2]);
+
+    float *v = (float *) malloc(n*n*sizeof(float));
+
+    BST t;
+    unsigned int lastElem = n - 1;
+
+    mt19937 generator(seed);
+    uniform_real_distribution<float> distribution(0.0, 1.0);
+    for (unsigned int i = 0; i < n; ++i) {
+        v[i] = distribution(generator);
+        t.insert(v[i]);
+    }
+
+    unsigned int erasedElems = 0;
+    srand(seed);
+    bool ins = true;
+    unsigned int count = 0;
+    for (unsigned int i = 0; i < n*n; ++i) {
+
+        if (ins) {
+            ++lastElem;
+            v[lastElem] = distribution(generator);
+            t.insert(v[lastElem]);
+        }
+
+        else {
+            unsigned int cand = rand() % (lastElem - erasedElems + 1) + erasedElems;
+            float aux = v[cand];
+            v[cand] = v[erasedElems];
+            v[erasedElems] = aux;
+            t.erase(aux);
+            ++erasedElems;
+        }
+
+        ins = !ins;
+        ++count;
+#ifdef SINGLE
+        if (count == n) {
+            count = 0;
+            cout << i << "," << t.ipl() << endl;
+        }
+#endif
+    }
+
+#ifndef SINGLE
+    cout << n << "," << t.ipl() << endl;
+#endif
+    free(v);
+}
+\end{verbatim}
+
+\section{Binary Search Tree implementation}
+A C++ implementation has been developed for efficiency purposes in the BST. A C++ class has been created to represent the Binary Search Tree data structure (refer to \texttt{bst.hh} for a more detailed exploration of different methods for the class). It primarily consists of a node that stores its value along with two pointers to its respective subtrees. In C++, this can be achieved by using a struct that holds two pointers to its own type.
+
+\subsection{Find operation}
+\begin{verbatim}
+unsigned int BST::find(float x, node* n) {
+    if (n == nullptr) return 0;
+    if (n -> x == x) return 1;
+    if (n -> x > x) return 1 + find(x, n->l);
+    else return 1 + find(x, n->r);
+}
+\end{verbatim}
+
+\subsection{Insert operation}
+\begin{verbatim}
+BST::node* BST::insert(float x, node* n) {
+
+    if (n == nullptr) {
+        node* newNode = new node;
+        newNode -> x = x;
+        return newNode;
+    }
+
+    else if (n -> x == x) return n;
+
+    else {
+        if (n -> x > x) n -> l = insert(x, n -> l);
+        else n -> r = insert(x, n -> r);
+        return n;
+    }
+}
+\end{verbatim}
+\subsection{Erase Operation}
+\begin{verbatim}
+BST::node* BST::erase(node* n, float x) {
+
+    if (n == nullptr) return nullptr;
+
+    if (n -> x < x) {
+        n -> r = erase(n -> r, x);
+        return n;
+    }
+
+    if (n -> x > x) {
+        n -> l = erase(n -> l, x);
+        return n;
+    }
+
+    if (n -> l == nullptr) {
+        node* aux = n -> r;
+        delete n;
+        return aux;
+    }
+
+    if (n -> r == nullptr) {
+        node* aux = n -> l;
+        delete n;
+        return aux;
+    }
+
+    float val = 0;
+    n -> r  = eraseSuccessor(n -> r, val);
+    n -> x = val;
+    return n;
+}
+
+BST::node* BST::eraseSuccessor(node* n, float& x) {
+    
+    if (n -> l == nullptr) {
+        node* aux = n -> r;
+        x = n -> x;
+        delete n;
+        return aux;
+    }
+
+    else {
+        n -> l = eraseSuccessor(n -> l, x);
+        return n;
+    }
+}
+\end{verbatim}
+
+\subsection{Internal Path Length calculation}
+\begin{verbatim}
+unsigned int BST::ipl() {
+    queue<pair<node*,unsigned int>> q;
+    unsigned int iplLocal = 0;
+    q.push({root,0});
+
+    while (not q.empty()) {
+        pair<node*, unsigned int> p = q.front();
+        q.pop();
+
+        if (p.first != nullptr) {
+            unsigned int d = p.second;
+            iplLocal += d;
+            q.push({p.first -> l, d+1});
+            q.push({p.first -> r, d+1});
+        }
+    }
+
+    return iplLocal;
+}
+\end{verbatim}
+

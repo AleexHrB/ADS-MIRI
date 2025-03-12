@@ -86,7 +86,7 @@ I_n = 2\ln n + o(\log n).
 
 Thus, the expected cost of an insertion into a random binary search tree is bounded by \( O(\log n) \).
 
-\subsection{Experimental Study}
+\subsection{Experimental Study}\label{sub:insEx}
 Once we have theoretical results on the expected cost of an insertion in a random BST, we can provide experimental results to assess how closely they match the theoretical predictions. For this, we will conduct the following experiment:
 
 \begin{enumerate}
@@ -98,7 +98,7 @@ Once we have theoretical results on the expected cost of an insertion in a rando
     \item We repeat the entire experiment for different values of \( n \).
 \end{enumerate}
 
-I conducted the experiment previously explained with values of \( n \) ranging from \( 10,000 \) to \( 200,000 \) in increments of \( 5,000 \), using seeds to generate random numbers from \( 1989 \) (in honor of the year of the first publication of the book \textit{Introduction to Algorithms}, which was a great resource for refreshing my knowledge of BSTs and expected cost) to \( 2008 \). Figure~\ref{fig:plotBoundIns} provides a plot of the values obtained from this experiment, as well as the theoretical bound derived using the continuous master theorem, indicating that the theoretical bound always bounds the experimental results. In fact, the shapes of both plots appear to be the same, suggesting that the only difference between the two functions is a constant factor. Indeed, by applying the continuous master theorem, we know that this difference is \( o(\log n) \), but a more detailed analysis, presented in Appendix~CITAR, shows that this difference is actually \( O(1) \).  
+I conducted the experiment previously explained with values of \( n \) ranging from \( 10,000 \) to \( 200,000 \) in increments of \( 5,000 \), using seeds to generate random numbers from \( 1989 \) (in honor of the year of the first publication of the book \textit{Introduction to Algorithms}, which was a great resource for refreshing my knowledge of BSTs and expected cost) to \( 2008 \). You can execute exactly the same experiment by just executing the script \texttt{execInsertion.sh}. Figure~\ref{fig:plotBoundIns} provides a plot of the values obtained from this experiment, as well as the theoretical bound derived using the continuous master theorem, indicating that the theoretical bound always bounds the experimental results. In fact, the shapes of both plots appear to be the same, suggesting that the only difference between the two functions is a constant factor. Indeed, by applying the continuous master theorem, we know that this difference is \( o(\log n) \), but a more detailed analysis, presented in Appendix \ref{ap:rec} shows that this difference is actually \( O(1) \).  
 
 This constant factor is clearly visible in Table~\ref{tab:tabIns}, where the column \textit{Difference} (computed as the difference between the theoretical value obtained using Roura's theorem and the experimental value) consistently yields basically a constant difference.
 

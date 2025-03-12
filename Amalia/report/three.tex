@@ -1,5 +1,5 @@
 \section{Analysis of Interleaver Insertions and Deletions}
-Knuth, in Volume 3 of his well-known book \textit{The Art of Computer Programming} \cite{knuth1998art}, mentioned that random insertions and deletions indeed \textit{destroy} the randomness of a BST. This phenomenon was first observed by Gary Knott in 1972, and later, Eppinger \cite{eppinger1983empirical} demonstrated experimentally that the path length, although initially decreasing slightly, eventually increases and stabilizes after performing a quadratic number of deletions and insertions.
+Knuth, in Volume 3 of his well-known book \textit{The Art of Computer Programming} \cite{knuth1998art}, mentioned that random insertions and deletions indeed \textit{destroy} the randomness of a BST. Knott\cite{knott1975deletion} and Culberson \& Munro\cite{culberson1990analysis} noticed that, after doing such operations, while the structure of a tree is probabilistically the same, the distribution of keys is not. Eppinger\cite{eppinger1983empirical} demonstrated experimentally that the path length, although initially decreasing slightly, eventually increases and stabilizes after performing a quadratic number of deletions and insertions. Many other articles have also appeared in the literature\cite{jonassen1978trivial, knuth1977deletions}
 
 The following experiment aims to support the observations made by Eppinger and Knuth:
 \begin{enumerate}
@@ -10,7 +10,7 @@ The following experiment aims to support the observations made by Eppinger and K
     \item We repeat the entire experiment for different values of \( n \).
 \end{enumerate}
 
-This time, as we are doing a quadratic number of steps, because of memory and time performance I have decided to conduct this experient with Random BSTs of size $1000$ to $2000$ in increases of $50$ elements. Figure \ref{fig:plotDeletion} provides a plot of the final IPL with and without doing this alternation between deletions and insertion. As expected, we see that, indeed, the IPL of a tree increases if we perform this operations, indicating that we are unbalancing our random BST (hence, destroying our randomness).
+This time, as we are doing a quadratic number of steps, because of memory and time performance I have decided to conduct this experient with Random BSTs of size $1000$ to $2000$ in increases of $50$ elements (same seeds as section \ref{sub:insEx}). Figure \ref{fig:plotDeletion} provides a plot of the final IPL with and without doing this alternation between deletions and insertion. As expected, we see that, indeed, the IPL of a tree increases if we perform this operations, indicating that we are unbalancing our random BST (hence, destroying our randomness).
 
 \begin{figure}[ht]
     \centering
@@ -24,3 +24,26 @@ This time, as we are doing a quadratic number of steps, because of memory and ti
 Table \ref{tab:tabDelet} provides a more numerical view of such plot. As we see, the difference in IPL gets bigger as we increases the size of $n$, definitely destroying the initial randomness that we created.
 
 \input{tableDeletion.tex}
+
+For a more detailed view of Eppinger's work we provide the following experiment:
+
+\begin{enumerate}
+    \item We create a random BST of size \( n \) by generating \( n \) random keys in the interval \( [0,1] \).
+    \item We perform a quadratic number of insertions and deletions as follows: we alternately insert a random element from the interval \( [0,1] \) and delete a random element from the BST.
+    \item We compute the internal path length of the BST using a Breadth-First Search algorithm every $n$ iterations.
+    \item We repeat all the previous steps with 20 different seeds and compute the final average.
+    \item We repeat the entire experiment for different values of \( n \in \{1000, 1500, 2000\} \).
+\end{enumerate}
+\newpage
+
+Figure \ref{fig:evIPL} provides a plot of such experiment. Indeed, we see what it was said: The IPL decrease slightly at the beginning but, after that, it starts increasing more than what we had at the beginning. Again, indicating that we are unbalancing our tree and losing our randomness.
+\input{figuresIPLDelete.tex}
+
+\section{Conclusion}
+Regarding the theoretical analysis of recurrences, although the continuous master theorem is a powerful tool for solving recurrences, it may not always provide a more accurate bound than solving them explicitly.
+
+Regarding the practical part, randomness is a powerful tool for keeping a random BST balanced, but we must be careful in certain situations.
+
+Last but not least, I would like to mention that this last section challenged my intuition: I was expecting that performing random insertions and deletions would not affect the structure of our tree, as every subtree is equally likely.
+
+Special thanks to Conrado's slides on Data Structures and Algorithms, which, along with the book \textit{Introduction to Algorithms}, were a great resource for refreshing my knowledge and assisting me when I struggled with certain calculations!

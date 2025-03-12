@@ -23,6 +23,7 @@ int main(int argc, char** argv) {
     unsigned int erasedElems = 0;
     srand(seed);
     bool ins = true;
+    unsigned int count = 0;
     for (unsigned int i = 0; i < n*n; ++i) {
 
         if (ins) {
@@ -41,10 +42,17 @@ int main(int argc, char** argv) {
         }
 
         ins = !ins;
-
+        ++count;
+#ifdef SINGLE
+        if (count == n) {
+            count = 0;
+            cout << i << "," << t.ipl() << endl;
+        }
+#endif
     }
 
-    
+#ifndef SINGLE
     cout << n << "," << t.ipl() << endl;
+#endif
     free(v);
 }

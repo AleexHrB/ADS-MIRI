@@ -1,4 +1,5 @@
 #include <iostream>
+#include <random>
 #include "bst.hh"
 using namespace std;
 
@@ -9,13 +10,15 @@ int main(int argc, char** argv) {
 
     BST t;
 
-    srand(seed);
-    for (unsigned int i = 0; i < n; ++i) t.insert(((double)rand()) / RAND_MAX);
+    mt19937 generator(seed);
+    uniform_real_distribution<float> distribution(0.0, 1.0);
+    for (unsigned int i = 0; i < n; ++i) t.insert(distribution(generator));
     
 
     unsigned int q = 2*n;
     unsigned int tpl = 0;
-    for (unsigned int i = 0; i < q; ++i) tpl += t.find(((double)rand()) / RAND_MAX);
+    for (unsigned int i = 0; i < q; ++i) tpl += t.find(distribution(generator));
 
     cout << n << "," << float(tpl) / q << endl;
 }
+
