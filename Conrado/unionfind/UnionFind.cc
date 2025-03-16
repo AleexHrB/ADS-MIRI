@@ -8,8 +8,7 @@ using namespace std;
 UnionFind::UnionFind(unsigned int n, UnionStrategy s, PathStrategy p) {
     P = (int*) malloc(n * sizeof(int));
 
-    weighted = s != UnionStrategy::QU;
-    if (not weighted) for (unsigned int i = 0; i < n; ++i) P[i] = i;
+    if (s != UnionStrategy::QU) for (unsigned int i = 0; i < n; ++i) P[i] = i;
     else for (unsigned int i = 0; i < n; ++i) P[i] = -1;
 
     strat = s;
@@ -30,7 +29,7 @@ unsigned int UnionFind::getTPL() const {
     for (unsigned int i = 0; i < size; ++i) {
         unsigned int j = i;
 
-        while (weighted ? P[j] > 0 : P[j] != j) {
+        while (parent(j) != j) {
             j = P[j];
             ++tpl;
         }
@@ -56,7 +55,7 @@ unsigned int UnionFind::find(unsigned int i) {
         case PathStrategy::TOR:
             return pathR(i);
         default:
-            while (weighted ? P[i] > 0 : P[i] != i) i = P[i];
+            while (parent(i) != i) i = P[i];
             return i;
     }
 }
