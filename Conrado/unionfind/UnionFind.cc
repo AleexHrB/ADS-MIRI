@@ -3,12 +3,13 @@
 #include <cstdio>
 using namespace std;
 #define min(a,b) (((a)<(b))?(a):(b))
+#define parent(i) (P[i] < 0 ? (i) : P[i])
 
 
 UnionFind::UnionFind(unsigned int n, UnionStrategy s, PathStrategy p) {
     P = (int*) malloc(n * sizeof(int));
 
-    if (s != UnionStrategy::QU) for (unsigned int i = 0; i < n; ++i) P[i] = i;
+    if (s == UnionStrategy::QU) for (unsigned int i = 0; i < n; ++i) P[i] = i;
     else for (unsigned int i = 0; i < n; ++i) P[i] = -1;
 
     strat = s;
@@ -95,10 +96,6 @@ unsigned int UnionFind::pathFC(unsigned int i) {
 #endif
         return P[i];
     }
-}
-
-inline unsigned int UnionFind::parent(unsigned int i) {
-    return P[i] < 0 ? i : P[i];
 }
 
 unsigned int UnionFind::pathPS(unsigned int i) {
