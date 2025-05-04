@@ -1,0 +1,211 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{eppinger1983}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=fb78d29ffddb1d339612f0794c2918be}{%
+           family={Eppinger},
+           familyi={E\bibinitperiod},
+           given={Jeffrey\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{fullhash}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{fullhashraw}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{bibnamehash}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{authorbibnamehash}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{authornamehash}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{authorfullhash}{fb78d29ffddb1d339612f0794c2918be}
+      \strng{authorfullhashraw}{fb78d29ffddb1d339612f0794c2918be}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper describes an experiment on the effect of insertions and deletions on the path length of unbalanced binary search trees. Repeatedly inserting and deleting nodes in a random binary tree yields a tree that is no longer random. The expected internal path length differs when different deletion algorithms are used. Previous empirical studies indicated that expected internal path length tends to decrease after repeated insertions and asymmetric deletions. This study shows that performing a larger number of insertions and asymmetric deletions actually increases the expected internal path length, and that for sufficiently large trees, the expected internal path length becomes worse than that of a random tree. With a symmetric deletion algorithm, however, the experiments indicate that performing a large number of insertions and deletions decreases the expected internal path length, and that the expected internal path length remains better than that of a random tree.}
+      \field{issn}{0001-0782}
+      \field{journaltitle}{Commun. ACM}
+      \field{month}{9}
+      \field{number}{9}
+      \field{title}{An empirical study of insertion and deletion in binary search trees}
+      \field{volume}{26}
+      \field{year}{1983}
+      \field{pages}{663\bibrangedash 669}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1145/358172.358183
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/358172.358183
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/358172.358183
+      \endverb
+      \keyw{binary trees}
+    \endentry
+    \entry{hibbard1962}{article}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4b7a5bc57ffb46c202ccd142c11048a2}{%
+           family={Hibbard},
+           familyi={H\bibinitperiod},
+           given={Thomas\bibnamedelima N.},
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York, NY, USA}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computing Machinery}%
+      }
+      \strng{namehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{fullhash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{fullhashraw}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{bibnamehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authorbibnamehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authornamehash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authorfullhash}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \strng{authorfullhashraw}{4b7a5bc57ffb46c202ccd142c11048a2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0004-5411}
+      \field{journaltitle}{J. ACM}
+      \field{month}{1}
+      \field{number}{1}
+      \field{title}{Some Combinatorial Properties of Certain Trees With Applications to Searching and Sorting}
+      \field{volume}{9}
+      \field{year}{1962}
+      \field{pages}{13\bibrangedash 28}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1145/321105.321108
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1145/321105.321108
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1145/321105.321108
+      \endverb
+    \endentry
+    \entry{jonassen1978trivial}{article}{}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=a0b5ac29d5fac92c35c4140c3cfef88a}{%
+           family={Jonassen},
+           familyi={J\bibinitperiod},
+           given={Arne\bibnamedelima T},
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{fullhash}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{fullhashraw}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{bibnamehash}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{authorbibnamehash}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{authornamehash}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{authorfullhash}{025a11b5a2820027ef50bd3f2d807dd6}
+      \strng{authorfullhashraw}{025a11b5a2820027ef50bd3f2d807dd6}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of computer and system sciences}
+      \field{number}{3}
+      \field{title}{A trivial algorithm whose analysis isn't}
+      \field{volume}{16}
+      \field{year}{1978}
+      \field{pages}{301\bibrangedash 322}
+      \range{pages}{22}
+    \endentry
+    \entry{knott1975deletion}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eea3b1c8f83a21ad7f026f8cd6fbc907}{%
+           family={Knott},
+           familyi={K\bibinitperiod},
+           given={Gary\bibnamedelima Don},
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Stanford University}%
+      }
+      \strng{namehash}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{fullhash}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{fullhashraw}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{bibnamehash}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{authorbibnamehash}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{authornamehash}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{authorfullhash}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \strng{authorfullhashraw}{eea3b1c8f83a21ad7f026f8cd6fbc907}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Deletion in binary storage trees.}
+      \field{year}{1975}
+    \endentry
+    \entry{knuth1998art}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley Professional}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Art of Computer Programming: Sorting and Searching, volume 3}
+      \field{year}{1998}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

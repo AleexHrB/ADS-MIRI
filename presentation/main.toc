@@ -1,0 +1,3 @@
+\beamer@sectionintoc {1}{1962: Hibbard}{4}{0}{1}
+\beamer@sectionintoc {2}{1975: Knott}{23}{0}{2}
+\beamer@sectionintoc {3}{1983: Eppinger}{39}{0}{3}
