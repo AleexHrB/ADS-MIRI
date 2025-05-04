@@ -1,0 +1,45 @@
+\documentclass[a4paper, twoside]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{subcaption}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=3cm,left=2.5cm,right=2.5cm,marginparwidth=1.75cm]{geometry}
+
+%% Useful packages
+\usepackage{graphicx}
+
+\begin{document}
+\input{title/title.tex}
+
+\setlength{\headheight}{45pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\fontsize{9bp}{9bp}\selectfont{Union-Find data structure: \\ An empirical analysis}}
+\lhead{\includegraphics[width=215px]{title/logo-upc.png}}
+\rfoot{\thepage}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\newpage
+
+\setstretch{1.1}
+\include{one.tex}
+\include{time.tex}
+\include{conc.tex}
+
+\newpage
+\bibliographystyle{ieeetr}
+\bibliography{bibs/sample}
+
+\include{appendix.tex}
+
+\end{document}

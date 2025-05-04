@@ -1,0 +1,10 @@
+\section{Time Comparison}
+With the same approach explained in Section 3, times have been calculated. Figure \ref{fig:timeNC} and \ref{fig:timeH} provides plots for the execution time counting only the time needed for doing merge operations (not the whole execution of the program!). As expected, Quick-Union without path compression performs the worst when we compare with weighted unions (the difference is even more clear as we increase the size of the data structure). Still, with weighted unions we see that time is getting more close to each other as we increase the size (but this is not a surprise, as time execution is related to average TPL and TPU which has been calculated in the previous section, where we saw that both metrics are similar using weighted unions).
+
+\input{timeNC.tex}
+
+What is really interesting is that when we add path compression techniques, although Quick-Union performed the worst in both TPL and TPU metrics using any path heuristic, its execution time does not notably differ from weighted unions (see Figure \ref{fig:timeH}), as TPL and TPU do. We might need a larger sample size to spot a notable difference in the trade-off of performing \textit{cheap} unions in exchange for letting the find operation balance the trees. In fact there is not a noticable difference in execution time rather than calculating metrics.
+\input{timeH.tex}
+
+From a theoretical analysis\cite{tarjan1984worst}, we know that Union-Find can have an amortized cost (using heuristics on both compression (full compression/splitting/halving) and unions) of \( O(m \hspace{2px} \alpha(n,m)) \), where \( \alpha \) is the inverse Ackermann function, $m$ is the number of operations we want to perform and $n$ the number of disjoint blocks. Without compression (or using type one reversal), we can achieve \( O(m \log n) \). We may need a larger input size in order to see a noticeable difference, only with those sizes we cannot see any time difference, although we really saw it calculating metrics.
+

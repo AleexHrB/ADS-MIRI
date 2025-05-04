@@ -1,0 +1,10 @@
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Total Path Length normalized with No Compression}}{5}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Example of Type One Reversal which may lead to a worst IPL}}{6}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces More accurate example of the representation of a tree after several \texttt {find} operations}}{7}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Total Path Length normalized for different heuristics}}{8}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Total Path Length normalized for different heuristics without Quick-Union}}{9}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Total Pointer Update normalized using different heuristics}}{10}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Total Pointer Update normalized without Quick-Union}}{11}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Total time No Compression}}{12}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Total time using different heuristics}}{13}{}%

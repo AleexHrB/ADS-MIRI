@@ -1,0 +1,225 @@
+\appendix
+\section{Union Operation: Code}
+From \texttt{main.cc} there is a single call to the Union operation. Such call is executed by the following merge function:
+
+\begin{center}
+    \begin{verbatim}
+void UnionFind::merge(unsigned int i, unsigned int j) {
+    unsigned int ri = find(i);
+    unsigned int rj = find(j);
+    if (ri == rj) return;
+    --numBlocks;
+    switch(strat) {
+        case UnionStrategy::QU:
+            mergeQU(ri, rj);
+            break;
+        case UnionStrategy::UW:
+            mergeUW(ri, rj);
+            break;
+        case UnionStrategy::UR:
+            mergeUR(ri, rj);
+            break;
+        default:
+            break;
+    }
+}
+    \end{verbatim}
+\end{center}
+
+Firstly one can see that there are two calls to the \texttt{find} operation which, depending on the strategy choosen for the path compression they will behave differently. For now let us just consider how the union operation is implemented 
+
+\subsection{Quick-Union}
+Anyone who chooses to use this strategy as their union strategy will perform the union operation in an extremely efficient time—as there is only one single operation—at the cost of increased time complexity in the find operation (we do not keep track of how paths will change when we perform the union). The following code provides an implementation of this approach:
+
+\begin{center}
+    \begin{verbatim}
+void UnionFind::mergeQU(unsigned int ri, unsigned int rj) {
+    P[ri] = rj;
+}
+    \end{verbatim}
+\end{center}
+
+\subsection{Union by Weight}
+An straightforward heuristic in order to choose how we can merge two different trees is to just merge the smaller one into the larger one. We will expect to not increase as much the path that we will create as if we do it the other way around. The following code provides an implementation of this approach:
+
+\begin{verbatim}
+void UnionFind::mergeUW(unsigned int ri, unsigned int rj) {
+    //Recall that representatives here are negative numbers
+    if (P[ri] >= P[rj]) {
+        P[rj] += P[ri];
+        P[ri] = rj;
+    }
+
+    else {
+        P[ri] += P[rj];
+        P[rj] = ri;
+    }
+}
+\end{verbatim}
+
+\subsection{Union by Rank}
+A similar idea from the Union by Weight heuristic can be applied here, but this time, we aim to control the rank of a tree, which we will use as an upper bound for its height. The following code provides an implementation of this approach:
+
+\begin{verbatim}
+void UnionFind::mergeUR(unsigned int ri, unsigned int rj) {
+
+    //Recall that representatives here are negative numbers
+    if (P[ri] >= P[rj]) {
+        P[rj] = min(P[rj], P[ri] - 1);
+        P[ri] = rj;
+    }
+
+    else {
+        P[ri] = min(P[ri], P[rj] - 1);
+        P[rj] = ri;
+    }
+}
+\end{verbatim}
+
+\section{Find Operation: Code}\label{ap:Path}
+Let us tackle the find operation, which is the first call during the union function. The following code correspond to such call: 
+
+\begin{verbatim}
+unsigned int UnionFind::find(unsigned int i) {
+
+    switch(path) {
+        case PathStrategy::FC:
+            return pathFC(i);
+        case PathStrategy::PS:
+            return pathPS(i);
+        case PathStrategy::PH:
+            return pathPH(i);
+        case PathStrategy::TOR:
+            return pathR(i);
+        default:
+            while (parent(i) != i) i = P[i];
+            return i;
+    }
+}
+
+\end{verbatim}
+
+As you can see, depending on the user's strategy for path compression, the code will choose the corresponding approach. It is worth noting that if the user decides not to use any path compression, the find operation will simply look for the representative of the class in a straightforward manner within the while loop (where \texttt{weighted} is just a boolean that indicates whether the representation of representatives uses negative numbers or not).
+
+
+\subsection{Full Compression}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::pathFC(unsigned int i) {
+
+    //parent(i) is defined as P[i] < 0 ? i : P[i]
+    if (parent(i) == parent(parent(i))) return parent(i);
+
+    else {
+        P[i] = pathFC(P[i]);
+        #ifndef TIME
+        ++tpu;
+        #endif
+        return P[i];
+    }
+}
+\end{verbatim}
+
+\subsection{Path Splitting}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+
+unsigned int UnionFind::pathPS(unsigned int i) {
+
+    //parent(i) is defined as P[i] < 0 ? i : P[i]
+    while (parent(i) != parent(parent(i))) {
+        unsigned int aux = P[i];
+        P[i] = P[P[i]];
+        i = aux;
+        //Increase by one the counter which tracks 
+        //the number of pointer switches that one makes
+        #ifndef TIME
+        ++tpu;
+        #endif
+    }
+
+    //This function will stop either at the root or
+    //at a children of the node, that is why we 
+    //must make another call to parent(i)
+    return parent(i);
+}
+\end{verbatim}
+
+
+\subsection{Path Halving}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::pathPH(unsigned int i) {
+
+    while (parent(i) != parent(parent(i))) {
+        P[i] = P[P[i]];
+        i = P[i];
+        //Increase by one the counter which tracks 
+        //the number of pointer switches that one makes
+        #ifndef TIME
+        ++tpu;
+        #endif
+    }
+
+    //This function will stop either at the root or
+    //at a children of the node, that is why we 
+    //must make another call to parent(i)
+    return parent(i);
+}
+\end{verbatim}
+
+\subsection{Type One Reversal}
+The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::pathR(unsigned int i) {
+
+    unsigned int finalNode = i;
+    i = parent(i);
+
+    while (parent(i) != parent(parent(i))) {
+        unsigned int aux = P[i];
+        P[i] = finalNode;
+        i = aux;
+#ifndef TIME
+        ++tpu;
+#endif
+    }
+
+    if (parent(finalNode) != parent(i)) {
+        P[finalNode] = parent(i);
+        P[i] = finalNode;
+#ifndef TIME
+        tpu += 2;
+#endif
+    }
+    return parent(finalNode);
+}
+\end{verbatim}
+
+\newpage
+
+\section{TPL Calculation}\label{ap:TPL}
+As stated before, we have decided to traverse the entire data structure to calculate the TPL. Again, it is important to remember that the goal of this metric is its value rather than the efficiency of its computation. The following code provides an implementation of this approach:
+
+\begin{verbatim}
+unsigned int UnionFind::getTPL() const {
+
+    unsigned int tpl = 0;
+
+    for (unsigned int i = 0; i < size; ++i) {
+        unsigned int j = i;
+
+        while (parent(j) != j) {
+            j = P[j];
+            ++tpl;
+        }
+
+    }
+
+    return tpl;
+}
+\end{verbatim}
