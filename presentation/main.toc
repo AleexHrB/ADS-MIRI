@@ -1,3 +1,6 @@
-\beamer@sectionintoc {1}{1962: Hibbard}{4}{0}{1}
-\beamer@sectionintoc {2}{1975: Knott}{23}{0}{2}
-\beamer@sectionintoc {3}{1983: Eppinger}{39}{0}{3}
+\beamer@sectionintoc {1}{Introduction to BSTs}{4}{0}{1}
+\beamer@sectionintoc {2}{Paradoxical result}{26}{0}{2}
+\beamer@sectionintoc {3}{Experimental Results}{53}{0}{3}
+\beamer@sectionintoc {4}{Theoretical Studies}{74}{0}{4}
+\beamer@sectionintoc {5}{Final remarks}{93}{0}{5}
+\beamer@sectionintoc {6}{References}{97}{0}{6}

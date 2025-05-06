@@ -180,11 +180,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -395,11 +395,11 @@
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquelist</bcf:key>
-      <bcf:value>true</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniquename</bcf:key>
-      <bcf:value>full</bcf:value>
+      <bcf:value>false</bcf:value>
     </bcf:option>
     <bcf:option type="singlevalued">
       <bcf:key>uniqueprimaryauthor</bcf:key>
@@ -559,6 +559,7 @@
     <bcf:option datatype="string">datelabel</bcf:option>
     <bcf:option datatype="string">backrefstyle</bcf:option>
     <bcf:option datatype="string">arxiv</bcf:option>
+    <bcf:option datatype="string">citepages</bcf:option>
     <bcf:option datatype="boolean">familyinits</bcf:option>
     <bcf:option datatype="boolean">giveninits</bcf:option>
     <bcf:option datatype="boolean">prefixinits</bcf:option>
@@ -2371,13 +2372,27 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">hibbard1962</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">knott1975deletion</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">knuth1977deletions</bcf:citekey>
     <bcf:citekey order="3" intorder="1">knott1975deletion</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">jonassen1978trivial</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">knott1975deletion</bcf:citekey>
     <bcf:citekey order="5" intorder="1">jonassen1978trivial</bcf:citekey>
     <bcf:citekey order="6" intorder="1">knuth1998art</bcf:citekey>
     <bcf:citekey order="7" intorder="1">knuth1998art</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">eppinger1983</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">knuth1998art</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">eppinger1983</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">knuth1998art</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">knuth1998art</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">knuth1998art</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">knuth1998art</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">culberson1989explaining</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">culberson1990analysis</bcf:citekey>
+    <bcf:citekey order="16" intorder="1">knuth1977deletions</bcf:citekey>
+    <bcf:citekey order="17" intorder="1">jonassen1978trivial</bcf:citekey>
+    <bcf:citekey order="18" intorder="1">martinez1998randomized</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">seidel1996randomized</bcf:citekey>
+    <bcf:citekey order="20" intorder="1">martinez1998randomized</bcf:citekey>
+    <bcf:citekey order="21" intorder="1">seidel1996randomized</bcf:citekey>
+    <bcf:citekey order="22" intorder="1">panny2010deletions</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

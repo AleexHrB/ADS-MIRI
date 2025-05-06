@@ -19,14 +19,100 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
+    \entry{culberson1989explaining}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=624d6db3188ad314837069144de84b95}{%
+           family={Culberson},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=9f642df542b9a908b3f48090c8e00ebe}{%
+           family={Munro},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi I.},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press, Inc.}%
+      }
+      \strng{namehash}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{fullhash}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{fullhashraw}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{bibnamehash}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{authorbibnamehash}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{authornamehash}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{authorfullhash}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \strng{authorfullhashraw}{8ef0b0c8b7870191660a0d7e3f54130e}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0010-4620}
+      \field{journaltitle}{Comput. J.}
+      \field{month}{2}
+      \field{number}{1}
+      \field{title}{Explaining the behaviour of binary search trees under prolonged updates: a model and simulations}
+      \field{volume}{32}
+      \field{year}{1989}
+      \field{pages}{68\bibrangedash 75}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1093/comjnl/32.1.68
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/comjnl/32.1.68
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/comjnl/32.1.68
+      \endverb
+    \endentry
+    \entry{culberson1990analysis}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=60e554643693e435c3c02522287e2bcd}{%
+           family={Culberson},
+           familyi={C\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=659d8421a05b38df6d9cc52493c0962b}{%
+           family={Munro},
+           familyi={M\bibinitperiod},
+           given={J\bibnamedelima Ian},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{fullhash}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{fullhashraw}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{bibnamehash}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{authorbibnamehash}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{authornamehash}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{authorfullhash}{4807c18220ff650d3eaae5d19dfcb12c}
+      \strng{authorfullhashraw}{4807c18220ff650d3eaae5d19dfcb12c}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algorithmica}
+      \field{title}{Analysis of the standard deletion algorithms in exact fit domain binary search trees}
+      \field{volume}{5}
+      \field{year}{1990}
+      \field{pages}{295\bibrangedash 311}
+      \range{pages}{17}
+    \endentry
     \entry{eppinger1983}{article}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=fb78d29ffddb1d339612f0794c2918be}{%
+        {{hash=fb78d29ffddb1d339612f0794c2918be}{%
            family={Eppinger},
            familyi={E\bibinitperiod},
            given={Jeffrey\bibnamedelima L.},
-           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
-           givenun=0}}%
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {New York, NY, USA}%
@@ -69,12 +155,11 @@
     \endentry
     \entry{hibbard1962}{article}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=4b7a5bc57ffb46c202ccd142c11048a2}{%
+        {{hash=4b7a5bc57ffb46c202ccd142c11048a2}{%
            family={Hibbard},
            familyi={H\bibinitperiod},
            given={Thomas\bibnamedelima N.},
-           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod},
-           givenun=0}}%
+           giveni={T\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {New York, NY, USA}%
@@ -115,18 +200,16 @@
     \endentry
     \entry{jonassen1978trivial}{article}{}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=a0b5ac29d5fac92c35c4140c3cfef88a}{%
+        {{hash=a0b5ac29d5fac92c35c4140c3cfef88a}{%
            family={Jonassen},
            familyi={J\bibinitperiod},
            given={Arne\bibnamedelima T},
-           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           giveni={A\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
            family={Knuth},
            familyi={K\bibinitperiod},
            given={Donald\bibnamedelima E},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Elsevier}%
@@ -153,12 +236,11 @@
     \endentry
     \entry{knott1975deletion}{book}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=eea3b1c8f83a21ad7f026f8cd6fbc907}{%
+        {{hash=eea3b1c8f83a21ad7f026f8cd6fbc907}{%
            family={Knott},
            familyi={K\bibinitperiod},
            given={Gary\bibnamedelima Don},
-           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod},
-           givenun=0}}%
+           giveni={G\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Stanford University}%
@@ -180,12 +262,11 @@
     \endentry
     \entry{knuth1998art}{book}{}{}
       \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ec08e6f01da5f3814f28a70c89c64656}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
            family={Knuth},
            familyi={K\bibinitperiod},
            given={Donald\bibnamedelima E},
-           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
-           givenun=0}}%
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
         {Addison-Wesley Professional}%
@@ -198,12 +279,147 @@
       \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
       \strng{authorfullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{extraname}{1}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The Art of Computer Programming: Sorting and Searching, volume 3}
       \field{year}{1998}
+    \endentry
+    \entry{knuth1977deletions}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=16ba958eaf56fad580491eef4f771cee}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima Ervin},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{fullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \strng{bibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorbibnamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authornamehash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhash}{16ba958eaf56fad580491eef4f771cee}
+      \strng{authorfullhashraw}{16ba958eaf56fad580491eef4f771cee}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Software Engineering}
+      \field{number}{5}
+      \field{title}{Deletions that preserve randomness}
+      \field{year}{1977}
+      \field{pages}{351\bibrangedash 359}
+      \range{pages}{9}
+    \endentry
+    \entry{martinez1998randomized}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=8c7a294e19ab7cbbb8a3ff089b09d440}{%
+           family={Martínez},
+           familyi={M\bibinitperiod},
+           given={Conrado},
+           giveni={C\bibinitperiod}}}%
+        {{hash=80b141c668da6a775153645cded80963}{%
+           family={Roura},
+           familyi={R\bibinitperiod},
+           given={Salvador},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM New York, NY, USA}%
+      }
+      \strng{namehash}{d0224097ef08f98782e069423d5c3c79}
+      \strng{fullhash}{d0224097ef08f98782e069423d5c3c79}
+      \strng{fullhashraw}{d0224097ef08f98782e069423d5c3c79}
+      \strng{bibnamehash}{d0224097ef08f98782e069423d5c3c79}
+      \strng{authorbibnamehash}{d0224097ef08f98782e069423d5c3c79}
+      \strng{authornamehash}{d0224097ef08f98782e069423d5c3c79}
+      \strng{authorfullhash}{d0224097ef08f98782e069423d5c3c79}
+      \strng{authorfullhashraw}{d0224097ef08f98782e069423d5c3c79}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the ACM (JACM)}
+      \field{number}{2}
+      \field{title}{Randomized binary search trees}
+      \field{volume}{45}
+      \field{year}{1998}
+      \field{pages}{288\bibrangedash 323}
+      \range{pages}{36}
+    \endentry
+    \entry{panny2010deletions}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=1ad8a999301bdb40e450a6b89b8da9a5}{%
+           family={Panny},
+           familyi={P\bibinitperiod},
+           given={Wolfgang},
+           giveni={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{fullhash}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{fullhashraw}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{bibnamehash}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{authorbibnamehash}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{authornamehash}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{authorfullhash}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \strng{authorfullhashraw}{1ad8a999301bdb40e450a6b89b8da9a5}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of statistical planning and inference}
+      \field{number}{8}
+      \field{title}{Deletions in random binary search trees: A story of errors}
+      \field{volume}{140}
+      \field{year}{2010}
+      \field{pages}{2335\bibrangedash 2345}
+      \range{pages}{11}
+    \endentry
+    \entry{seidel1996randomized}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a4a5b6c2d262f13d8643e8717dbaa686}{%
+           family={Seidel},
+           familyi={S\bibinitperiod},
+           given={Raimund},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2d889f1e499b66fa63a501d8545268e6}{%
+           family={Aragon},
+           familyi={A\bibinitperiod},
+           given={Cecilia\bibnamedelima R},
+           giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{fullhash}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{fullhashraw}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{bibnamehash}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{authorbibnamehash}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{authornamehash}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{authorfullhash}{f9298177eba6e9fcaf03f24b111660ca}
+      \strng{authorfullhashraw}{f9298177eba6e9fcaf03f24b111660ca}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Algorithmica}
+      \field{number}{4}
+      \field{title}{Randomized search trees}
+      \field{volume}{16}
+      \field{year}{1996}
+      \field{pages}{464\bibrangedash 497}
+      \range{pages}{34}
     \endentry
   \enddatalist
 \endrefsection
