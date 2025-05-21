@@ -2360,19 +2360,4 @@
       <bcf:constraint type="data" datatype="ismn">
         <bcf:field>ismn</bcf:field>
       </bcf:constraint>
-      <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
-        <bcf:field>gender</bcf:field>
-      </bcf:constraint>
-    </bcf:constraints>
-  </bcf:datamodel>
-  <!-- CITATION DATA -->
-  <!-- SECTION 0 -->
-  <bcf:bibdata section="0">
-    <bcf:datasource type="file" datatype="bibtex" glob="false">sample.bib</bcf:datasource>
-  </bcf:bibdata>
-  <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">hibbard1962</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">knuth1977deletions</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">knott1975deletion</bcf:citekey>
-    <bcf:citekey order="4" intorder="1">knott1975deletion</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">jonassen1978trivial</bcf:citekey>
+      <bcf:constraint type="data" data

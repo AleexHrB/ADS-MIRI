@@ -90,9 +90,21 @@
 
 \begin{frame}
 \frametitle{Acknowledgment}
-Special thanks to Conrado Martínez. 
-His $\Theta(A(2^{n!}, m\log m))$\footnote{Where $A$ is the Ackermann function. Not the inverse!!} 
-wisdom and advice  have been helpful throughout this project.
+Special thanks to Conrado Martínez!!
+His $\Theta(2^{n!})$ wisdom and advice  have been helpful throughout this project.
+\end{frame}
+
+\begin{frame}
+    Recall:
+    \begin{itemize}
+        \item $IPL = \sum\limits_{v \in V(T)} d(root, v)$
+            \pause
+        \item For a random tree containing $n$ nodes the expected IPL is denoted as $I_n$. The expected number of comparisons in a successful search is denoted as $C_n$ 
+        \item The expected number of comparisons in a search is proportional to the IPL, i.e., $C_n = \frac{I_n}{n} + 1$
+            \pause
+        \item Knuth \footcite{knuth1998art} give the expected number of comparisons in a successful search, $C_n$, as $2(1 + \frac{1}{n})H_n - 3$
+        \item By the relation $C_n = \frac{I_n}{n} + 1$ one obtains $I_n \approx 1.386n \log n - 2.846n$
+    \end{itemize}
 \end{frame}
 
 %---------------------------------------------------------
@@ -133,6 +145,14 @@ wisdom and advice  have been helpful throughout this project.
             \pause
         \item We will take a look to Hibbard's deletion algorithm.
     \end{itemize}
+
+    \begin{block}{Hibbard's deletion algorithm}
+        Let $v$ denote the node to be deleted. For \textit{Hibbard's} deletion method the following two cases must be considered:
+        \begin{enumerate}
+            \item $R(v) = \emptyset$: Then replace the reference to $v$ with $L(v)$
+            \item $R(v) \neq \emptyset$: Then delete the node $v_{min}$ with minimal key from $R(v)$ and replace its value to the node
+        \end{enumerate}
+    \end{block}
 \end{frame}
 
 \begin{frame}{Leaf case}
@@ -419,19 +439,19 @@ wisdom and advice  have been helpful throughout this project.
     Hibbard’s paper was remarkable in that it contained one of the first formal theorems about algorithms:
     \pause
     \begin{block}{Hibbard's Theorem (1962)}
-        If $n + 1$ items are inserted into an initially empty binary tree, in random order, and if one of those items (selected at random) is deleted, the probability that the resulting binary tree has a given shape is the same as the probability that this tree shape would be obtained by inserting $n$ items into an initially empty tree, in random order.
+        If $n + 1$ items are inserted into an initially empty binary tree, in random order, and if one of those items (selected at random) is deleted, the probability that the resulting binary tree has a given shape is the same as the probability that this tree shape would be obtained by inserting $n$ items into an initially empty tree, in random order \footcite{hibbard1962}.
     \end{block}
     \pause
-    It is reasonable to think that Hibbard's deletion algorithm preserves the randomness of BSTs...
+    Good news! Performing random operations on a BST preserves its randomness... 
     \pause
-    And it was believed for more than $10$ years!
+    or at least, that’s what was believed for more than 10 years.
 \end{frame}
 
-\begin{frame}
-    \begin{block}{Donald Knuth}
-        The $I^*D_r$ property might seem to be all that one needs to guarantee insensitivity to \textit{any} number of deletions, when they are intermixed with insertions in any order. At least, many people (including the present author when writing the first edition of \textit{The Art of Computer Programming Vol:3}) believed this\footcite{knuth1977deletions}.
-    \end{block}
-\end{frame}
+%\begin{frame}
+%    \begin{block}{Donald Knuth}
+%        The $I^*D_r$ property might seem to be all that one needs to guarantee insensitivity to \textit{any} number of deletions, when they are intermixed with insertions in any order. At least, many people (including the present author when writing the first edition of \textit{The Art of Computer Programming Vol:3}) believed this\footcite{knuth1977deletions}.
+%    \end{block}
+%\end{frame}
 
 \section{Paradoxical result}
 
@@ -441,15 +461,16 @@ wisdom and advice  have been helpful throughout this project.
 % Column 1
     \begin{column}{0.5\textwidth}
      \begin{itemize}
-         \item It was believed for more than a decade that Hibbard's algorithm preserved randomness on BSTs
-             \pause
          \item $1975$: \cite{knott1975deletion}
+             \pause
+         \item Knott found contradictions with Hibbard's theorem while he was doing his PhD
      \end{itemize}
     \end{column}
 % Column 2    
     \begin{column}{0.5\textwidth}
         \begin{center}
-            \begin{block}{Knott Paradox}
+             \pause
+            \begin{block}{Knott's Paradox}
                 Although Hibbard’s theorem establishes that n+1 random insertions
                 followed by a random deletion produce a tree whose shape has the distribution of n random insertions, it does not follow that a
                 subsequent random insertion yields a tree whose shape has the distribution of n+1 random insertions
@@ -458,6 +479,12 @@ wisdom and advice  have been helpful throughout this project.
     \end{column}
     
 \end{columns}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \includegraphics[]{bst.pdf}
+    \end{center}
 \end{frame}
 
 \begin{frame}
@@ -549,7 +576,7 @@ wisdom and advice  have been helpful throughout this project.
 \end{frame}
 
 \begin{frame}
-    Now another random insertion $w$ comes to the BST. Then we have four possible cases:
+    Consider a random insertion of an element $w$ to the BST. Then we have four possible cases:
     \begin{itemize}
         \pause
         \item $w < x < y < z$
@@ -656,133 +683,105 @@ wisdom and advice  have been helpful throughout this project.
         $$
         \mathbb{P}[B] = \frac{25}{72}
         $$
-        Know another random deletion comes. Let us analyze the probability of having and $L$ shape:
+        Now consider a random deletion. What is the probability of having an $L$ shape?
     \pause
     \begin{block}{Probability $L$ Shape}
         The probability of having an $L$ shape after a random deletion is: $\mathbb{P}[L] = \mathbb{P}[LL] + \frac{2}{3}  \mathbb{P}[LR] + \frac{2}{3} \mathbb{P}[B] = \frac{11}{72} + \frac{2}{3} \cdot \frac{13}{72} + \frac{2}{3} \cdot \frac{25}{72} = \frac{109}{216} > \frac{1}{2}$!!
     \end{block}
-    \pause
-    Actually it makes sense! 
-\end{frame}
-
-\begin{frame}
-    \begin{center}
-        \only<1>{
-            \begin{forest}
-                for tree={circle,draw, s sep=10mm}
-                [25
-                    [20
-                        [10
-                            [5]
-                            [12]
-                        ]
-                        [22]
-                    ]
-                    [36
-                        [30
-                            [28]
-                            [,phantom]
-                        ]
-                        [40
-                            [38]
-                            [48]
-                        ]
-                    ]
-                ]
-            \end{forest}
-        }
-
-        \only<2>{
-            \begin{forest}
-                for tree={circle,draw, s sep=10mm}
-                [25, color=red
-                    [20
-                        [10
-                            [5]
-                            [12]
-                        ]
-                        [22]
-                    ]
-                    [36
-                        [30
-                            [28]
-                            [,phantom]
-                        ]
-                        [40
-                            [38]
-                            [48]
-                        ]
-                    ]
-                ]
-            \end{forest}
-        }
-
-        \only<3>{
-            \begin{forest}
-                for tree={circle,draw, s sep=10mm}
-                [25,color=red
-                    [20
-                        [10
-                            [5]
-                            [12]
-                        ]
-                        [22]
-                    ]
-                    [36
-                        [30
-                            [28,color=green]
-                            [,phantom]
-                        ]
-                        [40
-                            [38]
-                            [48]
-                        ]
-                    ]
-                ]
-            \end{forest}
-        }
-
-        \only<4>{
-            \begin{forest}
-                for tree={circle,draw, s sep=10mm}
-                [28
-                    [20
-                        [10
-                            [5]
-                            [12]
-                        ]
-                        [22]
-                    ]
-                    [36
-                        [30]
-                        [40
-                            [38]
-                            [48]
-                        ]
-                    ]
-                ]
-            \end{forest}
-            \pause
-
-            Did we change the probability of inserting a random element into one subtree? Somehow, yes...
-        }
-    \end{center}
+    We have changed the probability distribution!
 \end{frame}
 
 \begin{frame}
     \begin{block}{Donald Knuth}
         The shape of the tree is random after deletions, but the relative distribution of values in a given tree shape may change, and it turns out that the first random insertion, after a deletion actually destroys the randomness property on shapes. This startling fact, first observed by Gary Knott in 1972, must be seen to be believed\footcite{knuth1998art}
     \end{block}
+
+    \pause
+    \begin{block}{Donald Knuth}
+        Since Hibbard's algorithm is quite asymmetrical between left and right, it stands to reason that a long sequence of random deletions and insertions will make the tree get way out of balance, so that the efficiency estimates we have made will be invalid. \textbf{But actually the trees do not degenerate at all!}\footnote{Found in previous versions of \textit{The Art of Computer Programming} Vol. 3}
+    \end{block}
 \end{frame}
 
 \begin{frame}
-    Knott was the first to notice that Hibbard's generalization was wrong. 
+    \textbf{Do not degenerate at all?}
     \pause
+    Knuth suggested a modification of Hibbard's algorithm to take into account the left subtree
+    \begin{block}{Hibbard's deletion algorithm (Knuth modification)}
+        Let $v$ denote the node to be deleted. For \textit{Hibbard's} deletion method (Knuth modification) the following two cases must be considered:
+        \begin{enumerate}
+            \item $R(v) = \emptyset$: Then replace the reference to $v$ with $L(v)$
+            \item $R(v) \neq \emptyset$ and $L(v) = \emptyset$: Then replace the reference to $v$ with $R(v)$
+            \item $R(v) \neq \emptyset$ and $L(v) \neq \emptyset$: Then delete the node $v_{min}$ with minimal key from $R(v)$ and replace its value to the node
+        \end{enumerate}
+    \end{block}
+    \pause
+    One can prove that Knuth's modification improves upon Hibbard's algorithm. In fact, Knuth's modification results in trees whose IPL is at most equal to that of trees produced by Hibbard's algorithm.
+\end{frame}
 
-    In his thesis he also gave some empirical data summarizing the results of simulation experiments, where BSTs randomly constructed by $I^n(ID)^m$. Leading to the following conjecture:
+\begin{frame}
+    \begin{block}{Donald Knuth}
+        Exercise 14 shows that Algorithm D with this extra step always leaves a tree that is at least as good as the original
+        Algorithm D, in the path-length sense, and sometimes the result is even better. Thus, a sequence of insertions and deletions using
+        this modification of algorithm D will result in trees which are actually better than the theory of random trees would predict: the
+        average computation time for search and insertion will tend to decrease as time goes on
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    In Knott's thesis he also gave some empirical data summarizing the results of simulation experiments, where BSTs were randomly constructed by $I^n(ID)^m$. Leading to the following conjecture:
     \begin{block}{Knott's conjecture}
         Empirical evidence suggests strongly that the path length tends to decrease after repeated deletions and insertions, so the
-        departure from randomness seems to be in the right direction; a theoretical explanation for this behavior is still lacking\footcite{knuth1998art}
+        departure from randomness seems to be in the right direction; a theoretical explanation for this behavior is still lacking
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \includegraphics[scale=0.75]{iplDelete.pdf}
+    \end{center}
+\end{frame}
+
+\begin{frame}{Deletions that preserve randomness\footcite{knuth1977deletions}}
+    \begin{block}{Abstract}
+        This paper discusses dynamic properties of data structures under
+        insertions and deletions. It is shown that, in certain circumstances,
+        the result of $n$ random insertions and $m$ random deletions will be
+        equivalent to $n-m$ random insertions, \textit{under various interpretations of
+            the word \textit{random} and under various constraints on the order of insertions
+        and deletions.}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item Abstract studies on deletion and insertion on any data structure
+            \pause
+        \item Generalization of Hibbard's theorem appears as \textit{one-step deletion insensitivity} abbreviated $I^* D_r$
+            \pause
+        \item Deletion insensitivity: $I^*D$, $I^*D^*$, $I^*DI^*$, $(I,D)^*$
+            \pause
+        \item \textit{Under various constraints on the order of insertions}: In particular three different types of insertions
+        \item \textit{Under various constraints on the order of deletions}: In particular six different types of deletions
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{A trivial algorithm whose analysis isn't \footcite{jonassen1978trivial}}
+    \begin{block}{Abstract}
+        Very few theoretical results have been obtained to date about the behavior of information retrieval algorithms under random \textit{deletions}, as well as random insertions. The present paper offers a possible explanation for this dearth of results, by showing that one of the simplest such algorithms already requires a surprisingly intricate analysis. Even when \textbf{the data structure never contains more than three items at a time, it is shown that the performance of the standard tree search/insertion/deletion algorithm involves Bessel functions and the solution of bivariate integral equations}. A step-by-step expository analysis of this problem is given, and it is shown how the difficulties arise and can be surmounted.
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item \url{https://doi.org/10.1016/0022-0000(78)90020-X}
+            \pause
+        \item Random deletions do not always enhance the average path length; the pattern $IIIDIDIDI$ leads to a better average search time than does the same patter followed by $DI$
+            \pause
+        \item With Knuth's modification on Hibbard's algorithm (considering a special case as one separate case) they obtained the following:
+    \end{itemize}
+    \begin{block}{Last paragraph in Jonassen and Knuth's article}
+        (...) Since the values of $c_n$ in the unmodified algorithm are \textit{greater} than $1/3$, for $n \geq 1$, the average internal path length actually turns out to be worse when we use the ``improved'' algorithm. On the other hand, Knott's empirical data indicate that the modified algorithm does indeed lead to an improvement when the trees are larger.
     \end{block}
 \end{frame}
 
@@ -807,20 +806,6 @@ wisdom and advice  have been helpful throughout this project.
     \end{columns}
 \end{frame}
 
-\begin{frame}
-    Recall:
-    \begin{itemize}
-        \item The expected number of comparisons used when searching for an element in a binary tree is proportional to the tree's path length
-            \pause
-        \item $IPL = \sum\limits_{v \in V(T)} d(root, v)$
-            \pause
-        \item For a random tree containing $n$ nodes the expected IPL is denoted as $I_n$. The expected number of comparisons in a successful search is denoted as $C_n$
-        \item Knuth \footcite{knuth1998art} give the expected number of comparisons in a successful search, $C_n$, as $2(1 + \frac{1}{n})H_n - 3$
-        \item By the relation $I_n = n(C_n - 1)$ one obtains the approximation $1.386n \log n - 2.846n$
-            \pause
-        \item A distribution of trees is said to be "better than random" when the expected IPL is less than $I_n$.
-    \end{itemize}
-\end{frame}
 
 \begin{frame}
     \begin{itemize}
@@ -836,6 +821,20 @@ wisdom and advice  have been helpful throughout this project.
 \end{frame}
 
 \begin{frame}
+    Do you remember?
+    \begin{center}
+        \includegraphics[scale=0.70]{iplDelete.pdf}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    Real plot
+    \begin{center}
+        \includegraphics[scale=0.70]{iplDeleteFull.pdf}
+    \end{center}
+\end{frame}
+
+\begin{frame}
     \begin{itemize}
         \item Hibbard's algorithm is asymmetric (always choose right subtree)
             \pause
@@ -844,7 +843,7 @@ wisdom and advice  have been helpful throughout this project.
 \end{frame}
 
 \begin{frame}
-    \footnotesize
+    \scriptsize
     \begin{algorithmic}
         \Function{Symmetric delete}{$T$, $x$}
         \If{$T.val < x$}
@@ -854,6 +853,8 @@ wisdom and advice  have been helpful throughout this project.
         \Else
         \If{$T.right = \text{null}$}
         \State \Return $T.left$
+        \ElsIf{$T.left = \text{null}$}
+        \State \Return $T.right$
         \Else
         \If{\Call{flipCoin} $= Head$}
         \State $T.val \gets$ \Call{minValue}{$T.right$}
@@ -964,7 +965,7 @@ wisdom and advice  have been helpful throughout this project.
     \end{block}
 \end{frame}
 
-\section{Theoretical Studies}
+\section{Final answer?}
 
 \begin{frame}{Explaining the Behaviour of Binary Search Trees Under Prolonged Updates: A Model and Simulations\footcite{culberson1989explaining}}
     \footnotesize
@@ -1014,59 +1015,22 @@ wisdom and advice  have been helpful throughout this project.
     \begin{alertblock}{Theorem 1}
         \textit{The IPL of the EFD tree is $\Theta(N^{3/2})$}
     \end{alertblock}
-\end{frame}
-
-
-
-\begin{frame}{Deletions that preserve randomness\footcite{knuth1977deletions}}
-    \begin{block}{Abstract}
-        This paper discusses dynamic properties of data structures under
-        insertions and deletions. It is shown that, in certain circumstances,
-        the result of $n$ random insertions and $m$ random deletions will be
-        equivalent to $n-m$ random insertions, \textit{under various interpretations of
-        the word \textit{random} and under various constraints on the order of insertions
-    and deletions.}
-    \end{block}
+        Using both Hibbard's algorithm and Knuth's modification...
 \end{frame}
 
 \begin{frame}
-    \begin{itemize}
-        \item Abstract studies on deletion and insertion on any data structure
-            \pause
-        \item Generalization of Hibbard's theorem appears as \textit{one-step deletion insensitivity} abbreviated $I^* D_r$
-            \pause
-        \item Deletion insensitivity: $I^*D$, $I^*D^*$, $I^*DI^*$, $(I,D)^*$
-            \pause
-        \item \textit{Under various constraints on the order of insertions}: In particular three different types of insertions
-        \item \textit{Under various constraints on the order of deletions}: In particular six different types of deletions
-    \end{itemize}
-\end{frame}
-
-
-\begin{frame}{A trivial algorithm whose analysis isn't \footcite{jonassen1978trivial}}
-    \begin{block}{Abstract}
-        Very few theoretical results have been obtained to date about the behavior of information retrieval algorithms under random \textit{deletions}, as well as random insertions. The present paper offers a possible explanation for this dearth of results, by showing that one of the simplest such algorithms already requires a surprisingly intricate analysis. Even when \textbf{the data structure never contains more than three items at a time, it is shown that the performance of the standard tree search/insertion/deletion algorithm involves Bessel functions and the solution of bivariate integral equations}. A step-by-step expository analysis of this problem is given, and it is shown how the difficulties arise and can be surmounted.
+    Can EFD models be generalized?
+    \pause
+    Promising... But still hypothetical
+    \begin{block}{Donald Knuth}
+        Further study by Culberson and Munro has lead to a plausibile conjecture that the average search time in the steady state is asymptotically $\sqrt{2n/9\pi}$\footcite{knuth1998art}
     \end{block}
+    We hope that our tragicomic tale ends here!
 \end{frame}
+
 
 \begin{frame}
-    \begin{itemize}
-        \item \url{https://doi.org/10.1016/0022-0000(78)90020-X}
-            \pause
-        \item "Random deletions do not always enhance the average path length; the pattern $IIIDIDIDI$ leads to a better average search time than does the same patter followed by $DI$
-            \pause
-        \item With Knuth's modification on Hibbard's algorithm (considering a special case as one separate case) they obtained the following:
-    \end{itemize}
-    \begin{block}{Last paragraph in Jonassen and Knuth article}
-        (...) Since the values of $c_n$ in the unmodified algorithm are \textit{greater} than $1/3$, for $n \geq 1$, the average internal path length actually turns out to be worse when we use the ``improved'' algorithm. On the other hand, Knott's empirical data indicate that the modified algorithm does indeed lead to an improvement when the trees are larger.
-    \end{block}
-\end{frame}
-
-
-\section{Final remarks}
-
-\begin{frame}
-    Do we know a deletion algorithm that preserve randomness?
+    Still, do we know a deletion algorithm that preserve randomness?
     \pause
     \begin{itemize}
         \item \cite{martinez1998randomized}
