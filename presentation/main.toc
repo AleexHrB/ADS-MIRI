@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Introduction to BSTs}{7}{0}{1}
-\beamer@sectionintoc {2}{Paradoxical result}{28}{0}{2}
-\beamer@sectionintoc {3}{Experimental Results}{66}{0}{3}
-\beamer@sectionintoc {4}{Final answer?}{85}{0}{4}
-\beamer@sectionintoc {5}{References}{100}{0}{5}
+\beamer@sectionintoc {2}{Paradoxical result}{31}{0}{2}
+\beamer@sectionintoc {3}{Experimental Results}{64}{0}{3}
+\beamer@sectionintoc {4}{Final answer?}{83}{0}{4}
+\beamer@sectionintoc {5}{References}{98}{0}{5}

@@ -441,16 +441,39 @@ His $\Theta(2^{n!})$ wisdom and advice  have been helpful throughout this projec
     \begin{block}{Hibbard's Theorem (1962)}
         If $n + 1$ items are inserted into an initially empty binary tree, in random order, and if one of those items (selected at random) is deleted, the probability that the resulting binary tree has a given shape is the same as the probability that this tree shape would be obtained by inserting $n$ items into an initially empty tree, in random order \footcite{hibbard1962}.
     \end{block}
-    \pause
-    Good news! Performing random operations on a BST preserves its randomness... 
-    \pause
-    or at least, that’s what was believed for more than 10 years.
 \end{frame}
 
+\begin{frame}
+    \begin{block}{Donald Knuth (1973)}
+        Since Hibbard's algorithm is quite asymmetrical between left and right, it stands to reason that a long sequence of random deletions and insertions will make the tree get way out of balance, so that the efficiency estimates we have made will be invalid. \textbf{But actually the trees do not degenerate at all!}\footnote{Found in previous versions of \textit{The Art of Computer Programming} Vol. 3}
+    \end{block}
+\end{frame}
+
+\begin{frame}
+    \textbf{Do not degenerate at all?}
+    \pause
+    Knuth suggested a modification of Hibbard's algorithm to take into account the left subtree
+    \begin{block}{Hibbard's deletion algorithm (Knuth modification)}
+        Let $v$ denote the node to be deleted. For \textit{Hibbard's} deletion method (Knuth modification) the following two cases must be considered:
+        \begin{enumerate}
+            \item $R(v) = \emptyset$: Then replace the reference to $v$ with $L(v)$
+            \item $R(v) \neq \emptyset$ and $L(v) = \emptyset$: Then replace the reference to $v$ with $R(v)$
+            \item $R(v) \neq \emptyset$ and $L(v) \neq \emptyset$: Then delete the node $v_{min}$ with minimal key from $R(v)$ and replace its value to the node
+        \end{enumerate}
+    \end{block}
+    \pause
+    One can prove that Knuth's modification improves upon Hibbard's algorithm. In fact, Knuth's modification results in trees whose IPL is at most equal to that of trees produced by Hibbard's algorithm.
+\end{frame}
+
+\begin{frame}
+    \begin{block}{Donald Knuth}
+        Exercise 14 shows that Algorithm D with this extra step always leaves a tree that is at least as good as the original
+        Algorithm D, in the path-length sense, and sometimes the result is even better. Thus, a sequence of insertions and deletions using
+        this modification of algorithm D \textbf{will result in trees which are actually better than the theory of random trees would predict: the
+        average computation time for search and insertion will tend to decrease as time goes on}
+    \end{block}
+\end{frame}
 %\begin{frame}
-%    \begin{block}{Donald Knuth}
-%        The $I^*D_r$ property might seem to be all that one needs to guarantee insensitivity to \textit{any} number of deletions, when they are intermixed with insertions in any order. At least, many people (including the present author when writing the first edition of \textit{The Art of Computer Programming Vol:3}) believed this\footcite{knuth1977deletions}.
-%    \end{block}
 %\end{frame}
 
 \section{Paradoxical result}
@@ -695,35 +718,8 @@ His $\Theta(2^{n!})$ wisdom and advice  have been helpful throughout this projec
     \begin{block}{Donald Knuth}
         The shape of the tree is random after deletions, but the relative distribution of values in a given tree shape may change, and it turns out that the first random insertion, after a deletion actually destroys the randomness property on shapes. This startling fact, first observed by Gary Knott in 1972, must be seen to be believed\footcite{knuth1998art}
     \end{block}
-
-    \pause
     \begin{block}{Donald Knuth}
-        Since Hibbard's algorithm is quite asymmetrical between left and right, it stands to reason that a long sequence of random deletions and insertions will make the tree get way out of balance, so that the efficiency estimates we have made will be invalid. \textbf{But actually the trees do not degenerate at all!}\footnote{Found in previous versions of \textit{The Art of Computer Programming} Vol. 3}
-    \end{block}
-\end{frame}
-
-\begin{frame}
-    \textbf{Do not degenerate at all?}
-    \pause
-    Knuth suggested a modification of Hibbard's algorithm to take into account the left subtree
-    \begin{block}{Hibbard's deletion algorithm (Knuth modification)}
-        Let $v$ denote the node to be deleted. For \textit{Hibbard's} deletion method (Knuth modification) the following two cases must be considered:
-        \begin{enumerate}
-            \item $R(v) = \emptyset$: Then replace the reference to $v$ with $L(v)$
-            \item $R(v) \neq \emptyset$ and $L(v) = \emptyset$: Then replace the reference to $v$ with $R(v)$
-            \item $R(v) \neq \emptyset$ and $L(v) \neq \emptyset$: Then delete the node $v_{min}$ with minimal key from $R(v)$ and replace its value to the node
-        \end{enumerate}
-    \end{block}
-    \pause
-    One can prove that Knuth's modification improves upon Hibbard's algorithm. In fact, Knuth's modification results in trees whose IPL is at most equal to that of trees produced by Hibbard's algorithm.
-\end{frame}
-
-\begin{frame}
-    \begin{block}{Donald Knuth}
-        Exercise 14 shows that Algorithm D with this extra step always leaves a tree that is at least as good as the original
-        Algorithm D, in the path-length sense, and sometimes the result is even better. Thus, a sequence of insertions and deletions using
-        this modification of algorithm D will result in trees which are actually better than the theory of random trees would predict: the
-        average computation time for search and insertion will tend to decrease as time goes on
+        The $I^*D_r$ property might seem to be all that one needs to guarantee insensitivity to \textit{any} number of deletions, when they are intermixed with insertions in any order. At least, many people (including the present author when writing the first edition of \textit{The Art of Computer Programming Vol:3}) believed this\footcite{knuth1977deletions}.
     \end{block}
 \end{frame}
 

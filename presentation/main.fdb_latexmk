@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1747852285.44459 "main.bcf" "main.bbl" "main" 1747852493.42567 0
-  "main.bcf" 1747852493.33864 110263 dbbbe51e9a9702aea99bcbc863b6575c "pdflatex"
+["biber main"] 1747896633.44932 "main.bcf" "main.bbl" "main" 1747896734.2153 0
+  "main.bcf" 1747896734.13546 110135 4be236a5cda7162bef8b47c5339d6e94 "pdflatex"
   "sample.bib" 1746549753.81127 4586 8ed706641a4511b35f96b7966841edcd ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1747852488.74822 "main.tex" "main.pdf" "main" 1747852493.42589 0
+["pdflatex"] 1747896729.68496 "main.tex" "main.pdf" "main" 1747896734.21551 0
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -299,13 +299,13 @@
   "iplDelete.pdf" 1747589241.01156 56789 7775ecfd59d3fdef303522f2b49aee91 ""
   "iplDeleteFull.pdf" 1747589285.83185 67758 2cecf77aaf8247c382a2acbfd481e967 ""
   "logo-upc.png" 1746358888.92988 55836 d8a4d8caa34fd935c4022b45d1bfc0f7 ""
-  "main.aux" 1747852493.33668 13343 918952b217059ddf6db75ecd4945fdec "pdflatex"
-  "main.bbl" 1747852286.02658 17654 9adfaf84f6572ee141991a4b7c9940e9 "biber main"
-  "main.nav" 1747852493.33988 6570 60660f89dcda65e45ec16725508f02c8 "pdflatex"
-  "main.out" 1747852493.33864 728 68b4b11b9fa5d46d3952b0f14496c3b8 "pdflatex"
-  "main.run.xml" 1747852493.33988 2336 5573c5f61c15fefeade0cef3293c9dd0 "pdflatex"
-  "main.tex" 1747852478.41759 37655 5f4b5a8fa070f919f0bf2de1389487d8 ""
-  "main.toc" 1747852493.33988 266 aecd0ceef901452492d295abca800779 "pdflatex"
+  "main.aux" 1747896734.13346 13292 78f039ed062dbd319dbec26cb486ee7c "pdflatex"
+  "main.bbl" 1747896636.03039 17654 9adfaf84f6572ee141991a4b7c9940e9 "biber main"
+  "main.nav" 1747896734.13623 6650 f2c62efa6b4b3f65658731c583ff9bf6 "pdflatex"
+  "main.out" 1747896734.13446 728 68b4b11b9fa5d46d3952b0f14496c3b8 "pdflatex"
+  "main.run.xml" 1747896734.13623 2336 5573c5f61c15fefeade0cef3293c9dd0 "pdflatex"
+  "main.tex" 1747896729.67532 37510 1385bfb348290e432f17a3f04a5312ca ""
+  "main.toc" 1747896734.13623 265 d154ab7700f33d342bd072a33fbd835f "pdflatex"
   "plotEppinger.png" 1746358888.93438 145363 57de8ec44b5343f5f729ae01bbf46905 ""
   "plotEppingerSym.png" 1746358888.93438 104424 c55f7caadb35920edc758612d8e43b9d ""
   "tag.pdf" 1746551730.88156 4532 5d440dc0ee72412eb8aa4fdd23f00494 ""

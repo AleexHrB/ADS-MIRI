@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.13)  21 MAY 2025 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.2.13)  22 MAY 2025 08:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1281,30 +1281,20 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
 pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:hibbard1962}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.448 \end{frame}
+l.444 \end{frame}
                  
 
 [25
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:hibbard1962}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.448 \end{frame}
-                 
 
 [26
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:hibbard1962}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.448 \end{frame}
-                 
 
 [27
 
-] (./main.toc)
+]
 
 [28
 
@@ -1313,46 +1303,46 @@ l.448 \end{frame}
 [29
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:knott1975deletion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.482 \end{frame}
-                 
 
 [30
 
-]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:knott1975deletion}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.482 \end{frame}
-                 
+] (./main.toc)
 
 [31
 
 ]
-<bst.pdf, id=360, 266.49562pt x 88.07906pt>
-File: bst.pdf Graphic file (type pdf)
-<use bst.pdf>
-Package pdftex.def Info: bst.pdf  used on input line 488.
-(pdftex.def)             Requested size: 266.49496pt x 88.07883pt.
-
 
 [32
 
- <./bst.pdf>]
+]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:knott1975deletion}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.505 \end{frame}
+                 
 
 [33
 
 ]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:knott1975deletion}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.505 \end{frame}
+                 
 
 [34
 
 ]
+<bst.pdf, id=383, 266.49562pt x 88.07906pt>
+File: bst.pdf Graphic file (type pdf)
+<use bst.pdf>
+Package pdftex.def Info: bst.pdf  used on input line 511.
+(pdftex.def)             Requested size: 266.49496pt x 88.07883pt.
+
 
 [35
 
-]
+ <./bst.pdf>]
 
 [36
 
@@ -1405,28 +1395,10 @@ Package pdftex.def Info: bst.pdf  used on input line 488.
 [48
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.703 \end{frame}
-                 
-Overfull \vbox (4.77332pt too high) detected at line 703
- []
-
-
 
 [49
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.703 \end{frame}
-                 
-Overfull \vbox (4.77332pt too high) detected at line 703
- []
-
-
 
 [50
 
@@ -1435,6 +1407,15 @@ Overfull \vbox (4.77332pt too high) detected at line 703
 [51
 
 ]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.724 \end{frame}
+                 
+Overfull \vbox (16.47337pt too high) detected at line 724
+ []
+
+
 
 [52
 
@@ -1443,24 +1424,29 @@ Overfull \vbox (4.77332pt too high) detected at line 703
 [53
 
 ]
+<iplDelete.pdf, id=558, 376.57487pt x 300.54784pt>
+File: iplDelete.pdf Graphic file (type pdf)
+<use iplDelete.pdf>
+Package pdftex.def Info: iplDelete.pdf  used on input line 738.
+(pdftex.def)             Requested size: 282.43047pt x 225.41031pt.
+
 
 [54
 
-]
+ <./iplDelete.pdf>]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1977deletions}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.749 \end{frame}
+                 
 
 [55
 
 ]
-<iplDelete.pdf, id=574, 376.57487pt x 300.54784pt>
-File: iplDelete.pdf Graphic file (type pdf)
-<use iplDelete.pdf>
-Package pdftex.def Info: iplDelete.pdf  used on input line 742.
-(pdftex.def)             Requested size: 282.43047pt x 225.41031pt.
-
 
 [56
 
- <./iplDelete.pdf>]
+]
 
 [57
 
@@ -1488,123 +1474,123 @@ Package pdftex.def Info: iplDelete.pdf  used on input line 742.
 
 [63
 
-]
+] (./main.toc)
 
 [64
 
 ]
+<eppinger.jpg, id=692, 192.72pt x 192.72pt>
+File: eppinger.jpg Graphic file (type jpg)
+<use eppinger.jpg>
+Package pdftex.def Info: eppinger.jpg  used on input line 803.
+(pdftex.def)             Requested size: 153.64493pt x 153.64394pt.
+
 
 [65
 
-] (./main.toc)
+ <./eppinger.jpg>]
 
 [66
 
 ]
-<eppinger.jpg, id=708, 192.72pt x 192.72pt>
-File: eppinger.jpg Graphic file (type jpg)
-<use eppinger.jpg>
-Package pdftex.def Info: eppinger.jpg  used on input line 807.
-(pdftex.def)             Requested size: 153.64493pt x 153.64394pt.
+<plotEppinger.png, id=712, 590.205pt x 659.46375pt>
+File: plotEppinger.png Graphic file (type png)
+<use plotEppinger.png>
+Package pdftex.def Info: plotEppinger.png  used on input line 817.
+(pdftex.def)             Requested size: 244.4622pt x 273.1491pt.
+
+Overfull \vbox (8.00247pt too high) detected at line 817
+ []
+
 
 
 [67
 
- <./eppinger.jpg>]
+ <./plotEppinger.png>]
+File: iplDelete.pdf Graphic file (type pdf)
+<use iplDelete.pdf>
+Package pdftex.def Info: iplDelete.pdf  used on input line 824.
+(pdftex.def)             Requested size: 263.60062pt x 210.38203pt.
+
+Overfull \vbox (0.36447pt too high) detected at line 824
+ []
+
+
 
 [68
 
 ]
-<plotEppinger.png, id=729, 590.205pt x 659.46375pt>
-File: plotEppinger.png Graphic file (type png)
-<use plotEppinger.png>
-Package pdftex.def Info: plotEppinger.png  used on input line 821.
-(pdftex.def)             Requested size: 244.4622pt x 273.1491pt.
+<iplDeleteFull.pdf, id=731, 367.68365pt x 300.54182pt>
+File: iplDeleteFull.pdf Graphic file (type pdf)
+<use iplDeleteFull.pdf>
+Package pdftex.def Info: iplDeleteFull.pdf  used on input line 831.
+(pdftex.def)             Requested size: 257.3768pt x 210.37784pt.
 
-Overfull \vbox (8.00247pt too high) detected at line 821
+Overfull \vbox (0.36028pt too high) detected at line 831
  []
 
 
 
 [69
 
- <./plotEppinger.png>]
-File: iplDelete.pdf Graphic file (type pdf)
-<use iplDelete.pdf>
-Package pdftex.def Info: iplDelete.pdf  used on input line 828.
-(pdftex.def)             Requested size: 263.60062pt x 210.38203pt.
-
-Overfull \vbox (0.36447pt too high) detected at line 828
- []
-
-
+ <./iplDeleteFull.pdf>]
 
 [70
 
 ]
-<iplDeleteFull.pdf, id=748, 367.68365pt x 300.54182pt>
-File: iplDeleteFull.pdf Graphic file (type pdf)
-<use iplDeleteFull.pdf>
-Package pdftex.def Info: iplDeleteFull.pdf  used on input line 835.
-(pdftex.def)             Requested size: 257.3768pt x 210.37784pt.
-
-Overfull \vbox (0.36028pt too high) detected at line 835
- []
-
-
 
 [71
-
- <./iplDeleteFull.pdf>]
-
-[72
-
-]
-
-[73
 
 ]
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <8> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 871.
+(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 867.
 
 
+
+[72
+
+]
+<plotEppingerSym.png, id=789, 590.205pt x 659.46375pt>
+File: plotEppingerSym.png Graphic file (type png)
+<use plotEppingerSym.png>
+Package pdftex.def Info: plotEppingerSym.png  used on input line 873.
+(pdftex.def)             Requested size: 244.4622pt x 273.1491pt.
+
+Overfull \vbox (8.00247pt too high) detected at line 873
+ []
+
+
+
+[73
+
+ <./plotEppingerSym.png>]
 
 [74
 
 ]
-<plotEppingerSym.png, id=806, 590.205pt x 659.46375pt>
-File: plotEppingerSym.png Graphic file (type png)
-<use plotEppingerSym.png>
-Package pdftex.def Info: plotEppingerSym.png  used on input line 877.
-(pdftex.def)             Requested size: 244.4622pt x 273.1491pt.
+<asymp.png, id=808, 593.96906pt x 670.00313pt>
+File: asymp.png Graphic file (type png)
+<use asymp.png>
+Package pdftex.def Info: asymp.png  used on input line 923.
+(pdftex.def)             Requested size: 242.14221pt x 273.13887pt.
 
-Overfull \vbox (8.00247pt too high) detected at line 877
+Overfull \vbox (7.99225pt too high) detected at line 923
  []
 
 
 
 [75
 
- <./plotEppingerSym.png>]
+ <./asymp.png>]
 
 [76
 
 ]
-<asymp.png, id=824, 593.96906pt x 670.00313pt>
-File: asymp.png Graphic file (type png)
-<use asymp.png>
-Package pdftex.def Info: asymp.png  used on input line 927.
-(pdftex.def)             Requested size: 242.14221pt x 273.13887pt.
-
-Overfull \vbox (7.99225pt too high) detected at line 927
- []
-
-
 
 [77
 
- <./asymp.png>]
+]
 
 [78
 
@@ -1624,7 +1610,7 @@ Overfull \vbox (7.99225pt too high) detected at line 927
 
 [82
 
-]
+] (./main.toc)
 
 [83
 
@@ -1632,7 +1618,7 @@ Overfull \vbox (7.99225pt too high) detected at line 927
 
 [84
 
-] (./main.toc)
+]
 
 [85
 
@@ -1641,28 +1627,28 @@ Overfull \vbox (7.99225pt too high) detected at line 927
 [86
 
 ]
-
-[87
-
-]
-
-[88
-
-]
-<tag.pdf, id=934, 194.22563pt x 230.36063pt>
+<tag.pdf, id=918, 194.22563pt x 230.36063pt>
 File: tag.pdf Graphic file (type pdf)
 <use tag.pdf>
-Package pdftex.def Info: tag.pdf  used on input line 995.
+Package pdftex.def Info: tag.pdf  used on input line 991.
 (pdftex.def)             Requested size: 194.22514pt x 230.36005pt.
 
-Overfull \vbox (4.61331pt too high) detected at line 995
+Overfull \vbox (4.61331pt too high) detected at line 991
  []
 
 
 
-[89
+[87
 
  <./tag.pdf>]
+
+[88
+
+]
+
+[89
+
+]
 
 [90
 
@@ -1675,27 +1661,37 @@ Overfull \vbox (4.61331pt too high) detected at line 995
 [92
 
 ]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1025 \end{frame}
+                  
 
 [93
 
 ]
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1025 \end{frame}
+                  
 
 [94
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1029 \end{frame}
-                  
 
 [95
 
 ]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:f:1:knuth1998art}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:martinez1998randomized}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1029 \end{frame}
+l.1035 \end{frame}
+                  
+pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:seidel1996randomized}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1035 \end{frame}
                   
 
 [96
@@ -1704,17 +1700,7 @@ l.1029 \end{frame}
 
 [97
 
-]
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:martinez1998randomized}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1039 \end{frame}
-                  
-pdfTeX warning (ext4): destination with the same identifier (name{cite.0:t:1:seidel1996randomized}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1039 \end{frame}
-                  
+] (./main.toc)
 
 [98
 
@@ -1722,27 +1708,19 @@ l.1039 \end{frame}
 
 [99
 
-] (./main.toc)
-
-[100
-
-]
-
-[101
-
  </usr/local/texlive/2024/texmf-dist/tex/latex/beamer/beamericonarticle.pdf>]
 
-[102]
-Overfull \hbox (15.99998pt too wide) in paragraph at lines 1049--1049
+[100]
+Overfull \hbox (15.99998pt too wide) in paragraph at lines 1045--1045
  [][]  
  []
 
 File: logo-upc.png Graphic file (type png)
 <use logo-upc.png>
-Package pdftex.def Info: logo-upc.png  used on input line 1049.
+Package pdftex.def Info: logo-upc.png  used on input line 1045.
 (pdftex.def)             Requested size: 192.71169pt x 33.72453pt.
 
-Overfull \vbox (45.26413pt too high) detected at line 1049
+Overfull \vbox (45.26413pt too high) detected at line 1045
  []
 
 
@@ -1750,9 +1728,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-[103]
+[101]
 
-[104]
+[102]
 \tf@nav=\write8
 \openout8 = `main.nav'.
 
@@ -1774,18 +1752,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46546 strings out of 473201
- 1014554 string characters out of 5716126
- 1763117 words of memory out of 5000000
+ 46542 strings out of 473201
+ 1014504 string characters out of 5716126
+ 1763103 words of memory out of 5000000
  68887 multiletter control sequences out of 15000+600000
  577169 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  133i,18n,123p,1600b,2194s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (104 pages, 1206116 bytes).
+Output written on main.pdf (102 pages, 1201128 bytes).
 PDF statistics:
- 1254 PDF objects out of 1440 (max. 8388607)
- 929 compressed objects within 10 object streams
- 237 named destinations out of 1000 (max. 500000)
+ 1236 PDF objects out of 1440 (max. 8388607)
+ 911 compressed objects within 10 object streams
+ 233 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 
